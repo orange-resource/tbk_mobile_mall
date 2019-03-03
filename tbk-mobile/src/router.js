@@ -25,51 +25,11 @@ export default new Router({
           name: 'cartSettlement',
           component: () => import('./views/cart/Settlement.vue')
       },
-      {
-          path: '/my',
-          name: 'my',
-          component: () => import('@/views/my/My.vue'),
-      },
-      {
-          path: '/my/collect',
-          name: 'collect',
-          component: () => import('@/views/my/Collect.vue'),
-      },
-      {
-          path: '/my/store',
-          name: 'store',
-          component: () => import('@/views/my/Store.vue'),
-      },
-      {
-          path: '/my/footprint',
-          name: 'footprint',
-          component: () => import('@/views/my/Footprint.vue'),
-      },
-      {
-          path: '/my/wallet/main',
-          name: 'wallet',
-          component: () => import('@/views/my/wallet/Wallet.vue'),
-      },
-      {
-          path: '/my/wallet/coupons',
-          name: 'coupons',
-          component: () => import('@/views/my/wallet/Coupons.vue'),
-      },
-      {
-          path: '/my/address/main',
-          name: 'receiverAddress',
-          component: () => import('@/views/my/address/ReceiverAddress.vue'),
-      },
-      {
-          path: '/my/address/receiverAddress/form',
-          name: 'receiverAddressForm',
-          component: () => import('@/views/my/address/ReceiverAddressForm.vue'),
-      },
-      {
-          path: '/my/setting/main',
-          name: 'setting',
-          component: () => import('@/views/my/setting/Setting.vue'),
-      },
+	  {
+	      path: '/talent',
+	      name: 'talent',
+	      component: () => import('./views/talent/List.vue')
+	  },
       {
           path: '/goods',
           name: 'goods',

@@ -3,8 +3,8 @@
         <van-tabbar v-model="active">
             <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
             <van-tabbar-item to="/category" icon="coupon-o">分类</van-tabbar-item>
-            <van-tabbar-item to="/cart" icon="shopping-cart-o">购物车</van-tabbar-item>
-            <van-tabbar-item to="/my" icon="contact">我</van-tabbar-item>
+            <van-tabbar-item to="/cart" icon="shopping-cart-o">发现</van-tabbar-item>
+            <van-tabbar-item to="/talent" icon="thumb-circle-o">达人说</van-tabbar-item>
         </van-tabbar>
     </div>
 </template>
@@ -28,7 +28,7 @@
                 case "cart":
                     this.active = 2;
                     break;
-                case "my":
+                case "talent":
                     this.active = 3;
                     break;
             }
