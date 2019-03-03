@@ -13,6 +13,7 @@ import './static/css/common.css'
 
 //引入自有组件
 import './plugins/qzqt'
+import './plugins/orange'
 
 Vue.config.productionTip = false;
 

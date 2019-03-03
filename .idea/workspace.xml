@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/qs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/qzqt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/vant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-loading.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/dr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/loading.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/Collect.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/Footprint.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/My.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/Store.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/address/ReceiverAddress.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/address/ReceiverAddressForm.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/setting/Setting.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/wallet/Coupons.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/my/wallet/Wallet.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-goods-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-goods-card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/static/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/static/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -144,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551624005062" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551633293053" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -247,7 +237,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551584272159</updated>
-      <workItem from="1551584274106" duration="5082000" />
+      <workItem from="1551584274106" duration="5729000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -270,11 +260,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551603065592</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="普通更新...">
+      <created>1551625376696</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551625376696</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5082000" />
+    <option name="totallyTimeSpent" value="5729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />

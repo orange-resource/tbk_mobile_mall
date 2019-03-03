@@ -10,3 +10,9 @@
 .bc {
     background-color: #f4f4f4;
 }
+
+.slide-box {
+    display: -webkit-box;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+}

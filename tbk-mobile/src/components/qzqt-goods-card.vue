@@ -15,14 +15,16 @@
                 </van-tag>
             </div>
             <div style="text-align: center;">
-                <a class="twolist-hidden" style="height: 40px">
+                <a class="twolist-hidden" style="height: 45px">
                     {{ title }}
                 </a>
                 <div class="twolist-hidden" style="padding: .3em .3em .3em .3em;color: red;display: flex;flex-direction: row;justify-content: center">
                     <van-tag v-if="priceTag != null" type="danger" style="margin-right: 3px">
                         {{ priceTag }}
                     </van-tag>
-                    ¥{{ price }}
+                    <div v-if="price != null">
+                        ¥{{ price }}
+                    </div>
                 </div>
             </div>
         </div>
