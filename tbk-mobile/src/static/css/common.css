@@ -1,0 +1,12 @@
+
+.radius {
+    border-radius: 1em 1em 1em / 1em 1em;
+}
+
+.hr {
+    background-color:#E4E7ED;height:1px;border:none;
+}
+
+.bc {
+    background-color: #f4f4f4;
+}
