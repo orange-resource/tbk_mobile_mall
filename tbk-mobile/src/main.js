@@ -6,6 +6,7 @@ import store from './store'
 import './plugins/axios'
 import './plugins/vant'
 import './plugins/qs'
+import './plugins/vue-error'
 
 //公共样式
 import './static/css/layout.css'
@@ -16,6 +17,8 @@ import './plugins/qzqt'
 import './plugins/orange'
 
 Vue.config.productionTip = false;
+
+
 
 new Vue({
   router,

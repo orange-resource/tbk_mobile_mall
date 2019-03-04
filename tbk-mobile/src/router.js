@@ -15,20 +15,15 @@ export default new Router({
           name: 'category',
           component: () => import('./views/category/Category.vue')
       },
-      {
-          path: '/cart',
-          name: 'cart',
-          component: () => import('./views/cart/Cart.vue')
-      },
-      {
-          path: '/cart/settlement',
-          name: 'cartSettlement',
-          component: () => import('./views/cart/Settlement.vue')
-      },
 	  {
 	      path: '/talent',
 	      name: 'talent',
 	      component: () => import('./views/talent/List.vue')
+	  },
+	  {
+	      path: '/talent/article',
+	      name: 'talentArticle',
+	      component: () => import('./views/talent/Article.vue')
 	  },
       {
           path: '/goods',
