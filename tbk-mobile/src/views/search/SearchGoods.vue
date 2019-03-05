@@ -27,7 +27,7 @@
                     <div slot="title">
                         <van-icon name="arrow-up" />筛选
                     </div>
-                    <qzqt-goods-sell
+                    <orange-goods-sell
                             v-for="g in 11"
                             image="https://x.dscmall.cn/storage/images/201809/goods_img/0_P_1536614291769.jpg"
                             title="CASIO卡西欧35周年限量G-SHOCK × A$AP FERG联名款GA-110FRG-7A"
@@ -37,7 +37,7 @@
                             payment="13"
                             address="泉州"
                             tag="促销"
-                    ></qzqt-goods-sell>
+                    ></orange-goods-sell>
                 </van-tab>
                 <van-tab>
                     <div slot="title">
@@ -70,14 +70,14 @@
                         @click-left="show = false"
                 />
 
-                <qzqt-card>
+                <orange-card>
                     <van-cell-group>
                         <van-switch-cell v-model="checked" title="仅看有货" />
                         <van-switch-cell v-model="checked" title="促销" />
                     </van-cell-group>
-                </qzqt-card>
+                </orange-card>
 
-                <qzqt-card>
+                <orange-card>
                     <van-panel title="价格区间" desc="" status="">
                         <van-row type="flex" justify="center" style="padding-bottom: 10px">
                             <van-col span="22">
@@ -94,16 +94,16 @@
                         </van-row>
 
                     </van-panel>
-                </qzqt-card>
+                </orange-card>
 
-                <qzqt-card>
+                <orange-card>
                     <van-cell-group>
                         <van-field
                                 label="品牌名"
                                 placeholder="请输入品牌名"
                         />
                     </van-cell-group>
-                </qzqt-card>
+                </orange-card>
 
                 <van-row type="flex" justify="center">
                     <van-col span="22">

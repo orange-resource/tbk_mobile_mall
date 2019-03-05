@@ -1,10 +1,10 @@
-.qzqt-home{
+.orange-home{
     display: flex;
     flex-direction: column;
 }
-.qzqt-content{
+.orange-content{
     flex: auto;
 }
-.qzqt-footer{
+.orange-footer{
     height: 50px;
 }

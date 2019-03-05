@@ -7,13 +7,13 @@ import './plugins/axios'
 import './plugins/vant'
 import './plugins/qs'
 import './plugins/vue-error'
+import './plugins/alert'
 
 //公共样式
 import './static/css/layout.css'
 import './static/css/common.css'
 
 //引入自有组件
-import './plugins/qzqt'
 import './plugins/orange'
 
 Vue.config.productionTip = false;

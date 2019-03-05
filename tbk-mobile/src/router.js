@@ -28,37 +28,7 @@ export default new Router({
       {
           path: '/goods',
           name: 'goods',
-          component: () => import('@/views/goods/Goods.vue'),
-      },
-      {
-          path: '/shop',
-          name: 'shop',
-          component: () => import('@/views/shop/Shop.vue'),
-      },
-      {
-          path: '/shop/details',
-          name: 'shopDetails',
-          component: () => import('@/views/shop/Details.vue'),
-      },
-      {
-          path: '/login',
-          name: 'login',
-          component: () => import('@/views/user/Login.vue'),
-      },
-      {
-          path: '/register',
-          name: 'register',
-          component: () => import('@/views/user/Register.vue'),
-      },
-      {
-          path: '/forgetPassword',
-          name: 'forgetPassword',
-          component: () => import('@/views/user/ForgetPassword.vue'),
-      },
-      {
-          path: '/updatePassword',
-          name: 'updatePassword',
-          component: () => import('@/views/user/UpdatePassword.vue'),
+          component: () => import('@/views/goods/Details'),
       },
       {
           path: '/article/list',
@@ -79,16 +49,6 @@ export default new Router({
           path: '/search/goods',
           name: 'searchGoods',
           component: () => import('@/views/search/SearchGoods.vue'),
-      },
-      {
-          path: '/order/list',
-          name: 'orderList',
-          component: () => import('@/views/order/List.vue'),
-      },
-      {
-          path: '/order/main',
-          name: 'orderMain',
-          component: () => import('@/views/order/Order.vue'),
       },
   ]
 })

@@ -2,9 +2,9 @@
 
     <div class="bc" style="height: 100%">
 
-        <div class="qzqt-home bc">
+        <div class="orange-home bc">
 
-            <div class="qzqt-content">
+            <div class="orange-content">
 
                 <!--头部轮播-->
                 <van-swipe @change="onChange" style="background-color: #fff">
@@ -161,7 +161,7 @@
             </div>
 
             <!--底部-->
-            <div class="qzqt-footer">
+            <div class="orange-footer">
                 <van-goods-action>
                     <van-goods-action-mini-btn
                             icon="chat-o"

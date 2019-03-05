@@ -2,8 +2,8 @@
 
     <div class="bc" style="height: 100%">
 
-        <div class="qzqt-home bc" style="height: 100%">
-            <div class="qzqt-content" style="display: flex;flex-direction: column">
+        <div class="orange-home bc" style="height: 100%">
+            <div class="orange-content" style="display: flex;flex-direction: column">
 
                 <div style="height: 44px">
                     <van-search placeholder="请输入搜索关键词" v-model="keyword" />
@@ -43,18 +43,18 @@
                         <van-row type="flex" style="padding-top: 10px;text-align: center">
                             <van-col span="1"></van-col>
                             <van-col span="22">
-                                <qzqt-advertising src="https://x.dscmall.cn/storage/data/touch_catads/15444645367579.jpg">
-                                </qzqt-advertising>
+                                <orange-advertising src="https://x.dscmall.cn/storage/data/touch_catads/15444645367579.jpg">
+                                </orange-advertising>
                             </van-col>
                             <van-col span="1"></van-col>
                         </van-row>
 
                         <van-row v-for="y in 2" type="flex" justify="center" style="padding-top: 10px">
                             <van-col span="22">
-                                <qzqt-horizontal-piece
+                                <orange-horizontal-piece
                                         style="font-size: 15px;"
                                         title="女装">
-                                </qzqt-horizontal-piece>
+                                </orange-horizontal-piece>
                                 <div v-for="t in 10"
                                      style="float: left;width: 33.333333333333333333333333333%;padding-top: 10px;height: 85px">
                                     <div style="display: flex;flex-direction: column;align-items: center">
@@ -72,7 +72,7 @@
                 </div>
 
             </div>
-            <qzqt-footer></qzqt-footer>
+            <orange-footer></orange-footer>
         </div>
 
     </div>

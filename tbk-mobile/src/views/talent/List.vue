@@ -2,13 +2,13 @@
 
 	<div class="bc" style="height: 100%">
 
-		<div class="qzqt-home">
+		<div class="orange-home">
 
-			<div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="qzqt-content content">
+			<div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="orange-content content">
 				<orange-loading :show="isPageLoadComplete"></orange-loading>
 			</div>
 
-			<div v-if="isPageLoadComplete == 2" class="qzqt-content content">
+			<div v-if="isPageLoadComplete == 2" class="orange-content content">
 
 				<!--头部-->
 				<van-nav-bar title="达人说"></van-nav-bar>
@@ -17,13 +17,13 @@
 				<div style="height: 200px;" class="head">
 
 					<div class="slide-box">
-						<qzqt-card v-for="(i,index) in topdata" :key="'q' + index" style="position: relative;" class="slide-item radius">
+						<orange-card v-for="(i,index) in topdata" :key="'q' + index" style="position: relative;" class="slide-item radius">
 							<img :src="i.article_banner"
 								 class="radius" width="100%" height="100%" alt="图片被橘子酸到火星了..."
 								 @click="openArticle(i.id)"
 							/>
 							<van-tag style="position: absolute; bottom: 0; left: 0;" type="danger">{{i.shorttitle}}</van-tag>
-						</qzqt-card>
+						</orange-card>
 					</div>
 
 				</div>
@@ -31,7 +31,7 @@
 				<!--中部-->
 				<van-tabs>
 					<van-tab title="最新文章">
-						<qzqt-goods-card
+						<orange-goods-card
 								v-for="(i,index) in newdata"
 								:key="'w' + index"
 								topTag="最新"
@@ -39,10 +39,10 @@
 								:image="i.image"
 								:to='"talent/article?id=" + i.id'
 								style="margin-top: 10px"
-						></qzqt-goods-card>
+						></orange-goods-card>
 					</van-tab>
 					<van-tab v-for="(list,inde) in clickdata" :key="inde" :title="list.name">
-						<qzqt-goods-card
+						<orange-goods-card
 								v-for="(i,ind) in list.data"
 								:key="'e' + ind"
 								:topTag="list.name"
@@ -50,7 +50,7 @@
 								:image="i.image"
 								:to='"talent/article?id=" + i.id'
 								style="margin-top: 10px"
-						></qzqt-goods-card>
+						></orange-goods-card>
 					</van-tab>
 				</van-tabs>
 
@@ -63,9 +63,8 @@
 		</div>
 
 		<div class="footer">
-		    <qzqt-footer></qzqt-footer>
+		    <orange-footer></orange-footer>
 		</div>
-
 
 	</div>
 
@@ -77,7 +76,6 @@
 	    name: "Card",
 		mounted() {
 
-            this.isPageLoadComplete = 0;
             this.$axios.get('talent/getAll').then((rsp) => {
                 if (rsp.data.code == 1) {
                     this.topdata = rsp.data.data.topdata;
@@ -91,13 +89,11 @@
                     }
                     this.isPageLoadComplete = 2;
                 } else {
-                    this.$notify('数据获取异常，请重新刷新页面');
+                    this.isPageLoadComplete = 1;
+                    this.$alert.notifyNoData();
                 }
             }).catch((e) => {
-                this.$dialog.alert({
-                    title: '处理提示',
-                    message: '哎呀！我的天爷呀！发生了未知错误！\n' + e,
-                });
+                this.$alert.dialogUnknown(e);
                 this.isPageLoadComplete = 1;
 			})
 		},

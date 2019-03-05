@@ -49,14 +49,14 @@
                     <span style="font-size: 15px">本文推荐商品</span>
                 </van-col>
             </van-row>
-            <qzqt-goods-sell
+            <orange-goods-sell
                     v-for="(i,index) in goods"
                     :key="'q' + index"
                     :image="i.itempic"
                     :title="i.itemtitle"
                     :price="i.itemendprice"
                     :payment="i.itemsale"
-            ></qzqt-goods-sell>
+            ></orange-goods-sell>
 
             <van-row type="flex" justify="center">
                 <van-col span="22" v-html="content" style="margin-bottom: 20px">
@@ -88,33 +88,36 @@
         },
         mounted() {
 
-            this.isPageLoadComplete = 0;
             this.$axios.get('talent/getArticle',{
                 params: {
                     articleId: this.$route.query.id
                 }
             }).then((rsp) => {
-                this.title = rsp.data.data.name;
-                this.shortTitle = rsp.data.data.shorttitle;
-                this.readTimes = rsp.data.data.readtimes;
-                this.talentName = rsp.data.data.talent_name;
-                this.goods = rsp.data.data.items;
-                this.content = rsp.data.data.article
-                    .replace(/&lt;img/g, "<img width='100%' ") //处理图片不会撑过头
-                    .replace(/&lt;/g, "<")
-                    .replace(/&gt;/g, ">")
-                    .replace(/&amp;/g, "&")
-                    .replace(/&quot;/g, '"')
-                    .replace(/&apos;/g, "'");
-                setInterval(function () { //将文中出现的商品全部删除
-                    $(".single-content").html('');
-                },1000);
-                this.isPageLoadComplete = 2;
+
+                if (rsp.data.code == 1) {
+                    this.title = rsp.data.data.name;
+                    this.shortTitle = rsp.data.data.shorttitle;
+                    this.readTimes = rsp.data.data.readtimes;
+                    this.talentName = rsp.data.data.talent_name;
+                    this.goods = rsp.data.data.items;
+                    this.content = rsp.data.data.article
+                        .replace(/&lt;img/g, "<img width='100%' ") //处理图片不会撑过头
+                        .replace(/&lt;/g, "<")
+                        .replace(/&gt;/g, ">")
+                        .replace(/&amp;/g, "&")
+                        .replace(/&quot;/g, '"')
+                        .replace(/&apos;/g, "'");
+                    setInterval(function () { //将文中出现的商品全部删除
+                        $(".single-content").html('');
+                    },1000);
+                    this.isPageLoadComplete = 2;
+                } else {
+                    this.isPageLoadComplete = 1;
+                    this.$alert.notifyNoData();
+                }
+
             }).catch((e) => {
-                this.$dialog.alert({
-                    title: '处理提示',
-                    message: '哎呀！我的天爷呀！发生了未知错误！\n' + e,
-                });
+                this.$alert.dialogUnknown(e);
                 this.isPageLoadComplete = 1;
             })
 

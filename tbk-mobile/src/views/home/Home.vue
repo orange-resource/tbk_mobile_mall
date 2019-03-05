@@ -2,13 +2,13 @@
 
     <div class="bc" style="height: 100%">
 
-        <div class="qzqt-home bc">
+        <div class="orange-home bc">
 
-            <div class="qzqt-content">
+            <div class="orange-content">
 
                 <!--头部-->
                 <van-search placeholder="请输入搜索关键词" v-model="keyword" />
-                <qzqt-swipe :images="images"></qzqt-swipe>
+                <orange-swipe :images="images"></orange-swipe>
                 <!--头部 end-->
 
                 <!--分类区-->
@@ -54,21 +54,21 @@
                 <!--广告区1 end-->
 
                 <!--分类瀑布-->
-                <qzqt-category-waterfall
+                <orange-category-waterfall
                         :data="categoryData"
-                ></qzqt-category-waterfall>
+                ></orange-category-waterfall>
 
-                <qzqt-category-waterfall
+                <orange-category-waterfall
                         :data="categoryData2"
-                ></qzqt-category-waterfall>
+                ></orange-category-waterfall>
 
-                <qzqt-category-waterfall
+                <orange-category-waterfall
                         :data="categoryData"
-                ></qzqt-category-waterfall>
+                ></orange-category-waterfall>
 
-                <qzqt-category-waterfall
+                <orange-category-waterfall
                         :data="categoryData2"
-                ></qzqt-category-waterfall>
+                ></orange-category-waterfall>
                 <!--分类瀑布 end-->
 
                 <!--广告区 2-->
@@ -95,14 +95,14 @@
                             finished-text="没有更多了"
                             @load="onLoad"
                     >
-                        <qzqt-goods-card
+                        <orange-goods-card
                                 v-for="item in list"
                                 topTag="推荐"
                                 title="17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料"
                                 price="14"
                                 image="https://x.dscmall.cn/storage/images/201703/thumb_img/0_thumb_G_1490174791219.jpg"
                                 to="/my"
-                        ></qzqt-goods-card>
+                        ></orange-goods-card>
                     </van-list>
                 </div>
                 <!--商品推荐 end-->
@@ -110,7 +110,7 @@
             </div>
 
 
-            <qzqt-footer></qzqt-footer>
+            <orange-footer></orange-footer>
 
         </div>
 
