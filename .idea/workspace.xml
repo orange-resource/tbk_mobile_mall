@@ -1,45 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Details.vue" afterDir="false" />
+    <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="增加商品详情">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-advertising.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-advertising.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-article-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-article-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-category-waterfall.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-category-waterfall.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-goods-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-goods-sell.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-sell.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-goods-settlement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-settlement.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-horizontal-piece.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-horizontal-piece.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-order-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-order-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-shipping-address-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-shipping-address-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-store-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-store-card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/qzqt-swipe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-swipe.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/plugins/qzqt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/plugins/vue-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/vue-error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/static/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/static/css/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/category/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/category/Category.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Goods.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/order/List.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/order/Order.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/shop/Details.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/shop/Shop.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-sell.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-sell.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/orange-technology-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-technology-footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Details.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Details.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Goods.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/user/ForgetPassword.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/user/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/user/Register.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/user/UpdatePassword.vue" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,13 +44,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="37" />
+          <entry key="txt" value="43" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="PLAIN_TEXT" value="43" />
           <entry key="XML" value="17" />
         </counts>
       </usages-collector>
@@ -163,7 +132,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551809764246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551861082735" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -266,7 +235,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551584272159</updated>
-      <workItem from="1551584274106" duration="7662000" />
+      <workItem from="1551584274106" duration="9537000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -310,11 +279,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551724944695</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="增加商品详情">
+      <created>1551810781866</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551810781866</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7662000" />
+    <option name="totallyTimeSpent" value="9537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -365,7 +341,8 @@
     <MESSAGE value="普通更新..." />
     <MESSAGE value="增加达人说模块" />
     <MESSAGE value="优化达人说模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化达人说模块" />
+    <MESSAGE value="增加商品详情" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加商品详情" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/pom.xml">

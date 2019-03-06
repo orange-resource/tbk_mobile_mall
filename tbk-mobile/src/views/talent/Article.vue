@@ -6,8 +6,10 @@
             <van-nav-bar
                     title="达人说文章介绍 加载中..."
                     left-text="返回"
+                    right-text="达人说"
                     left-arrow
                     @click-left="onClickLeft"
+                    @click-right="onClickRight"
             />
             <orange-loading :show="isPageLoadComplete"></orange-loading>
         </div>
@@ -19,6 +21,8 @@
                     :title="title"
                     left-text="返回"
                     left-arrow
+                    right-text="达人说"
+                    @click-right="onClickRight"
                     @click-left="onClickLeft"
             />
             <!--头部 end-->
@@ -56,6 +60,7 @@
                     :title="i.itemtitle"
                     :price="i.itemendprice"
                     :payment="i.itemsale"
+                    :to='"../goods?id=" + i.itemid'
             ></orange-goods-sell>
 
             <van-row type="flex" justify="center">
@@ -81,9 +86,10 @@
         name: "Article",
         methods: {
             onClickLeft() {
-                this.$router.push({
-                    name: 'talent',
-                })
+                window.history.go(-1);
+            },
+            onClickRight() {
+                this.$router.push({ path: "/talent" });
             },
         },
         mounted() {

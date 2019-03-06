@@ -7,6 +7,11 @@
             <div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="orange-content">
                 <van-nav-bar
                         title="商品详情 加载中..."
+                        left-text="返回"
+                        right-text="首页"
+                        left-arrow
+                        @click-left="onClickLeft"
+                        @click-right="onClickRight"
                 />
                 <orange-loading :show="isPageLoadComplete"></orange-loading>
             </div>
@@ -14,7 +19,13 @@
             <div v-if="isPageLoadComplete == 2" class="orange-content">
 
                 <!--头部-->
-                <van-nav-bar title="商品详情"></van-nav-bar>
+                <van-nav-bar title="商品详情"
+                             left-text="返回"
+                             right-text="首页"
+                             left-arrow
+                             @click-left="onClickLeft"
+                             @click-right="onClickRight"
+                ></van-nav-bar>
 
                 <!--图片展示-->
                 <van-swipe style="background-color: #fff">
@@ -63,6 +74,17 @@
                     <van-row type="flex" justify="center">
                         <van-col span="20" style="padding: 5px 0 5px 0">
                             <span style="font-size: 15px;color: #999999">{{ details.itemdesc }}</span>
+                        </van-col>
+                    </van-row>
+                </van-panel>
+
+                <!--使用教程-->
+                <van-panel title="优惠劵使用简介" desc="" status="">
+                    <van-row type="flex" justify="center">
+                        <van-col span="20" style="padding: 5px 0 5px 0">
+                            <span style="font-size: 15px;color: #999999">
+                                点击立即领卷按钮，会跳转到淘宝官方领卷页面进行领卷
+                            </span>
                         </van-col>
                     </van-row>
                 </van-panel>
@@ -145,6 +167,12 @@
             }
         },
         methods: {
+            onClickLeft() {
+                window.history.go(-1);
+            },
+            onClickRight() {
+                this.$router.push({ path: "/" });
+            },
             openShare() {
                 this.share = true;
                 this.$nextTick(function() {
@@ -160,7 +188,7 @@
                     }
                 });
             },
-            openTb() {
+            openTb: function () {
                 this.$dialog.alert({
                     message: '链接将跳转淘宝，商品详情看完，觉得满意返回本页面点击立即领卷按钮进行领卷'
                 }).then(() => {
@@ -168,6 +196,7 @@
                 });
             },
             btv() { //领卷
+                this.$toast('正在前往淘宝官方领卷页面，请耐心等待...');
                 this.$axios.get('goods/ratesurl',{
                     params: {
                         goodsId: this.$route.query.id,

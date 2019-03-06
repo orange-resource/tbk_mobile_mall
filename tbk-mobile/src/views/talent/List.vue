@@ -22,7 +22,6 @@
 								 class="radius" width="100%" height="100%" alt="图片被橘子酸到火星了..."
 								 @click="openArticle(i.id)"
 							/>
-							<van-tag style="position: absolute; bottom: 0; left: 0;" type="danger">{{i.shorttitle}}</van-tag>
 						</orange-card>
 					</div>
 
@@ -56,7 +55,8 @@
 
 				<!--底部-->
 				<orange-technology-footer style="clear: both"></orange-technology-footer>
-
+				<br><br>
+				<br>
 			</div>
 
 
@@ -135,7 +135,6 @@
     .slide-item{
         width: 300px;
         height: 150px;
-        border:3px solid #ccc;
         margin-right: 30px;
 		margin-left: 10px;
     }

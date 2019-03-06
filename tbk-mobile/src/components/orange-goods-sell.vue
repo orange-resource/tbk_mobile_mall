@@ -2,7 +2,7 @@
 
     <div>
 
-        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff" @click="open()">
+        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff">
             <van-col span="22" style="display: flex;flex-direction: row">
                 <div style="width: 100px;position: relative">
                     <img :src="image"
@@ -11,7 +11,7 @@
                 </div>
                 <div style="flex: auto">
                     <div class="twolist-hidden" style="height: 40px;width: 100%;padding-left: 5px;">
-                        <a style="font-size: 14px;color: #4b566a">
+                        <a style="font-size: 14px;color: #4b566a" @click="open()">
                             {{ title }}
                         </a>
                     </div>
@@ -31,7 +31,7 @@
                             <span v-if="payment != null" style="color: darkgray;font-size: 13px">{{ payment }}人付款</span>
                         </van-col>
                         <van-col span="8" style="text-align: right">
-                            <span v-if="address == null" style="color: darkgray;font-size: 13px">未知</span>
+                            <span v-if="address == null" style="color: darkgray;font-size: 13px"></span>
                             <span v-if="address != null" style="color: darkgray;font-size: 13px">{{ address }}</span>
                         </van-col>
                     </van-row>
