@@ -11,9 +11,9 @@ export default new Router({
           component: () => import('./views/home/Home.vue')
       },
       {
-          path: '/category',
-          name: 'category',
-          component: () => import('./views/category/Category.vue')
+          path: '/hot',
+          name: 'hot',
+          component: () => import('./views/hot/Index')
       },
 	  {
 	      path: '/talent',
@@ -28,7 +28,7 @@ export default new Router({
       {
           path: '/goods',
           name: 'goods',
-          component: () => import('@/views/goods/Details'),
+          component: () => import('@/views/goods/Index'),
       },
       {
           path: '/article/list',

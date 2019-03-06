@@ -5,6 +5,10 @@ import axios from "axios";
 import router from '../router'
 import store from '../store'
 
+import { Toast } from 'vant';
+
+Vue.use(Toast);
+
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
@@ -17,16 +21,23 @@ let config = {
   withCredentials: true, // Check cross-site Access-Control
 };
 
+let toast;
+
 const _axios = axios.create(config);
 
 _axios.interceptors.request.use(
   function(config) {
-    // Do something before request is sent
-    return config;
+      // Do something before request is sent
+      toast = Toast.loading({
+          mask: true,
+          message: '拼命加载数据中...'
+      });
+      return config;
   },
   function(error) {
-    // Do something with request error
-    return Promise.reject(error);
+      // Do something with request error
+      toast.clear();
+      return Promise.reject(error);
   }
 );
 
@@ -34,6 +45,7 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
   function(response) {
       // Do something with response data
+      toast.clear();
       switch (response.status) {
           case 200:
             if (response.data.code == 12) {
@@ -50,7 +62,8 @@ _axios.interceptors.response.use(
       return response;
   },
   function(error) {
-    return Promise.reject(error);
+      toast.clear();
+      return Promise.reject(error);
   }
 );
 
@@ -71,6 +84,6 @@ Plugin.install = function(Vue, options) {
   });
 };
 
-Vue.use(Plugin)
+Vue.use(Plugin);
 
 export default Plugin;

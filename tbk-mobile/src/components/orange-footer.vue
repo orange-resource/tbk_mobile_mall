@@ -1,8 +1,8 @@
 <template>
-    <div class="qzqt-footer">
+    <div class="orange-footer">
         <van-tabbar v-model="active">
             <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
-            <van-tabbar-item to="/category" icon="coupon-o">分类</van-tabbar-item>
+            <van-tabbar-item to="/hot" icon="fire-o">热销区</van-tabbar-item>
             <van-tabbar-item to="/cart" icon="shopping-cart-o">发现</van-tabbar-item>
             <van-tabbar-item to="/talent" icon="thumb-circle-o">达人说</van-tabbar-item>
         </van-tabbar>
@@ -22,7 +22,7 @@
                 case "home":
                     this.active = 0;
                     break;
-                case "category":
+                case "hot":
                     this.active = 1;
                     break;
                 case "cart":

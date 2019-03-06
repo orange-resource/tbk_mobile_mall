@@ -2,7 +2,7 @@
 
     <div>
 
-        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff">
+        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff;margin-top: 5px">
             <van-col span="22" style="display: flex;flex-direction: row">
                 <div style="width: 100px;position: relative">
                     <img :src="image"
@@ -23,7 +23,7 @@
                     </div>
                     <van-row type="flex" justify="center" style="background-color: #fff;padding: 5px 0 10px 5px">
                         <van-col span="8">
-                            <span v-if="logistics == null" style="color: darkgray;font-size: 13px">免运费</span>
+                            <span v-if="logistics == null" style="color: darkgray;font-size: 13px"></span>
                             <span v-if="logistics != null" style="color: darkgray;font-size: 13px">运费{{ logistics }}</span>
                         </van-col>
                         <van-col span="8" style="text-align: center">

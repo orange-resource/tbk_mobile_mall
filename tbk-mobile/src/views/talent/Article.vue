@@ -59,8 +59,10 @@
                     :image="i.itempic"
                     :title="i.itemtitle"
                     :price="i.itemendprice"
+                    :originalPrice="i.itemprice"
                     :payment="i.itemsale"
                     :to='"../goods?id=" + i.itemid'
+                    style="margin: 5px 0 5px 0"
             ></orange-goods-sell>
 
             <van-row type="flex" justify="center">
