@@ -41,11 +41,11 @@
 
 <script>
     export default {
-        name: "qzqt-category-waterfall",
+        name: "orange-category-waterfall",
         props: ["data"],
         methods: {
             open(to) {
-                this.$router.push({ path: to });
+                location.assign(this.to);
             },
         }
     }

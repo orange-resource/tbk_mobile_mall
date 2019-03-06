@@ -12,11 +12,11 @@
 
 <script>
     export default {
-        name: "qzqt-swipe",
+        name: "orange-swipe",
         props: ["images"],
         methods: {
             open(to) {
-                this.$router.push({ path: to });
+                location.assign(this.to);
             },
         }
     }

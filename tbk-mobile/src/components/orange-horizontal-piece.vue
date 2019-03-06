@@ -20,7 +20,7 @@
 
 <script>
     export default {
-        name: "qzqt-horizontal-piece",
+        name: "orange-horizontal-piece",
         props:["title"],
     }
 </script>

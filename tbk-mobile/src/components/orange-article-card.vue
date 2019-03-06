@@ -42,11 +42,11 @@
 
 <script>
     export default {
-        name: "qzqt-article-card",
+        name: "orange-article-card",
         props:["title","author","date","visit","to"],
         methods: {
             open(to) {
-                this.$router.push({ path: to });
+                location.assign(this.to);
             },
         },
     }

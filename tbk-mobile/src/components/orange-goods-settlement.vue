@@ -42,13 +42,13 @@
 
 <script>
     export default {
-        name: "qzqt-goods-settlement",
+        name: "orange-goods-settlement",
         props:[
             "title","price","sku","image","tag","to","piece"
         ],
         methods: {
             open() {
-                this.$router.push({ path: this.to });
+                location.assign(this.to);
             },
         }
     }

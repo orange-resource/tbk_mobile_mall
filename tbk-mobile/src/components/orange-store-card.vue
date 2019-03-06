@@ -30,7 +30,7 @@
 
 <script>
     export default {
-        name: "qzqt-store-card",
+        name: "orange-store-card",
         props: ["logo","name","attention","isAttention","to"],
     }
 </script>

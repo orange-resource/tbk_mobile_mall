@@ -27,7 +27,7 @@
 
 <script>
     export default {
-        name: "qzqt-shipping-address-card",
+        name: "orange-shipping-address-card",
         props:["name","phoneNumber","address"],
     }
 </script>

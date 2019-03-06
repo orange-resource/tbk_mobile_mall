@@ -89,6 +89,26 @@
                     </van-row>
                 </van-panel>
 
+                <!--猜你喜欢-->
+                <van-row type="flex" justify="space-around">
+                    <van-col span="24" style="text-align: center">
+                        <img src="../../static/img/like.jpg"
+                             width="100%" height="100%">
+                    </van-col>
+                </van-row>
+                <orange-goods-card
+                        v-for="(i,ind) in like"
+                        :key="'e' + ind"
+                        :topTag='"优惠劵金额" + i.couponmoney'
+                        :title="i.itemtitle"
+                        :image="i.itempic"
+                        :price="i.itemprice"
+                        :priceTag="i.itemendprice"
+                        :ratio="true"
+                        :to='"../goods?id=" + i.itemid'
+                        style="margin-top: 10px"
+                ></orange-goods-card>
+
                 <van-actionsheet v-model="share" title="分享商品">
                     <van-row type="flex" justify="center">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
@@ -102,7 +122,7 @@
                     </van-row>
                 </van-actionsheet>
 
-                <orange-technology-footer></orange-technology-footer>
+                <orange-technology-footer style="clear: both"></orange-technology-footer>
 
             </div>
 
@@ -145,8 +165,25 @@
                 if (rsp.data.code == 1) {
 
                     this.details = rsp.data.data;
-
                     this.isPageLoadComplete = 2;
+
+                    this.$axios.get('goods/like',{
+                        params: {
+                            goodsId: this.details.itemid,
+                        }
+                    }).then((rsp) => {
+
+                        if (rsp.data.code == 1) {
+
+                            this.like = rsp.data.data;
+
+                        } else {
+                            this.$alert.notifyNoData();
+                        }
+
+                    }).catch((e) => {
+                        this.$alert.dialogUnknown(e);
+                    });
 
                 } else {
                     this.isPageLoadComplete = 1;
@@ -164,6 +201,7 @@
                 share: false,
                 isPageLoadComplete: 0, //页面是否加载完成 0.正在加载 1.加载失败 2.加载完毕 ...
                 details: '',
+                like: '',
             }
         },
         methods: {

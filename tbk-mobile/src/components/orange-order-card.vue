@@ -60,11 +60,11 @@
 
 <script>
     export default {
-        name: "qzqt-order-card",
+        name: "orange-order-card",
         props: ["logo","title","status","number","money","to"],
         methods: {
             open(to) {
-                this.$router.push({ path: to });
+                location.assign(this.to);
             },
         },
     }

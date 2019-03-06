@@ -10,7 +10,7 @@
                 <van-tag v-if="bottomTag != null" type="danger" style="position: absolute;bottom:0;right:0">
                     {{ bottomTag }}
                 </van-tag>
-                <van-tag v-if="topTag != null" type="danger" style="position: absolute;top:0;left:0">
+                <van-tag v-if="topTag != null" size="large" type="danger" style="position: absolute;top:0;left:0">
                     {{ topTag }}
                 </van-tag>
             </div>
@@ -19,11 +19,12 @@
                     {{ title }}
                 </a>
                 <div class="twolist-hidden" style="padding: .3em .3em .3em .3em;color: red;display: flex;flex-direction: row;justify-content: center">
-                    <van-tag v-if="priceTag != null" type="danger" style="margin-right: 3px">
+                    <van-tag v-if="priceTag != null" size="large" type="danger" style="margin-right: 3px">
                         {{ priceTag }}
                     </van-tag>
                     <div v-if="price != null">
-                        ¥{{ price }}
+                        <span v-if="ratio == null">¥{{ price }}</span>
+                        <span v-if="ratio != null" style="font-size: 15px"><s>¥{{ price }}</s></span>
                     </div>
                 </div>
             </div>
@@ -35,13 +36,13 @@
 
 <script>
     export default {
-        name: "qzqt-goods-card",
+        name: "orange-goods-card",
         props:[
-            "bottomTag","topTag","title","price","priceTag","image","to"
+            "bottomTag","topTag","title","price","ratio","priceTag","image","to"
         ],
         methods: {
             open() {
-                this.$router.push({ path: this.to });
+                location.assign(this.to);
             },
         }
     }

@@ -15,10 +15,9 @@
                         <van-badge-group :active-key="activeKey" @change="onChange">
                             <van-badge v-for="(i,index) in category" :key="index" :title="i.name" />
                         </van-badge-group>
-                        <br>
                     </div>
 
-                    <div style="flex: auto;overflow:auto;">
+                    <div class="slide" style="flex: auto;overflow:auto;">
 
                         <van-row type="flex" justify="center" style="padding-top: 10px">
                             <van-col span="22">

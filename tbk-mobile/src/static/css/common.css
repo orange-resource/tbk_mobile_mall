@@ -16,3 +16,8 @@
     overflow-x: scroll;
     -webkit-overflow-scrolling:touch;
 }
+
+.slide {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}

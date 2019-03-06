@@ -45,13 +45,13 @@
 
 <script>
     export default {
-        name: "qzqt-goods-sell",
+        name: "orange-goods-sell",
         props:[
             "logistics","payment","title","price","originalPrice","address","image","tag","to"
         ],
         methods: {
             open() {
-                this.$router.push({ path: this.to });
+                location.assign(this.to);
             },
         }
     }

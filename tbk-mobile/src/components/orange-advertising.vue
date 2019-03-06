@@ -9,11 +9,11 @@
 
 <script>
     export default {
-        name: "qzqt-advertising",
+        name: "orange-advertising",
         props: ["src","to"],
         methods: {
             open() {
-                this.$router.push({ path: this.to });
+                location.assign(this.to);
             },
         }
     }

@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 export default new Router({
+    mode: 'history',
   routes: [
       {
           path: '/',
@@ -14,6 +15,11 @@ export default new Router({
           path: '/hot',
           name: 'hot',
           component: () => import('./views/hot/Index')
+      },
+      {
+          path: '/discovery',
+          name: 'discovery',
+          component: () => import('./views/discovery/List')
       },
 	  {
 	      path: '/talent',
@@ -50,5 +56,9 @@ export default new Router({
           name: 'searchGoods',
           component: () => import('@/views/search/SearchGoods.vue'),
       },
+      {
+          path: "*",
+          redirect: "/"
+      }
   ]
 })

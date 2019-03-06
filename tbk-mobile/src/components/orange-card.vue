@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "qzqt-card"
+        name: "orange-card"
     }
 </script>
 
