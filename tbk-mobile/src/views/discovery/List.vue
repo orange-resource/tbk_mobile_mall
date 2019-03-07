@@ -2,16 +2,58 @@
 
 	<div class="bc" style="height: 100%">
 
-		<div class="orange-home">
+		<div class="orange-home bc">
 
-			<div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="orange-content content">
-				<orange-loading :show="isPageLoadComplete"></orange-loading>
-			</div>
-
-			<div v-if="isPageLoadComplete == 2" class="orange-content content">
+			<div class="orange-content content">
 
 				<!--头部-->
 				<van-nav-bar title="发现好物"></van-nav-bar>
+
+				<!--中间-->
+				<van-tabs type="card">
+					<van-tab title="精选单品">
+
+						<van-list
+								v-model="handpickLoad.loading"
+								:finished="handpickLoad.finished"
+								finished-text="没有更多数据了..."
+								@load="handpickOnLoad()"
+						>
+							<orange-handpick
+									v-for="(h,index) in handpick"
+									:key="index"
+									:total="h.dummy_click_statistics"
+									:content="h.show_content"
+									:images="h.itempic"
+									:showTime="h.show_time"
+									:to='"goods?id=" + h.itemid'
+							></orange-handpick>
+						</van-list>
+
+					</van-tab>
+					<van-tab title="好货专场">
+
+						<van-list
+								v-model="newsLoad.loading"
+								:finished="newsLoad.finished"
+								finished-text="没有更多数据了..."
+								@load="newsOnLoad()"
+						>
+							<orange-news
+									v-for="(h,index) in news"
+									:key="'news' + index"
+									:total="h.share_times"
+									:content="h.show_text"
+									:showTime="h.activity_start_time"
+									:goods="h.goods"
+							></orange-news>
+						</van-list>
+
+					</van-tab>
+					<van-tab title="趣味发圈">
+
+					</van-tab>
+				</van-tabs>
 
 				<!--底部-->
 				<orange-technology-footer style="clear: both"></orange-technology-footer>
@@ -34,56 +76,76 @@
 	export default {
 	    name: "Card",
 		mounted() {
-
-            this.$axios.get('talent/getAll').then((rsp) => {
-                if (rsp.data.code == 1) {
-                    this.topdata = rsp.data.data.topdata;
-                    this.newdata = rsp.data.data.newdata;
-                    for (let i = 0;i < rsp.data.data.clickdata.length;i++) {
-                        for (let p = 0;p < 4;p++) {
-                            if (rsp.data.data.clickdata[i].talentcat == p+1) {
-                                this.clickdata[p].data.push(rsp.data.data.clickdata[i]);
-                            }
-                        }
-                    }
-                    this.isPageLoadComplete = 2;
-                } else {
-                    this.isPageLoadComplete = 1;
-                    this.$alert.notifyNoData();
-                }
-            }).catch((e) => {
-                this.$alert.dialogUnknown(e);
-                this.isPageLoadComplete = 1;
-			})
 		},
 	    data() {
 	        return {
-	            isPageLoadComplete: 0, //页面是否加载完成 0.正在加载 1.加载失败 2.加载完毕 ...
-                topdata: [],
-                newdata: [],
-                clickdata: [ //1.好物,2.潮流,3.美食,4.生活
-                    {
-                        name: '好物',
-						data: [],
-					},
-                    {
-                        name: '潮流',
-                        data: [],
-					},
-                    {
-                        name: '美食',
-                        data: [],
-					},
-                    {
-                        name: '生活',
-                        data: [],
-					},
-				],
+	            handpick: [],
+				handpickLoad: {
+                    loading: false,
+                    finished: false,
+					total: 0,
+				},
+	            news: [],
+				newsLoad: {
+                    loading: false,
+                    finished: false,
+					total: 0,
+				},
             }
 	    },
 	    methods: {
-            openArticle(articleId) {
-                this.$router.push({ path: 'talent/article?id=' + articleId });
+            handpickOnLoad() {
+                this.getHandpick(this.handpickLoad.total+=1);
+			},
+			getHandpick(page) { //获取精选商品数据
+                this.$axios.get('discovery/handpick',{
+                    params: {
+                        page: page,
+					}
+				}).then((rsp) => {
+                    if (rsp.data.code == 1) {
+                        for (let i = 0;i < rsp.data.data.length;i++) {
+                            this.handpick.push(rsp.data.data[i]);
+                        }
+                        this.handpickLoad.loading = false;
+                    } else {
+                        this.handpickLoad.finished  = true;
+                    }
+                }).catch((e) => {
+                    this.$alert.dialogUnknown(e);
+                })
+			},
+            newsOnLoad() {
+                this.getNews(this.newsLoad.total+=1);
+			},
+			getNews(page) { //获取精选商品数据
+                this.$axios.get('discovery/news',{
+                    params: {
+                        page: page,
+					}
+				}).then((rsp) => {
+                    if (rsp.data.code == 1) {
+                        for (let i = 0;i < rsp.data.data.length;i++) {
+
+                            rsp.data.data[i].goods = [];
+                            let itemData = rsp.data.data[i].item_data;
+                            for (let p = 0;p < itemData.length;p++) {
+                                rsp.data.data[i].goods.push({
+                                    image: itemData[p].itempic,
+                                    price: '卷后价格' + itemData[p].itemendprice,
+                                    to: "goods?id=" + itemData[p].itemid,
+                                });
+							}
+
+                            this.news.push(rsp.data.data[i]);
+                        }
+                        this.newsLoad.loading = false;
+                    } else {
+                        this.newsLoad.finished  = true;
+                    }
+                }).catch((e) => {
+                    this.$alert.dialogUnknown(e);
+                })
 			},
 	    }
 	}
@@ -91,17 +153,4 @@
 </script>
 
 <style>
-    .slide-item{
-        width: 300px;
-        height: 150px;
-        margin-right: 30px;
-		margin-left: 10px;
-    }
-	.head{
-        background: url('../../static/img/bj.png') no-repeat;
-        background-size: 100% 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-    }
 </style>

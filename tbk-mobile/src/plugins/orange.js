@@ -4,6 +4,8 @@ import Vue from 'vue'
 
 import orangeLoading from "@/components/orange-loading"
 import orangeTechnologyFooter from "@/components/orange-technology-footer"
+import orangeHandpick from "@/components/orange-handpick"
+import orangeNews from "@/components/orange-news"
 
 import orangeFooter from "@/components/orange-footer"
 import orangeAdvertising from "@/components/orange-advertising"
@@ -21,6 +23,8 @@ import orangeStoreCard from "@/components/orange-store-card"
 
 Vue.component("orange-loading",orangeLoading);
 Vue.component("orange-technology-footer",orangeTechnologyFooter);
+Vue.component("orange-handpick",orangeHandpick);
+Vue.component("orange-news",orangeNews);
 
 Vue.component("orange-footer",orangeFooter);
 Vue.component("orange-advertising",orangeAdvertising);

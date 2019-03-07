@@ -2,19 +2,7 @@
 
     <div style="background-color: #fff;height: 100%">
 
-        <div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" style="background-color: #fff">
-            <van-nav-bar
-                    title="达人说文章介绍 加载中..."
-                    left-text="返回"
-                    right-text="达人说"
-                    left-arrow
-                    @click-left="onClickLeft"
-                    @click-right="onClickRight"
-            />
-            <orange-loading :show="isPageLoadComplete"></orange-loading>
-        </div>
-
-        <div v-if="isPageLoadComplete == 2" style="background-color: #fff">
+        <div style="background-color: #fff">
 
             <!--头部-->
             <van-nav-bar
@@ -118,15 +106,12 @@
                     setInterval(function () { //将文中出现的商品全部删除
                         $(".single-content").html('');
                     },1000);
-                    this.isPageLoadComplete = 2;
                 } else {
-                    this.isPageLoadComplete = 1;
-                    this.$alert.notifyNoData();
+                    this.$alert.notifyNoData(rsp.data.msg);
                 }
 
             }).catch((e) => {
                 this.$alert.dialogUnknown(e);
-                this.isPageLoadComplete = 1;
             })
 
         },

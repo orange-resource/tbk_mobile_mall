@@ -1,6 +1,6 @@
 <template>
 
-    <div class="radius" style="margin: 10px 10px 10px 10px;background-color: #fff;">
+    <div class="radius card">
         <slot></slot>
     </div>
 
@@ -13,4 +13,9 @@
 </script>
 
 <style scoped>
+
+    .card {
+        margin: 10px 10px 10px 10px;background-color: #fff
+    }
+
 </style>

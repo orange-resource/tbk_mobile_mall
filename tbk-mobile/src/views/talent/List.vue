@@ -4,11 +4,7 @@
 
 		<div class="orange-home">
 
-			<div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="orange-content content">
-				<orange-loading :show="isPageLoadComplete"></orange-loading>
-			</div>
-
-			<div v-if="isPageLoadComplete == 2" class="orange-content content">
+			<div class="orange-content content">
 
 				<!--头部-->
 				<van-nav-bar title="达人说"></van-nav-bar>
@@ -86,19 +82,15 @@
                             }
                         }
                     }
-                    this.isPageLoadComplete = 2;
                 } else {
-                    this.isPageLoadComplete = 1;
-                    this.$alert.notifyNoData();
+                    this.$alert.notifyNoData(rsp.data.msg);
                 }
             }).catch((e) => {
                 this.$alert.dialogUnknown(e);
-                this.isPageLoadComplete = 1;
 			})
 		},
 	    data() {
 	        return {
-	            isPageLoadComplete: 0, //页面是否加载完成 0.正在加载 1.加载失败 2.加载完毕 ...
                 topdata: [],
                 newdata: [],
                 clickdata: [ //1.好物,2.潮流,3.美食,4.生活

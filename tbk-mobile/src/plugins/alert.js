@@ -23,8 +23,8 @@ var alert = {
         });
     },
 
-    notifyNoData: function () {
-        Notify('数据获取异常，请重新刷新页面');
+    notifyNoData: function (msg) {
+        Notify('数据获取异常，请重新刷新页面,原因：' + msg);
     }
 
 };

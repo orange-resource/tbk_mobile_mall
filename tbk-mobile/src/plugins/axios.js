@@ -29,6 +29,7 @@ _axios.interceptors.request.use(
   function(config) {
       // Do something before request is sent
       toast = Toast.loading({
+          duration: 0,
           mask: true,
           message: '拼命加载数据中...'
       });
@@ -45,20 +46,21 @@ _axios.interceptors.request.use(
 _axios.interceptors.response.use(
   function(response) {
       // Do something with response data
+
       toast.clear();
-      switch (response.status) {
-          case 200:
-            if (response.data.code == 12) {
-                store.commit("logout");
-                router.replace({
-                    path: '/login'
-                })
-            }
-            break;
-          default:
-            alert("未知错误....");
-            break;
-      }
+      // switch (response.status) {
+      //     case 200:
+      //       if (response.data.code == 12) {
+      //           store.commit("logout");
+      //           router.replace({
+      //               path: '/login'
+      //           })
+      //       }
+      //       break;
+      //     default:
+      //       alert("未知错误....");
+      //       break;
+      // }
       return response;
   },
   function(error) {

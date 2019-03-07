@@ -17,7 +17,7 @@
                 <van-tab v-for="index in 8" :title="'标签 ' + index">
                     <div style="padding-bottom: 10px">
 
-                        <qzqt-article-card
+                        <orange-article-card
                                 v-for="gi in 3"
                                 title="资金管理"
                                 author="orange"
@@ -25,7 +25,7 @@
                                 visit="52"
                                 to="main"
                                 style="margin-top: 10px"
-                        ></qzqt-article-card>
+                        ></orange-article-card>
 
                     </div>
                 </van-tab>

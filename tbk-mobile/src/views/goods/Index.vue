@@ -4,19 +4,7 @@
 
         <div class="orange-home bc">
 
-            <div v-if="isPageLoadComplete == 0 || isPageLoadComplete == 1" class="orange-content">
-                <van-nav-bar
-                        title="商品详情 加载中..."
-                        left-text="返回"
-                        right-text="首页"
-                        left-arrow
-                        @click-left="onClickLeft"
-                        @click-right="onClickRight"
-                />
-                <orange-loading :show="isPageLoadComplete"></orange-loading>
-            </div>
-
-            <div v-if="isPageLoadComplete == 2" class="orange-content">
+            <div class="orange-content">
 
                 <!--头部-->
                 <van-nav-bar title="商品详情"
@@ -51,7 +39,7 @@
                         {{ details.itemtitle }}
                     </span>
                     <div style="position: absolute;right: 0;bottom: .5em">
-                        <van-button @click="openShare()" type="danger" size="small">分享</van-button>
+                        <van-button @click="openShare()" type="info" size="small">分享</van-button>
                     </div>
                 </div>
                 <van-row type="flex" style="background-color: #fff;padding: 10px 0 10px 0">
@@ -127,7 +115,7 @@
             </div>
 
             <!--底部-->
-            <div v-if="isPageLoadComplete == 2" class="orange-footer">
+            <div class="orange-footer">
                 <van-goods-action>
                     <van-goods-action-big-btn
                             @click="openTb()"
@@ -165,7 +153,6 @@
                 if (rsp.data.code == 1) {
 
                     this.details = rsp.data.data;
-                    this.isPageLoadComplete = 2;
 
                     this.$axios.get('goods/like',{
                         params: {
@@ -178,7 +165,7 @@
                             this.like = rsp.data.data;
 
                         } else {
-                            this.$alert.notifyNoData();
+                            this.$alert.notifyNoData(rsp.data.msg);
                         }
 
                     }).catch((e) => {
@@ -186,12 +173,10 @@
                     });
 
                 } else {
-                    this.isPageLoadComplete = 1;
-                    this.$alert.notifyNoData();
+                    this.$alert.notifyNoData(rsp.data.msg);
                 }
 
             }).catch((e) => {
-                this.isPageLoadComplete = 1;
                 this.$alert.dialogUnknown(e);
             });
 
@@ -216,7 +201,7 @@
                 this.$nextTick(function() {
                     if ($("#qrcode").children("img").length < 1) { //检测dom是否存在
                         new QRCode(document.getElementById('qrcode'), {
-                            text: "http://172.20.10.3/#" + this.$route.fullPath,
+                            text: "http://172.20.10.3" + this.$route.fullPath,
                             width: 200,
                             height: 200,
                         });
