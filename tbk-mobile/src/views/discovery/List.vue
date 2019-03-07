@@ -50,7 +50,37 @@
 						</van-list>
 
 					</van-tab>
-					<van-tab title="趣味发圈">
+					<van-tab title="精选专题">
+
+						<van-list
+								v-model="themeLoad.loading"
+								:finished="themeLoad.finished"
+								finished-text="没有更多数据了..."
+								@load="themeOnLoad()"
+						>
+
+						<orange-card v-for="(t,index) in theme">
+
+							<img :src='"http://img.haodanku.com/" + t.app_image'
+								 class="theme-image" width="100%"
+								 @click="openTheme(t.id)"
+							/>
+
+							<van-row type="flex" justify="center">
+								<van-col span="22">
+									<span>{{ t.name }}</span>
+								</van-col>
+							</van-row>
+
+							<van-row type="flex" justify="center">
+								<van-col span="22" v-html="t.show_text" class="theme-content">
+
+								</van-col>
+							</van-row>
+
+						</orange-card>
+
+						</van-list>
 
 					</van-tab>
 				</van-tabs>
@@ -91,6 +121,11 @@
                     finished: false,
 					total: 0,
 				},
+                theme: [],
+                themeLoad: {
+                    loading: false,
+                    finished: false,
+				},
             }
 	    },
 	    methods: {
@@ -118,7 +153,7 @@
             newsOnLoad() {
                 this.getNews(this.newsLoad.total+=1);
 			},
-			getNews(page) { //获取精选商品数据
+			getNews(page) { //获取好货专场数据
                 this.$axios.get('discovery/news',{
                     params: {
                         page: page,
@@ -147,10 +182,39 @@
                     this.$alert.dialogUnknown(e);
                 })
 			},
+            themeOnLoad() {
+                this.getTheme();
+			},
+			getTheme() { //获取精选主题数据
+                this.$axios.get('discovery/theme').then((rsp) => {
+                    if (rsp.data.code == 1) {
+                        this.theme = rsp.data.data;
+                    }
+                    this.themeLoad.loading = false;
+                    this.themeLoad.finished  = true;
+                }).catch((e) => {
+                    this.$alert.dialogUnknown(e);
+                })
+			},
+			openTheme(themeId) {
+                location.assign("/discovery/theme?id=" + themeId);
+			},
 	    }
 	}
 
 </script>
 
 <style>
+
+	.theme-image {
+		height: 200px;
+		border-radius: 5%;
+	}
+
+	.theme-content {
+		font-size: 15px;
+		color: #999999;
+		padding-bottom: 5px
+	}
+
 </style>

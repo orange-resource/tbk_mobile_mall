@@ -21,6 +21,11 @@ export default new Router({
           name: 'discovery',
           component: () => import('./views/discovery/List')
       },
+      {
+          path: '/discovery/theme',
+          name: 'discoveryTheme',
+          component: () => import('./views/discovery/Theme')
+      },
 	  {
 	      path: '/talent',
 	      name: 'talent',
