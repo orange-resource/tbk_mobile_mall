@@ -5,9 +5,7 @@
         <div class="orange-home bc" style="height: 100%">
             <div class="orange-content" style="display: flex;flex-direction: column">
 
-                <div style="height: 54px">
-                    <van-search placeholder="请输入搜索关键词" v-model="keyword" />
-                </div>
+                <orange-search to="/search/main"></orange-search>
 
                 <div style="flex: auto;display: flex;flex-direction: row">
 
@@ -108,7 +106,7 @@
                     if (rsp.data.code == 1) {
                         this.goods = rsp.data.data;
                     } else {
-                        this.$alert.notifyNoData();
+                        this.$alert.notifyNoData(rsp.data.msg);
                     }
 
                 }).catch((e) => {

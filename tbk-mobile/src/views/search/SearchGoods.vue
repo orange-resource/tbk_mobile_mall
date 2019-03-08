@@ -8,111 +8,47 @@
             <van-nav-bar
                     title="搜索商品"
                     left-text="返回"
+                    right-text="首页"
                     left-arrow
+                    @click-right="onClickRight"
                     @click-left="onClickLeft"
             />
             <!--头部 end-->
 
-            <!--搜索筛选-->
+            <!--搜索-->
             <van-search
-                    v-model="value"
+                    v-model="keyword"
                     placeholder="请输入搜索关键词"
                     show-action
                     @search="onSearch"
             >
-                <div slot="action" @click="onSearch">筛选</div>
+                <div slot="action" @click="onSearch">搜索</div>
             </van-search>
-            <van-tabs animated>
-                <van-tab>
-                    <div slot="title">
-                        <van-icon name="arrow-up" />筛选
-                    </div>
-                    <orange-goods-sell
-                            v-for="g in 11"
-                            image="https://x.dscmall.cn/storage/images/201809/goods_img/0_P_1536614291769.jpg"
-                            title="CASIO卡西欧35周年限量G-SHOCK × A$AP FERG联名款GA-110FRG-7A"
-                            price="13"
-                            originalPrice="299"
-                            logistics="11"
-                            payment="13"
-                            address="泉州"
-                            tag="促销"
-                    ></orange-goods-sell>
-                </van-tab>
-                <van-tab>
-                    <div slot="title">
-                        新品
-                    </div>
-                    内容
-                </van-tab>
-                <van-tab>
-                    <div slot="title">
-                        销量
-                    </div>
-                    内容
-                </van-tab>
-                <van-tab>
-                    <div slot="title">
-                        <van-icon name="arrow-down" />价格
-                    </div>
-                    内容
+            <!--搜索 end-->
+
+            <!--出来商品-->
+            <van-tabs @click="tabSearch">
+                <van-tab v-for="(t,index) in tab" :key="index" :title="t.name">
+
+                    <van-list
+                            v-model="t.loading"
+                            :finished="t.finished"
+                            finished-text="没有更多了"
+                            @load="onLoad"
+                    >
+                        <orange-goods-sell
+                                v-for="(i,index) in t.data"
+                                :key="index"
+                                :image="i.itempic"
+                                :title="i.itemtitle"
+                                :price="i.itemendprice"
+                                :originalPrice="i.itemprice"
+                                :payment="i.itemsale"
+                        ></orange-goods-sell>
+                    </van-list>
+
                 </van-tab>
             </van-tabs>
-            <!--搜索筛选 end-->
-
-            <van-popup v-model="show" position="right" :overlay="false"
-                       style="width: 100%;height: 100%;position: absolute;" class="bc">
-
-                <van-nav-bar
-                        title="筛选"
-                        left-text="返回"
-                        left-arrow
-                        @click-left="show = false"
-                />
-
-                <orange-card>
-                    <van-cell-group>
-                        <van-switch-cell v-model="checked" title="仅看有货" />
-                        <van-switch-cell v-model="checked" title="促销" />
-                    </van-cell-group>
-                </orange-card>
-
-                <orange-card>
-                    <van-panel title="价格区间" desc="" status="">
-                        <van-row type="flex" justify="center" style="padding-bottom: 10px">
-                            <van-col span="22">
-                                <van-row type="flex" justify="center">
-                                    <van-col span="10">
-                                        <input style="width: 100%">
-                                    </van-col>
-                                    <van-col span="4" style="text-align: center">-</van-col>
-                                    <van-col span="10">
-                                        <input style="width: 100%">
-                                    </van-col>
-                                </van-row>
-                            </van-col>
-                        </van-row>
-
-                    </van-panel>
-                </orange-card>
-
-                <orange-card>
-                    <van-cell-group>
-                        <van-field
-                                label="品牌名"
-                                placeholder="请输入品牌名"
-                        />
-                    </van-cell-group>
-                </orange-card>
-
-                <van-row type="flex" justify="center">
-                    <van-col span="22">
-                        <van-button type="danger" style="width: 100%">确认</van-button>
-                    </van-col>
-                </van-row>
-
-
-            </van-popup>
 
         </div>
 
@@ -124,22 +60,65 @@
 
     export default {
         name: "SearchGoods",
+        mounted() {
+            this.keyword = this.$route.query.keyword;
+        },
         data() {
             return {
-                show: false,
-                value: '',
-                checked: true,
-                activeNames: ['1'],
+                keyword: '',
+                tab: [
+                    {name: '综合',loading: false,finished: false,total: 0,data: []},
+                    {name: '最新',loading: false,finished: false,total: 0,data: []},
+                    {name: '销量',loading: false,finished: false,total: 0,data: []},
+                    {name: '价格',loading: false,finished: false,total: 0,data: []},
+                ],
+                tagIndex: 0,
             }
         },
         methods:{
             onClickLeft() {
-                this.$router.push({
-                    name: 'searchMain',
-                })
+                window.history.go(-1);
             },
-            onSearch() {
-                this.show = true;
+            onClickRight() {
+                location.assign("/");
+            },
+            onSearch() { //搜索按钮触发
+                this.getData(this.tagIndex,1);
+            },
+            tabSearch(index, title) { //点击标签，换标签触发
+                this.tagIndex = index;
+            },
+            onLoad() { //继续加载数据事件
+                this.tab[this.tagIndex].total+=1;
+                this.getData(this.tagIndex,this.tab[this.tagIndex].total);
+            },
+            getData(index,page) {
+
+                this.$axios.get('search/goods',{
+                    params: {
+                        tag: index,
+                        page: page,
+                        keyword: this.keyword,
+                    }
+                }).then((rsp) => {
+
+                    if (rsp.data.code == 1) {
+                        if (page == 1) {
+                            this.tab[index].data = [];
+                        }
+                        for (let i = 0;i < rsp.data.data.length;i++) {
+                            this.tab[index].data.push(rsp.data.data[i]);
+                        }
+                        this.tab[index].loading = false;
+                    } else {
+                        this.tab[index].finished = true;
+                        this.$alert.notifyNoData(rsp.data.msg);
+                    }
+
+                }).catch((e) => {
+                    this.$alert.dialogUnknown(e);
+                });
+
             },
         }
     }

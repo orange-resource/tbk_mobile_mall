@@ -7,36 +7,9 @@
             <div class="orange-content">
 
                 <!--头部-->
-                <van-search placeholder="请输入搜索关键词" v-model="keyword" />
+                <orange-search to="/search/main"></orange-search>
                 <orange-swipe :images="images"></orange-swipe>
                 <!--头部 end-->
-
-                <!--分类区-->
-                <div v-for="g in grid"
-                     style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
-                     @click="gridOpen(g.toUrl)">
-                    <img :src="g.imageUrl"
-                         style="height: 70px"/>
-                    <span style="font-size: 10px;text-align: center">{{g.name}}</span>
-                </div>
-                <!--分类区 end-->
-
-                <!--文章热点-->
-                <van-row type="flex" justify="space-around" style="clear: both;padding-top: 5px">
-                    <van-col span="24">
-                        <van-cell-group>
-                            <van-cell to="/article/list" title="商场热点" label="咨询快达" value="更多"/>
-                        </van-cell-group>
-                        <van-tabbar :fixed="false">
-                            <van-tabbar-item to="/article/list" icon="home-o" info="99">3G咨询</van-tabbar-item>
-                            <van-tabbar-item to="/article/list" icon="home-o" info="99">站内快讯</van-tabbar-item>
-                            <van-tabbar-item to="/article/list" icon="home-o" info="99">商城公告</van-tabbar-item>
-                            <van-tabbar-item to="/article/list" icon="setting-o" info="99">公告</van-tabbar-item>
-                            <van-tabbar-item to="/article/list" icon="setting-o" info="99">入驻说明</van-tabbar-item>
-                        </van-tabbar>
-                    </van-col>
-                </van-row>
-                <!--文章热点 end-->
 
                 <!--广告区1-->
                 <div v-for="g in pretty">
@@ -52,24 +25,6 @@
                     </van-col>
                 </van-row>
                 <!--广告区1 end-->
-
-                <!--分类瀑布-->
-                <orange-category-waterfall
-                        :data="categoryData"
-                ></orange-category-waterfall>
-
-                <orange-category-waterfall
-                        :data="categoryData2"
-                ></orange-category-waterfall>
-
-                <orange-category-waterfall
-                        :data="categoryData"
-                ></orange-category-waterfall>
-
-                <orange-category-waterfall
-                        :data="categoryData2"
-                ></orange-category-waterfall>
-                <!--分类瀑布 end-->
 
                 <!--广告区 2-->
                 <van-row type="flex" justify="center" style="clear: both;">

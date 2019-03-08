@@ -14,11 +14,12 @@
             <!--头部 end-->
 
             <van-tabs >
-                <van-tab v-for="index in 8" :title="'标签 ' + index">
+                <van-tab v-for="(i,index) in 8" :title="'标签 ' + index" :key="index">
                     <div style="padding-bottom: 10px">
 
                         <orange-article-card
-                                v-for="gi in 3"
+                                v-for="(p,io) in 3"
+                                :key="io"
                                 title="资金管理"
                                 author="orange"
                                 date="2019.1.1"

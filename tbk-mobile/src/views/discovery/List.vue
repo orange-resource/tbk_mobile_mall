@@ -59,7 +59,7 @@
 								@load="themeOnLoad()"
 						>
 
-						<orange-card v-for="(t,index) in theme">
+						<orange-card v-for="(t,index) in theme" :key="index">
 
 							<img :src='"http://img.haodanku.com/" + t.app_image'
 								 class="theme-image" width="100%"
