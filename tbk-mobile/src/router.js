@@ -62,8 +62,13 @@ export default new Router({
           component: () => import('@/views/search/SearchGoods.vue'),
       },
       {
+          path: '/error/404',
+          name: '404',
+          component: () => import('@/views/error/404'),
+      },
+      {
           path: "*",
-          redirect: "/"
+          redirect: "/error/404"
       }
   ]
 })

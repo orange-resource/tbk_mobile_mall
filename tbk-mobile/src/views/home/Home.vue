@@ -51,7 +51,8 @@
                             @load="onLoad"
                     >
                         <orange-goods-card
-                                v-for="item in list"
+                                v-for="(i,index) in list"
+                                :key="index"
                                 topTag="推荐"
                                 title="17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料"
                                 price="14"

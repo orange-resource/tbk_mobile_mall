@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/Theme.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-search.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/orange-swipe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-swipe.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/article/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/article/List.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/hot/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/hot/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,13 +46,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="84" />
+          <entry key="txt" value="88" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="84" />
+          <entry key="PLAIN_TEXT" value="88" />
           <entry key="XML" value="17" />
         </counts>
       </usages-collector>
@@ -137,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551964130239" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552059907404" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -241,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551584272159</updated>
       <workItem from="1551584274106" duration="13344000" />
-      <workItem from="1552026225759" duration="773000" />
+      <workItem from="1552026225759" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -327,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551964007159</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="增加搜索">
+      <created>1552059498911</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1552059498911</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14117000" />
+    <option name="totallyTimeSpent" value="14748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -388,7 +392,8 @@
     <MESSAGE value="增加猜你喜欢模块" />
     <MESSAGE value="发现 增加两个模块" />
     <MESSAGE value="更新模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新模块" />
+    <MESSAGE value="增加搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加搜索" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/pom.xml">

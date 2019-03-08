@@ -1,7 +1,7 @@
 <template>
 
     <van-swipe :autoplay="3000">
-        <van-swipe-item v-for="image in images">
+        <van-swipe-item v-for="(image,index) in images" :key="index">
             <img :src="image.src" width="100%" height="100%" @click="open(image.to)" />
         </van-swipe-item>
 
