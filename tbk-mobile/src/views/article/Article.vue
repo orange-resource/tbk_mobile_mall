@@ -44,7 +44,6 @@
                 </van-col>
             </van-row>
 
-
         </div>
 
     </div>

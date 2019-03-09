@@ -86,6 +86,7 @@
 				</van-tabs>
 
 				<!--底部-->
+				<orange-up></orange-up>
 				<orange-technology-footer style="clear: both"></orange-technology-footer>
 
 			</div>

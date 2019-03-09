@@ -201,7 +201,7 @@
                 this.$nextTick(function() {
                     if ($("#qrcode").children("img").length < 1) { //检测dom是否存在
                         new QRCode(document.getElementById('qrcode'), {
-                            text: "http://172.20.10.3" + this.$route.fullPath,
+                            text: window.location.href,
                             width: 200,
                             height: 200,
                         });

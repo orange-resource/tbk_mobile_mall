@@ -6,7 +6,7 @@
 
             <!--头部-->
             <van-nav-bar
-                    title="搜索商品"
+                    title="淘优惠，就要优惠"
                     left-text="返回"
                     right-text="首页"
                     left-arrow
@@ -14,17 +14,6 @@
                     @click-left="onClickLeft"
             />
             <!--头部 end-->
-
-            <!--搜索-->
-            <van-search
-                    v-model="keyword"
-                    placeholder="请输入搜索关键词"
-                    show-action
-                    @search="onSearch"
-            >
-                <div slot="action" @click="onSearch">搜索</div>
-            </van-search>
-            <!--搜索 end-->
 
             <!--出来商品-->
             <van-tabs @click="tabSearch">
@@ -64,16 +53,16 @@
     export default {
         name: "SearchGoods",
         mounted() {
-            this.keyword = this.$route.query.keyword;
+            this.type = this.$route.query.type;
         },
         data() {
             return {
-                keyword: '',
+                type: '',
                 tab: [
                     {name: '综合',loading: false,finished: false,total: 0,data: []},
-                    {name: '最新',loading: false,finished: false,total: 0,data: []},
+                    {name: '卷后价',loading: false,finished: false,total: 0,data: []},
                     {name: '销量',loading: false,finished: false,total: 0,data: []},
-                    {name: '价格',loading: false,finished: false,total: 0,data: []},
+                    {name: '超优惠',loading: false,finished: false,total: 0,data: []},
                 ],
                 tagIndex: 0,
             }
@@ -85,9 +74,6 @@
             onClickRight() {
                 location.assign("/");
             },
-            onSearch() { //搜索按钮触发
-                this.getData(this.tagIndex,1);
-            },
             tabSearch(index, title) { //点击标签，换标签触发
                 this.tagIndex = index;
             },
@@ -97,11 +83,11 @@
             },
             getData(index,page) {
 
-                this.$axios.get('search/goods',{
+                this.$axios.get('home/district',{
                     params: {
                         tag: index,
                         page: page,
-                        keyword: this.keyword,
+                        type: this.type,
                     }
                 }).then((rsp) => {
 

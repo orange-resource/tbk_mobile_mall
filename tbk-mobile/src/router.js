@@ -9,7 +9,17 @@ export default new Router({
       {
           path: '/',
           name: 'home',
-          component: () => import('./views/home/Home.vue')
+          component: () => import('./views/home/Home')
+      },
+      {
+          path: '/home/district',
+          name: 'homeDistrict',
+          component: () => import('./views/home/District')
+      },
+      {
+          path: '/home/brand',
+          name: 'homeBrand',
+          component: () => import('./views/home/Brand')
       },
       {
           path: '/hot',
@@ -29,12 +39,12 @@ export default new Router({
 	  {
 	      path: '/talent',
 	      name: 'talent',
-	      component: () => import('./views/talent/List.vue')
+	      component: () => import('./views/talent/List')
 	  },
 	  {
 	      path: '/talent/article',
 	      name: 'talentArticle',
-	      component: () => import('./views/talent/Article.vue')
+	      component: () => import('./views/talent/Article')
 	  },
       {
           path: '/goods',
@@ -44,22 +54,22 @@ export default new Router({
       {
           path: '/article/list',
           name: 'articleList',
-          component: () => import('@/views/article/List.vue'),
+          component: () => import('@/views/article/List'),
       },
       {
           path: '/article/main',
           name: 'articleMain',
-          component: () => import('@/views/article/Article.vue'),
+          component: () => import('@/views/article/Article'),
       },
       {
           path: '/search/main',
           name: 'searchMain',
-          component: () => import('@/views/search/Search.vue'),
+          component: () => import('@/views/search/Search'),
       },
       {
           path: '/search/goods',
           name: 'searchGoods',
-          component: () => import('@/views/search/SearchGoods.vue'),
+          component: () => import('@/views/search/SearchGoods'),
       },
       {
           path: '/error/404',

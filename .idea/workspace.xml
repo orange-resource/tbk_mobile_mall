@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/public/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/error/404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-up.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Brand.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/District.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/orange-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/plugins/orange.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/article/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/article/Article.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,13 +52,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="92" />
+          <entry key="txt" value="99" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="92" />
+          <entry key="PLAIN_TEXT" value="99" />
           <entry key="XML" value="17" />
         </counts>
       </usages-collector>
@@ -133,7 +140,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552061817726" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552130538554" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -141,7 +148,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -237,7 +244,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551584272159</updated>
       <workItem from="1551584274106" duration="13344000" />
-      <workItem from="1552026225759" duration="2035000" />
+      <workItem from="1552026225759" duration="3499000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -337,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552061806564</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="增加404页面">
+      <created>1552102170579</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552102170579</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15379000" />
+    <option name="totallyTimeSpent" value="16843000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -400,7 +414,8 @@
     <MESSAGE value="更新模块" />
     <MESSAGE value="增加搜索" />
     <MESSAGE value="优化页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化页面" />
+    <MESSAGE value="增加404页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加404页面" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/pom.xml">

@@ -59,6 +59,7 @@
             </van-row>
 
             <!--底部-->
+            <orange-up></orange-up>
             <orange-technology-footer></orange-technology-footer>
 
         </div>
