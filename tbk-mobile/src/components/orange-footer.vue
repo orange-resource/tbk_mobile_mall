@@ -17,6 +17,8 @@
                 active: 0
             }
         },
+        methods: {
+        },
         mounted(){
             switch (this.$route.name) {
                 case "home":
