@@ -36,7 +36,7 @@
                 <!--其余的一个一个的-->
                 <div class="other">
                     <van-cell-group>
-                        <van-cell value="" icon="label-o">
+                        <van-cell value="" icon="label-o" @click="openTutorial()">
                             <template slot="title">
                                 <span class="custom-text">新手教程 </span>
                                 <van-tag type="danger">{{ user.data.tutorialNumber }}</van-tag>
@@ -100,6 +100,19 @@
             this.user.data.collectNumber = queue.getCount(this.collectKey);
             this.user.data.footprintNumber = queue.getCount(this.footprintKey);
 
+            this.$axios.get('my/getNumber').then((rsp) => {
+
+                if (rsp.data.code == 1) {
+                    this.user.data.msgNumber = rsp.data.data.msgNumber;
+                    this.user.data.tutorialNumber = rsp.data.data.tutorialNumber;
+                } else {
+                    this.$alert.notifyNoData(rsp.data.msg);
+                }
+
+            }).catch((e) => {
+                this.$alert.dialogUnknown(e);
+            });
+
         },
         data(){
           return {
@@ -130,6 +143,10 @@
                 location.assign("/my/footprint");
             },
             openMsg() {
+                location.assign("/my/msg/list");
+            },
+            openTutorial() {
+
             },
         },
     }

@@ -62,6 +62,11 @@ export default new Router({
           component: () => import('./views/my/Collect')
       },
       {
+          path: '/my/msg/list',
+          name: 'myMsgList',
+          component: () => import('./views/my/MsgList')
+      },
+      {
           path: '/goods',
           name: 'goods',
           component: () => import('@/views/goods/Index'),

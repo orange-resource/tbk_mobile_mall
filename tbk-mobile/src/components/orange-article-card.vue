@@ -26,7 +26,7 @@
                             <van-icon style="color: darkgray;font-size: 13px" name="underway-o" />
                             <span style="color: darkgray;font-size: 13px;margin-left: 3px">{{ date }}</span>
                         </div>
-                        <div style="margin-left: 10px">
+                        <div v-if="visit != null" style="margin-left: 10px">
                             <van-icon style="color: darkgray;font-size: 13px" name="eye-o" />
                             <span style="color: darkgray;font-size: 13px;margin-left: 3px">{{ visit }}</span>
                         </div>
