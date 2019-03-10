@@ -47,6 +47,21 @@ export default new Router({
 	      component: () => import('./views/talent/Article')
 	  },
       {
+          path: '/my',
+          name: 'my',
+          component: () => import('./views/my/My')
+      },
+      {
+          path: '/my/footprint',
+          name: 'myFootprint',
+          component: () => import('./views/my/Footprint')
+      },
+      {
+          path: '/my/collect',
+          name: 'myCollect',
+          component: () => import('./views/my/Collect')
+      },
+      {
           path: '/goods',
           name: 'goods',
           component: () => import('@/views/goods/Index'),

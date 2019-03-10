@@ -117,6 +117,11 @@
             <!--底部-->
             <div class="orange-footer">
                 <van-goods-action>
+                    <van-goods-action-mini-btn
+                            :icon="collect.icon"
+                            :text="collect.name"
+                            @click="clickCollect()"
+                    />
                     <van-goods-action-big-btn
                             @click="openTb()"
                             text="查看商品详情" />
@@ -140,6 +145,8 @@
     import QRCode from 'qrcodejs2'
     import '../../static/jquery-1.9.1.min.js'
 
+    import { queue } from "../../static/queue";
+
     export default {
         name: "Details",
         mounted() {
@@ -152,7 +159,30 @@
 
                 if (rsp.data.code == 1) {
 
+                    rsp.data.data.itemId = rsp.data.data.itemid;
                     this.details = rsp.data.data;
+
+                    try {
+                        let isExist = queue.isExist(this.collectKey,rsp.data.data.itemId);
+                        if (isExist == true) {
+                            this.collect.name = "已收藏";
+                            this.collect.icon = "star";
+                            this.collect.isCollect = true;
+                        } else {
+                            this.collect.name = "收藏";
+                            this.collect.icon = "star-o";
+                            this.collect.isCollect = false;
+                        }
+                        isExist = queue.isExist(this.footprintKey,rsp.data.data.itemId);
+                        if (isExist == false) {
+                            queue.insert({
+                                key: this.footprintKey,
+                                value: this.details,
+                            });
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
 
                     this.$axios.get('goods/like',{
                         params: {
@@ -185,11 +215,29 @@
             return {
                 share: false,
                 isPageLoadComplete: 0, //页面是否加载完成 0.正在加载 1.加载失败 2.加载完毕 ...
-                details: '',
+                details: [],
                 like: '',
+                collect: {
+                    icon: 'star-o',
+                    name: '收藏',
+                    isCollect: false,
+                },
+                footprintKey: 'orange-tyh-footprint',
+                collectKey: 'orange-tyh-collect',
             }
         },
         methods: {
+            clickCollect() { //收藏
+                if (this.collect.isCollect == true) {
+                    queue.removeItem(this.collectKey,[this.details.itemId]);
+                } else {
+                    queue.insert({
+                        key: this.collectKey,
+                        value: this.details,
+                    });
+                }
+                location.assign(window.location.href);
+            },
             onClickLeft() {
                 window.history.go(-1);
             },

@@ -33,6 +33,7 @@
                 }
             },
             up() {
+                document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             },
         },
@@ -46,7 +47,7 @@
 
     .top {
         position: fixed;
-        right:0;
+        right: 10px;
         bottom: 10%;
         height:40px;
         width:40px;

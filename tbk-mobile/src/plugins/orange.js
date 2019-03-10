@@ -2,7 +2,6 @@
 import Vue from 'vue'
 //引入自有组件
 
-import orangeLoading from "@/components/orange-loading"
 import orangeTechnologyFooter from "@/components/orange-technology-footer"
 import orangeHandpick from "@/components/orange-handpick"
 import orangeNews from "@/components/orange-news"
@@ -23,7 +22,6 @@ import orangeCard from "@/components/orange-card"
 import orangeShippingAddressCard from "@/components/orange-shipping-address-card"
 import orangeStoreCard from "@/components/orange-store-card"
 
-Vue.component("orange-loading",orangeLoading);
 Vue.component("orange-technology-footer",orangeTechnologyFooter);
 Vue.component("orange-handpick",orangeHandpick);
 Vue.component("orange-news",orangeNews);

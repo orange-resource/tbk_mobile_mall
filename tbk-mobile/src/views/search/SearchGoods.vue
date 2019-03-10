@@ -61,6 +61,8 @@
 
 <script>
 
+    import { queue } from "../../static/queue";
+
     export default {
         name: "SearchGoods",
         mounted() {
@@ -76,6 +78,7 @@
                     {name: '价格',loading: false,finished: false,total: 0,data: []},
                 ],
                 tagIndex: 0,
+                localKeyword: 'orange-tyh-keyword',
             }
         },
         methods:{
@@ -86,6 +89,15 @@
                 location.assign("/");
             },
             onSearch() { //搜索按钮触发
+                try {
+                    queue.insert({
+                        key: this.localKeyword,
+                        value: {keyword: this.keyword},
+                        capacityNum: 20,
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
                 this.getData(this.tagIndex,1);
             },
             tabSearch(index, title) { //点击标签，换标签触发

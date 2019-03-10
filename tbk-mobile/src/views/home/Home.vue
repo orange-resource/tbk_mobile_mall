@@ -81,6 +81,7 @@
     export default {
         name: "Home",
         mounted() {
+
             this.$axios.get('home/deserver').then((rsp) => {
 
                 if (rsp.data.code == 1) {

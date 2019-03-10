@@ -5,6 +5,7 @@
             <van-tabbar-item to="/hot" icon="fire-o">热销区</van-tabbar-item>
             <van-tabbar-item to="/discovery" icon="aim">发现</van-tabbar-item>
             <van-tabbar-item to="/talent" icon="thumb-circle-o">达人说</van-tabbar-item>
+            <van-tabbar-item to="/my" icon="manager-o">我的</van-tabbar-item>
         </van-tabbar>
     </div>
 </template>
@@ -32,6 +33,9 @@
                     break;
                 case "talent":
                     this.active = 3;
+                    break;
+                case "my":
+                    this.active = 4;
                     break;
             }
         }
