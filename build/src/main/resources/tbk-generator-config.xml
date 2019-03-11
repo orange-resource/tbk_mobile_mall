@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="mysql" defaultModelType="hierarchical" targetRuntime="MyBatis3Simple" >
+        <!-- 生成的 Java 文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 格式化 Java 代码 -->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+        <!-- 格式化 XML 代码 -->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+
+        <!-- 自定义注释生成器 -->
+        <commentGenerator type="com.orange.tbk.build.config.MySQLCommentGenerator">
+            <property name="author" value="Orange"/>
+            <property name="dateFormat" value="yyyy/MM/dd"/>
+        </commentGenerator>
+
+        <!-- 配置数据库连接 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/com.orange.tbkmobile.db?characterEncoding=utf-8" userId="root" password="root">
+            <!-- 设置 useInformationSchema 属性为 true -->
+            <property name="useInformationSchema" value="true" />
+        </jdbcConnection>
+
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.orange.tbk.api.bean"
+                            targetProject="api/src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+         <!--&lt;!&ndash;生成映射文件的包名和位置 &ndash;&gt;-->
+        <!--<sqlMapGenerator targetPackage="mapper"-->
+                         <!--targetProject="src/main/resources">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        <!--</sqlMapGenerator>-->
+         <!--&lt;!&ndash;生成DAO的包名和位置 &ndash;&gt;-->
+        <!--<javaClientGenerator type="XMLMAPPER"-->
+                             <!--targetPackage="com.orange.tbk.admin.mapper" targetProject="admin/src/main/java">-->
+            <!--<property name="enableSubPackages" value="true" />-->
+        <!--</javaClientGenerator>-->
+
+        <!-- 设置数据库的表名和实体类名 -->
+        <table tableName="t_user" domainObjectName="User">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_system_message" domainObjectName="SystemMessage">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_system_config" domainObjectName="SystemConfig">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_hdk_config" domainObjectName="HdkConfig">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_course" domainObjectName="Course">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_carousel" domainObjectName="Carousel">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+        <table tableName="t_aliyun_oss" domainObjectName="AliyunOss">
+            <!-- generatedKey用于生成生成主键的方法 -->
+            <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()"/>
+        </table>
+
+    </context>
+
+</generatorConfiguration>

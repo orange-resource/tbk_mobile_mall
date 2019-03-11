@@ -2,111 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.postcssrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/README-zh.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/check-versions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/vue-loader.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/dev.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/prod.env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/api/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/api/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/assets/404_images/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/assets/404_images/404_cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/Breadcrumb/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/Hamburger/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/SvgIcon/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/example.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/form.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/nested.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/password.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/software.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/table.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/tree.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值kl.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值缴费.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/反馈管理.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/地图.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户d.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/软件管理.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/邮箱.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/配置.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svgo.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/permission.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/modules/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/modules/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/btn.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/element-ui.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/mixin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/time.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/404.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/account/account_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/baidu_map_api_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/dashboard/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/Layout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/AppMain.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Navbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/Item.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/Link.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/SidebarItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/TagsView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/mixin/ResizeHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_login_log_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_map.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_register_log_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/login/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_leave_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_versions_form.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/my/MsgList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/ParameterError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandleAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroFilterConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ValidatorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/ResponseCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/realm/CustomRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyBatisPlusConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/InterfaceManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementIpHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementVisit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/config/EmptyCommentGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/config/MySQLCommentGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/src/main/resources/tbk-generator-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/test/java/com/orange/tbk/api/ApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/dashboard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/dashboard/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/login/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -132,32 +62,50 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="java" value="39" />
           <entry key="md" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="properties" value="5" />
+          <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JAVA" value="39" />
           <entry key="Markdown" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="Properties" value="5" />
+          <entry key="XML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="txt" value="113" />
-          <entry key="xml" value="17" />
+          <entry key="java" value="53" />
+          <entry key="properties" value="18" />
+          <entry key="txt" value="126" />
+          <entry key="xml" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="113" />
-          <entry key="XML" value="17" />
+          <entry key="JAVA" value="53" />
+          <entry key="PLAIN_TEXT" value="126" />
+          <entry key="Properties" value="18" />
+          <entry key="XML" value="71" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,6 +114,29 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/build/pom.xml" />
+        <option value="$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/config/MySQLCommentGenerator.java" />
+        <option value="$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java" />
+        <option value="$PROJECT_DIR$/build/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/build/src/main/resources/tbk-generator-config.xml" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-web/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/ResponseCode.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/realm/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroFilterConfig.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/InterfaceManagement.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementVisit.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/runner/InterfaceRunner.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandleAspect.java" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyBatisPlusConfiguration.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/AliyunOssMapper.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java" />
       </list>
     </option>
   </component>
@@ -204,10 +175,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1" />
+    <option name="width" value="1918" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -226,6 +196,87 @@
               <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
               <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="orange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="orange" type="462c0819:PsiDirectoryNode" />
+              <item name="tbk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="orange" type="462c0819:PsiDirectoryNode" />
+              <item name="tbk" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="orange" type="462c0819:PsiDirectoryNode" />
+              <item name="tbk" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +286,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552231416540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552314646971" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -243,7 +294,23 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.orange.tbk.adminweb.runner" />
+      <recent name="com.orange.tbk.api.runner" />
+      <recent name="com.orange.tbk.api.bean" />
+      <recent name="com.orange.tbk.adminweb.realm" />
+      <recent name="com.orange.tbk.build" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\java\orange\tbkmobile\admin\src\main\java\com\orange\tbk\admin" />
+      <recent name="E:\project\java\orange\tbkmobile\admin\src\main\resources" />
+      <recent name="E:\project\java\orange\tbkmobile\api\src\main\java\com\orange\tbk\api" />
+      <recent name="E:\project\java\orange\tbkmobile\admin-web\src\main\java\com\orange\tbk\adminweb" />
+      <recent name="E:\project\java\orange\tbkmobile\admin-web\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -257,9 +324,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminWebApplication">
+  <component name="RunManager" selected="Application.Generator">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.orange.tbk.build.Generator" />
+      <module name="build" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.orange.tbk.build.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -326,7 +407,13 @@
       <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.BuildApplication" />
       <item itemvalue="Spring Boot.ApiApplication" />
+      <item itemvalue="Application.Generator" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Generator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -340,7 +427,7 @@
       <updated>1551584272159</updated>
       <workItem from="1551584274106" duration="13344000" />
       <workItem from="1552026225759" duration="5017000" />
-      <workItem from="1552285482102" duration="1616000" />
+      <workItem from="1552285482102" duration="5176000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -475,15 +562,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552231224699</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="增加后台页面">
+      <created>1552295404912</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1552295404913</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19977000" />
+    <option name="totallyTimeSpent" value="23537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Web" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25725028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -491,10 +587,12 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976957" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -507,6 +605,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32949308" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="15" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -525,6 +624,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/tbk-mobile" />
+    </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="update" />
     <MESSAGE value="普通更新..." />
@@ -541,12 +643,10 @@
     <MESSAGE value="增加404页面" />
     <MESSAGE value="优化增强" />
     <MESSAGE value="页面模块增加..." />
-    <option name="LAST_COMMIT_MESSAGE" value="页面模块增加..." />
+    <MESSAGE value="增加后台页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加后台页面" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -559,6 +659,204 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/config/MySQLCommentGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1120">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/config/EmptyCommentGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/resources/tbk-generator-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1778">
+          <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/Response.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/ResponseCode.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/realm/CustomRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroFilterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ValidatorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandle.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/ParameterError.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/InterfaceManagement.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementIpHandle.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementVisit.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/runner/InterfaceRunner.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandleAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="40" column="76" lean-forward="true" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2583">
+          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyBatisPlusConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyMetaObjectHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/ZookeeperLockConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/AliyunOssMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
         </state>
       </provider>
     </entry>
