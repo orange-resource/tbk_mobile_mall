@@ -1,6 +1,7 @@
 package com.orange.tbk.adminweb.realm;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.api.service.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -14,8 +15,8 @@ import java.util.Set;
 @Component
 public class CustomRealm extends AuthorizingRealm {
 
-//    @Reference
-//    private AccountService accountService;
+    @Reference
+    private UserService userService;
 
     /**
      * 权限
@@ -42,10 +43,10 @@ public class CustomRealm extends AuthorizingRealm {
         String username = token.getUsername();
         String password = String.valueOf(token.getPassword());
 
-//        int verifyUser = accountService.verifyUser(username, password);
-//        if (verifyUser > 0) {
-//            return new SimpleAuthenticationInfo(username,password,getName());
-//        }
+        int verifyUser = userService.verifyUser(username, password);
+        if (verifyUser > 0) {
+            return new SimpleAuthenticationInfo(username,password,getName());
+        }
 
         throw new AuthenticationException();
     }

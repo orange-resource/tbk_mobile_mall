@@ -9,11 +9,7 @@ package com.orange.tbk.adminweb.model;
 public enum ResponseCode {
 
     //成功...
-    REGISTER_SUCCESS(101,"注册成功"),
-
     LOGIN_SUCCESS(100,"登陆成功"),
-
-    UPDATE_PASSWORD_SUCCESS(105,"改密成功"),
 
     LOGOUT_SUCCESS(106,"登出成功"),
 
@@ -21,23 +17,13 @@ public enum ResponseCode {
     //失败
     EMPTY(903,"无"),
 
-    REGISTER_CLOSE(910,"注册关闭"),
-
     TOO_FAST(911,"访问过快"),
-
-    ACCOUNT_EMPTY(914,"用户不存在"),
 
     LOGOUT_ERROR(925,"登出失败"),
 
     LOGIN_ERROR(926,"登陆失败"),
 
-    PASSWORD_ERROR(930,"密码错误"),
-
-    SERVER_ERROR(936,"服务器错误"),
-
     INTERFACE_CLOSE(938,"访问失败，接口已被关闭！"),
-
-    INTERFACE_WHITE_EXIST(939,"访问失败，您的ip不可以访问此接口！"),
 
     //基础
     QUERY_SUCCESS(9,"查询成功"),
