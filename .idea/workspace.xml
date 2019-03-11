@@ -2,6 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.postcssrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/README-zh.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/check-versions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/vue-loader.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/dev.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/config/prod.env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/api/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/api/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/assets/404_images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/assets/404_images/404_cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/Breadcrumb/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/Hamburger/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/SvgIcon/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/example.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/form.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/nested.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/password.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/software.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/tree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值kl.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值缴费.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/反馈管理.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/地图.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户d.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/软件管理.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/邮箱.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/配置.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svgo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/getters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/modules/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/store/modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/btn.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/element-ui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/styles/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/utils/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/account/account_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/baidu_map_api_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/dashboard/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/Layout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/AppMain.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/Item.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/Link.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/SidebarItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/Sidebar/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/TagsView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/layout/mixin/ResizeHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_login_log_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_map.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_register_log_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/login/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_leave_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_versions_form.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-admin-web-page/static/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tbk-mobile/src/views/my/MsgList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,10 +124,10 @@
     <session id="1371826762">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -90,17 +194,20 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/tbk-admin-web-page/node_modules" />
     <handled-path value="$PROJECT_DIR$/tbk-mobile/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/tbk-admin-web-page/package.json" />
       <path value="$PROJECT_DIR$/tbk-mobile/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="width" value="1918" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -110,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -122,13 +230,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552231184746" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552231416540" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -232,7 +339,8 @@
       <option name="presentableId" value="Default" />
       <updated>1551584272159</updated>
       <workItem from="1551584274106" duration="13344000" />
-      <workItem from="1552026225759" duration="4777000" />
+      <workItem from="1552026225759" duration="5017000" />
+      <workItem from="1552285482102" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -360,16 +468,23 @@
       <option name="project" value="LOCAL" />
       <updated>1552229738506</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="页面模块增加...">
+      <created>1552231224699</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552231224699</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18121000" />
+    <option name="totallyTimeSpent" value="19977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25349087" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25725028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
