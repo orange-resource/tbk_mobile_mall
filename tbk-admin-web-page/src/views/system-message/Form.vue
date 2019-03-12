@@ -12,30 +12,38 @@
         <el-form :model="form" :rules="forms" :status-icon="true"
                  ref="form" label-width="100px" class="demo-ruleForm">
 
-          <el-form-item label="版本号" prop="number">
-            <el-input v-model="form.number" class="common-width"></el-input>
+          <el-form-item label="主图" prop="image">
+            <el-upload
+              class="avatar-uploader"
+              action="http://localhost:9399/tbk/aliyunOss/uploadImage"
+              name="image"
+              :drag="true"
+              :show-file-list="false"
+              :on-success="handleAvatarSuccess"
+              :before-upload="beforeAvatarUpload">
+              <img v-if="form.image" :src="form.image" class="avatar">
+              <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+            </el-upload>
+            <el-input v-model="form.image" class="common-width" placeholder="点击上传图片或者手动输入图片链接"></el-input>
           </el-form-item>
 
-          <el-form-item label="更新公告(日志)" prop="notice">
-            <el-input
-              v-model="form.notice"
-              class="common-width"
-              type="textarea"
-              :rows="15"
-              placeholder="请输入更新公告"
-            >
-            </el-input>
+          <el-form-item label="系统消息标题" prop="title">
+            <el-input v-model="form.title" class="common-width" ></el-input>
           </el-form-item>
 
-          <el-form-item label="更新地址" prop="updateUrl">
-            <el-input v-model="form.updateUrl" class="common-width"></el-input>
-          </el-form-item>
+          <!--<el-form-item label="更新公告(日志)" prop="notice">-->
+            <!--<el-input-->
+              <!--v-model="form.notice"-->
+              <!--class="common-width"-->
+              <!--type="textarea"-->
+              <!--:rows="15"-->
+              <!--placeholder="请输入更新公告"-->
+            <!--&gt;-->
+            <!--</el-input>-->
+          <!--</el-form-item>-->
 
-          <el-form-item label="是否强制更新" prop="novatioNecessaria">
-            <el-radio-group v-model="form.novatioNecessaria" size="medium">
-              <el-radio border :label=0 >不强制</el-radio>
-              <el-radio border :label=1 >强制</el-radio>
-            </el-radio-group>
+          <el-form-item label="作者名称" prop="author">
+            <el-input v-model="form.author" class="common-width"></el-input>
           </el-form-item>
 
           <el-form-item>
@@ -79,19 +87,43 @@
 
         //表单配置
         form: {
-          number: '',
-          notice: '',
-          novatioNecessaria: 0,
-          updateUrl: '',
+          image: '',
+          title: '',
+          content: '',
+          author: '',
         },
         forms: {
-          number: [
-            {required: true, message: '请填写版本号', trigger: 'blur'},
+          image: [
+            {required: true, message: '请上传主图', trigger: 'blur'},
+          ],
+          title: [
+            {required: true, message: '请输入系统消息标题', trigger: 'blur'},
+          ],
+          content: [
+            {required: true, message: '请输入系统消息内容', trigger: 'blur'},
+          ],
+          author: [
+            {required: true, message: '请输入作者名称', trigger: 'blur'},
           ],
         },
       }
     },
     methods: {
+      handleAvatarSuccess(res, file) {
+        this.form.image = file.response.data;
+      },
+      beforeAvatarUpload(file) {
+        const isJPG = true;
+        const isLt2M = file.size / 1024 / 1024 < 3;
+
+        // if (!isJPG) {
+        //   this.$message.error('上传头像图片只能是 JPG 格式!');
+        // }
+        if (!isLt2M) {
+          this.$message.error('上传图片大小不能超过 3MB!');
+        }
+        return isJPG && isLt2M;
+      },
       openExpress() { //上一页
         this.$router.push({
           name: this.open.url,
@@ -139,5 +171,27 @@
 </script>
 
 <style scoped>
-
+  .avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .avatar-uploader .el-upload:hover {
+    border-color: #409EFF;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+  }
+  .avatar {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 </style>

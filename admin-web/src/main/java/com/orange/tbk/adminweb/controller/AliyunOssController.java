@@ -63,7 +63,7 @@ public class AliyunOssController {
 
         try {
             String upload = this.upload(image);
-            return Response.build(ResponseCode.SUCCESS,upload);
+            return Response.build(ResponseCode.SUCCESS,ResponseCode.SUCCESS.getDesc(),upload);
         } catch (Exception e) {
             return Response.error();
         }
