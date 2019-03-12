@@ -12,13 +12,14 @@ public interface SystemMessageMapper extends BaseMapper<SystemMessage> {
 
     @Select("<script>" +
             "select * from t_system_message " +
-            "where " +
+            "<where> " +
             "<if test=\"systemMessage.title != null and systemMessage.title !=''\">" +
             "and title like concat('%',#{systemMessage.title},'%') " +
             "</if>" +
             "<if test=\"systemMessage.content != null and systemMessage.content !=''\">" +
             "and content like concat('%',#{systemMessage.content},'%') " +
             "</if>" +
+            "</where>" +
             "order by create_date desc" +
             "</script>")
     List<SystemMessage> page(@Param("systemMessage") SystemMessage systemMessage, Page page);

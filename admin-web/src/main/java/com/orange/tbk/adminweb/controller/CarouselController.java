@@ -15,14 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "course")
+@RequestMapping(value = "carousel")
 public class CarouselController {
 
     @Reference
     private CarouselService carouselService;
 
     @RspHandle
-    @RequiresUser
     @RequestMapping(value = "list",method = RequestMethod.GET)
     @ResponseBody
     public Response list() {
@@ -60,7 +59,7 @@ public class CarouselController {
     @RequiresUser
     @RequestMapping(value = "alter",method = RequestMethod.POST)
     @ResponseBody
-    public Response update(Carousel carousel) {
+    public Response alter(Carousel carousel) {
 
         boolean update = carouselService.updateById(carousel);
         if (update == true) {
@@ -75,8 +74,8 @@ public class CarouselController {
     @ResponseBody
     public Response delete(String carouselId) {
 
-        boolean delete = carouselService.removeById(carouselId);
-        if (delete == true) {
+        boolean remove = carouselService.removeById(carouselId);
+        if (remove == true) {
             return Response.build(ResponseCode.SUCCESS);
         }
         return Response.build(ResponseCode.ERROR);

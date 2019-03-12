@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 好单库apikey配置
  * t_hdk_config
  * @author Orange
- * @date 2019/03/11
+ * @date 2019/03/13
  */
 @TableName("t_hdk_config")
 @KeySequence("SEQ_TEST")

@@ -59,7 +59,7 @@ public class SystemMessageController {
     @RequiresUser
     @RequestMapping(value = "alter",method = RequestMethod.POST)
     @ResponseBody
-    public Response update(SystemMessage systemMessage) {
+    public Response alter(SystemMessage systemMessage) {
 
         boolean update = systemMessageService.updateById(systemMessage);
         if (update == true) {
@@ -74,8 +74,8 @@ public class SystemMessageController {
     @ResponseBody
     public Response delete(String systemMessageId) {
 
-        boolean delete = systemMessageService.removeById(systemMessageId);
-        if (delete == true) {
+        boolean remove = systemMessageService.removeById(systemMessageId);
+        if (remove == true) {
             return Response.build(ResponseCode.SUCCESS);
         }
         return Response.build(ResponseCode.ERROR);

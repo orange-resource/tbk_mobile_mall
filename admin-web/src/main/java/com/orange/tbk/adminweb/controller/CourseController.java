@@ -59,7 +59,7 @@ public class CourseController {
     @RequiresUser
     @RequestMapping(value = "alter",method = RequestMethod.POST)
     @ResponseBody
-    public Response update(Course course) {
+    public Response alter(Course course) {
 
         boolean update = courseService.updateById(course);
         if (update == true) {
@@ -74,8 +74,8 @@ public class CourseController {
     @ResponseBody
     public Response delete(String courseId) {
 
-        boolean delete = courseService.removeById(courseId);
-        if (delete == true) {
+        boolean remove = courseService.removeById(courseId);
+        if (remove == true) {
             return Response.build(ResponseCode.SUCCESS);
         }
         return Response.build(ResponseCode.ERROR);

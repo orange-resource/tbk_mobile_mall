@@ -12,13 +12,14 @@ public interface CourseMapper extends BaseMapper<Course> {
 
     @Select("<script>" +
             "select * from t_course " +
-            "where " +
+            "<where> " +
             "<if test=\"course.title != null and course.title !=''\">" +
             "and title like concat('%',#{course.title},'%') " +
             "</if>" +
             "<if test=\"course.content != null and course.content !=''\">" +
             "and content like concat('%',#{course.content},'%') " +
             "</if>" +
+            "</where>" +
             "order by create_date desc" +
             "</script>")
     List<Course> page(@Param("course") Course course, Page page);

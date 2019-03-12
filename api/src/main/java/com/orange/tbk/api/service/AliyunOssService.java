@@ -7,4 +7,6 @@ public interface AliyunOssService extends IService<AliyunOss> {
 
     void create(AliyunOss aliyunOss);
 
+    AliyunOss single();
+
 }

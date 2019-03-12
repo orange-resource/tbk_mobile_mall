@@ -60,6 +60,48 @@ export const constantRouterMap = [
       },
     ]
   },
+
+  {
+    path: '/systemMessage',
+    component: Layout,
+    alwaysShow: true,
+    name: 'SystemMessage',
+    redirect: 'noredirect',
+    meta: { title: '系统消息', icon: 'eye' },
+    children: [
+      {
+        path: 'list',
+        name: 'SystemMessageList',
+        component: () => import('@/views/system-message/List'),
+        meta: { title: '消息列表', icon: 'eye' }
+      },
+      {
+        path: 'form',
+        name: 'SystemMessageForm',
+        component: () => import('@/views/system-message/Form'),
+        meta: { title: '系统消息操作', icon: 'eye' },
+        hidden: true,
+      },
+    ]
+  },
+
+  {
+    path: '/oss',
+    component: Layout,
+    alwaysShow: true,
+    name: 'Oss',
+    redirect: 'noredirect',
+    meta: { title: 'OSS配置', icon: 'eye' },
+    children: [
+      {
+        path: 'form',
+        name: 'OssForm',
+        component: () => import('@/views/aliyun-oss/Form'),
+        meta: { title: '配置操作', icon: 'eye' }
+      },
+    ]
+  },
+
   {
     path: '/soft',
     component: Layout,

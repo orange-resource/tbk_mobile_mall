@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 阿里云对象存储配置模块
  * t_aliyun_oss
  * @author Orange
- * @date 2019/03/11
+ * @date 2019/03/13
  */
 @TableName("t_aliyun_oss")
 @KeySequence("SEQ_TEST")
@@ -55,9 +55,16 @@ public class AliyunOss implements Serializable {
     private String bucketName;
 
     /**
+     * 目录路径
      * catalogue
      */
     private String catalogue;
+
+    /**
+     * 图片后缀样式
+     * style
+     */
+    private String style;
 
     public String getId() {
         return id;
@@ -145,5 +152,13 @@ public class AliyunOss implements Serializable {
 
     public void setCatalogue(String catalogue) {
         this.catalogue = catalogue == null ? null : catalogue.trim();
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style == null ? null : style.trim();
     }
 }

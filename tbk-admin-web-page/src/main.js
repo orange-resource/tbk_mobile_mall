@@ -17,6 +17,9 @@ import store from './store'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+//引入自有组件
+import './utils/orange-module'
+
 import echarts from 'echarts'
 
 Vue.prototype.$echarts = echarts
