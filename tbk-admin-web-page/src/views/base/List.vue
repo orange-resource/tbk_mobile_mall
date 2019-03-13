@@ -121,7 +121,7 @@
           tablePageSizes: [10, 50, 100, 200]
         },
         open: {
-          url: 'SoftForm',
+          url: 'SystemMessageForm',
         }
 
       }
@@ -138,8 +138,8 @@
       getTableData() {
 
         let data = this.seachForm
-        data.current = this.tablePageNum
-        data.size = this.tablePageSize
+        data.current = this.table.tablePageNum
+        data.size = this.table.tablePageSize
 
         this.$axios.get('systemMessage/page', {
           params: data
@@ -158,16 +158,18 @@
         })
       },
       handleSizeChange(val) {
-        this.tablePageSize = val
+        this.table.tablePageSize = val
         this.getTableData()
       },
       handleCurrentChange(val) {
-        this.tablePageNum = val
+        this.table.tablePageNum = val
         this.getTableData()
       },
       search(isPrompt) {
         if (isPrompt == true) {
           this.$message.success('执行刷新数据成功...')
+        } else {
+          this.table.tablePageNum = 1;
         }
         this.getTableData()
       },
@@ -178,7 +180,7 @@
         this.$axios.post('systemMessage/delete', this.$qs.stringify({
           systemMessageId: row.id
         })).then((rsp) => {
-          this.search()
+          this.getTableData()
           this.$message(rsp.msg)
         }).catch((e) => {
           this.$notify.error({

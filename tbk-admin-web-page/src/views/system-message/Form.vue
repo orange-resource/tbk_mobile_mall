@@ -15,11 +15,11 @@
           <el-form-item label="主图" prop="image">
             <el-upload
               class="avatar-uploader"
-              action="http://localhost:9399/tbk/aliyunOss/uploadImage"
-              name="image"
               :drag="true"
+              action="..."
               :show-file-list="false"
               :on-success="handleAvatarSuccess"
+              :http-request="httpRequest"
               :before-upload="beforeAvatarUpload">
               <img v-if="form.image" :src="form.image" class="avatar">
               <i v-else class="el-icon-plus avatar-uploader-icon"></i>
@@ -31,18 +31,18 @@
             <el-input v-model="form.title" class="common-width" ></el-input>
           </el-form-item>
 
-          <!--<el-form-item label="更新公告(日志)" prop="notice">-->
-            <!--<el-input-->
-              <!--v-model="form.notice"-->
-              <!--class="common-width"-->
-              <!--type="textarea"-->
-              <!--:rows="15"-->
-              <!--placeholder="请输入更新公告"-->
-            <!--&gt;-->
-            <!--</el-input>-->
-          <!--</el-form-item>-->
+          <el-form-item label="系统内容" prop="content">
+            <quill-editor
+              v-model="form.content"
+              ref="myQuillEditor"
+              :options="editorOption"
+              style="height: 500px"
+              @blur="onEditorBlur($event)" @focus="onEditorFocus($event)"
+              @change="onEditorChange($event)">
+            </quill-editor>
+          </el-form-item>
 
-          <el-form-item label="作者名称" prop="author">
+          <el-form-item label="作者名称" prop="author" style="padding-top: 50px">
             <el-input v-model="form.author" class="common-width"></el-input>
           </el-form-item>
 
@@ -61,17 +61,24 @@
 </template>
 
 <script>
+
+  import VueQuillEditor, { Quill } from 'vue-quill-editor'
+  import { ImageDrop } from 'quill-image-drop-module'
+  import ImageResize from 'quill-image-resize-module'
+  Quill.register('modules/imageDrop', ImageDrop)
+  Quill.register('modules/imageResize', ImageResize)
+
   export default {
     name: 'Form',
     mounted() {
 
       if (this.$route.params.id != null) {
-        this.$axios.get("softVersions/getSingleBySoftId",{
+        this.$axios.get("systemMessage/single",{
           params: {
-            softId: this.$route.params.id,
+            systemMessageId: this.$route.params.id,
           }
         }).then((rsp) => {
-          this.form =rsp.data;
+          this.form = rsp.data;
         });
 
         this.formButtonName = '立即保存';
@@ -106,23 +113,68 @@
             {required: true, message: '请输入作者名称', trigger: 'blur'},
           ],
         },
+        uploadImageLoading: '',
+        editorOption:{
+          placeholder: "输入详情内容...",
+          modules: {
+            imageDrop: true,
+            imageResize: {
+              displayStyles: {
+                backgroundColor: 'black',
+                border: 'none',
+                color: 'white'
+              },
+            },
+            toolbar: [
+              ['bold', 'italic', 'underline', 'strike'],
+              ['blockquote', 'code-block'],
+              [{ 'header': 1 }, { 'header': 2 }],
+              [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+              [{ 'script': 'sub' }, { 'script': 'super' }],
+              [{ 'indent': '-1' }, { 'indent': '+1' }],
+              [{ 'direction': 'rtl' }],
+              [{ 'size': ['small', false, 'large', 'huge'] }],
+              [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+              [{ 'font': [] }],
+              [{ 'color': [] }, { 'background': [] }],
+              [{ 'align': [] }],
+              ['clean'],
+              ['link', 'image', 'video']
+            ],
+          }
+        },
       }
     },
     methods: {
       handleAvatarSuccess(res, file) {
-        this.form.image = file.response.data;
+        this.uploadImageLoading.close();
+        this.form.image = file.response.imagebase64;
       },
       beforeAvatarUpload(file) {
         const isJPG = true;
         const isLt2M = file.size / 1024 / 1024 < 3;
 
-        // if (!isJPG) {
-        //   this.$message.error('上传头像图片只能是 JPG 格式!');
-        // }
         if (!isLt2M) {
           this.$message.error('上传图片大小不能超过 3MB!');
+        } else {
+          this.uploadImageLoading = this.$loading({
+            lock: true,
+            text: 'Loading',
+            spinner: 'el-icon-loading',
+            background: 'rgba(0, 0, 0, 0.7)'
+          });
         }
+
         return isJPG && isLt2M;
+      },
+      httpRequest(options) {
+
+        let file = options.file;
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+          options.onSuccess({imagebase64: e.currentTarget.result}, options.file);
+        }
       },
       openExpress() { //上一页
         this.$router.push({
@@ -133,7 +185,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            if (this.$route.params.versionsNum != null) {
+            if (this.$route.params.id != null) {
               this.submit(true);
             } else {
               this.submit(false);
@@ -148,11 +200,10 @@
 
         let data = this.form;
 
-        let url = "softVersions/create";
-        data.softId = this.$route.params.id;
+        let url = "systemMessage/create";
         if (isUpdate == true) {
-          data.id = this.id;
-          url = "softVersions/update";
+          data.id = this.$route.params.id;
+          url = "systemMessage/alter";
         }
 
         this.$axios({
@@ -165,6 +216,12 @@
       },
       resetForm(formName) {
         this.$refs[formName].resetFields();
+      },
+      onEditorBlur(){//失去焦点事件
+      },
+      onEditorFocus(){//获得焦点事件
+      },
+      onEditorChange(){//内容改变事件
       },
     }
   }
@@ -190,8 +247,8 @@
     text-align: center;
   }
   .avatar {
-    width: 100%;
-    height: 100%;
+    width: 178px;
+    height: 178px;
     display: block;
   }
 </style>

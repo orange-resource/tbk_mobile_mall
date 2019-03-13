@@ -42,6 +42,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    new webpack.ProvidePlugin({
+      'window.Quill': 'quill/dist/quill.js',
+      'Quill': 'quill/dist/quill.js'
+    }),
     // extract css into its own file
     new MiniCssExtractPlugin({
       filename: utils.assetsPath('css/[name].[contenthash:8].css'),

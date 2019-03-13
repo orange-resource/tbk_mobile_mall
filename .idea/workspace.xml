@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/adminweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/admin.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/base/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/base/List.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/Form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/List.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,17 +30,18 @@
     <session id="1371826762">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="161" />
+          <entry key="java" value="162" />
           <entry key="md" value="1" />
           <entry key="properties" value="10" />
           <entry key="xml" value="16" />
@@ -42,7 +50,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="161" />
+          <entry key="JAVA" value="162" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="10" />
           <entry key="XML" value="16" />
@@ -52,14 +60,14 @@
         <counts>
           <entry key="java" value="2652" />
           <entry key="properties" value="73" />
-          <entry key="txt" value="138" />
+          <entry key="txt" value="148" />
           <entry key="xml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="2652" />
-          <entry key="PLAIN_TEXT" value="138" />
+          <entry key="PLAIN_TEXT" value="148" />
           <entry key="Properties" value="73" />
           <entry key="XML" value="78" />
         </counts>
@@ -68,47 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin-web/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/FileUploadConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="65" column="92" selection-start-line="65" selection-start-column="92" selection-end-line="65" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-483">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="629">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -242,8 +214,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -634,6 +604,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -643,7 +615,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552414353369" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552467340585" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -681,7 +653,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Generator">
+  <component name="RunManager" selected="Spring Boot.AdminWebApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -777,7 +749,8 @@
       <workItem from="1551584274106" duration="13344000" />
       <workItem from="1552026225759" duration="5017000" />
       <workItem from="1552285482102" duration="7771000" />
-      <workItem from="1552361193094" duration="24502000" />
+      <workItem from="1552361193094" duration="24543000" />
+      <workItem from="1552445699637" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -954,16 +927,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552411867988</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="完善上传图片">
+      <created>1552415795058</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1552415795058</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50634000" />
+    <option name="totallyTimeSpent" value="52008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3039742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30827066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -974,7 +955,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4032258" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4032258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1068,7 +1049,8 @@
     <MESSAGE value="增加后台页面" />
     <MESSAGE value="后台框架初步搭建" />
     <MESSAGE value="增加接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加接口" />
+    <MESSAGE value="完善上传图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善上传图片" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1424,13 +1406,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/utils/aliyunoss/AliyunOSSUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/utils/aliyunoss/AliyunOSSUtil.java" />
     <entry file="file://$PROJECT_DIR$/admin-web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -1438,13 +1414,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/util/AliyunOSSUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/util/AliyunOSSUtil.java" />
     <entry file="file://$PROJECT_DIR$/api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1550,13 +1520,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/Configurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/Configurer.java" />
     <entry file="file://$PROJECT_DIR$/admin-web/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1573,22 +1537,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="1365">
           <caret line="65" column="92" selection-start-line="65" selection-start-column="92" selection-end-line="65" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="154">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="34" />
         </state>
       </provider>
     </entry>
