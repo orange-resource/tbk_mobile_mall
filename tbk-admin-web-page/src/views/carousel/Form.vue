@@ -12,7 +12,7 @@
         <el-form :model="form" :rules="forms" :status-icon="true"
                  ref="form" label-width="100px" class="demo-ruleForm">
 
-          <el-form-item label="主图" prop="image">
+          <el-form-item label="主图" prop="sort">
             <el-upload
               class="avatar-uploader"
               :drag="true"
@@ -27,23 +27,12 @@
             <el-input v-model="form.image" class="common-width" placeholder="点击上传图片或者手动输入图片链接"></el-input>
           </el-form-item>
 
-          <el-form-item label="系统消息标题" prop="title">
-            <el-input v-model="form.title" class="common-width" ></el-input>
+          <el-form-item label="排序(开放接口从小到大排序)" prop="sort">
+            <el-input v-model="form.sort" class="common-width"></el-input>
           </el-form-item>
 
-          <el-form-item label="系统内容" prop="content">
-            <quill-editor
-              v-model="form.content"
-              ref="myQuillEditor"
-              :options="editorOption"
-              style="height: 500px"
-              @blur="onEditorBlur($event)" @focus="onEditorFocus($event)"
-              @change="onEditorChange($event)">
-            </quill-editor>
-          </el-form-item>
-
-          <el-form-item label="作者名称" prop="author" style="padding-top: 50px">
-            <el-input v-model="form.author" class="common-width"></el-input>
+          <el-form-item label="点击跳转地址" prop="clickUrl">
+            <el-input v-model="form.clickUrl" class="common-width"></el-input>
           </el-form-item>
 
           <el-form-item>
@@ -61,24 +50,17 @@
 </template>
 
 <script>
-
-  import VueQuillEditor, { Quill } from 'vue-quill-editor'
-  import { ImageDrop } from 'quill-image-drop-module'
-  import ImageResize from 'quill-image-resize-module'
-  Quill.register('modules/imageDrop', ImageDrop)
-  Quill.register('modules/imageResize', ImageResize)
-
   export default {
     name: 'Form',
     mounted() {
 
       if (this.$route.params.id != null) {
-        this.$axios.get("systemMessage/single",{
+        this.$axios.get("carousel/single",{
           params: {
-            systemMessageId: this.$route.params.id,
+            carouselId: this.$route.params.id,
           }
         }).then((rsp) => {
-          this.form = rsp.data;
+          this.form =rsp.data;
         });
 
         this.formButtonName = '立即保存';
@@ -88,61 +70,28 @@
     data() {
       return {
         open: {
-          url: 'SystemMessageList',
+          url: 'CarouselList',
         },
         formButtonName: '立即创建',
 
         //表单配置
         form: {
           image: '',
-          title: '',
-          content: '',
-          author: '',
+          clickUrl: '',
+          sort: '',
         },
         forms: {
           image: [
-            {required: true, message: '请上传主图', trigger: 'blur'},
+            {required: true, message: '请上传主图或者填写主图链接', trigger: 'blur'},
           ],
-          title: [
-            {required: true, message: '请输入系统消息标题', trigger: 'blur'},
+          clickUrl: [
+            {required: true, message: '请填写点击跳转链接', trigger: 'blur'},
           ],
-          content: [
-            {required: true, message: '请输入系统消息内容', trigger: 'blur'},
-          ],
-          author: [
-            {required: true, message: '请输入作者名称', trigger: 'blur'},
+          sort: [
+            {required: true, message: '请填写排序', trigger: 'blur'},
           ],
         },
         uploadImageLoading: '',
-        editorOption:{
-          placeholder: "输入详情内容...",
-          modules: {
-            imageDrop: true,
-            imageResize: {
-              displayStyles: {
-                backgroundColor: 'black',
-                border: 'none',
-                color: 'white'
-              },
-            },
-            toolbar: [
-              ['bold', 'italic', 'underline', 'strike'],
-              ['blockquote', 'code-block'],
-              [{ 'header': 1 }, { 'header': 2 }],
-              [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-              [{ 'script': 'sub' }, { 'script': 'super' }],
-              [{ 'indent': '-1' }, { 'indent': '+1' }],
-              [{ 'direction': 'rtl' }],
-              [{ 'size': ['small', false, 'large', 'huge'] }],
-              [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-              [{ 'font': [] }],
-              [{ 'color': [] }, { 'background': [] }],
-              [{ 'align': [] }],
-              ['clean'],
-              ['link', 'image', 'video']
-            ],
-          }
-        },
       }
     },
     methods: {
@@ -185,7 +134,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            if (this.$route.params.id != null) {
+            if (this.$route.params.versionsNum != null) {
               this.submit(true);
             } else {
               this.submit(false);
@@ -200,10 +149,11 @@
 
         let data = this.form;
 
-        let url = "systemMessage/create";
+        let url = "carousel/create";
+        data.softId = this.$route.params.id;
         if (isUpdate == true) {
-          data.id = this.$route.params.id;
-          url = "systemMessage/alter";
+          data.id = this.id;
+          url = "carousel/update";
         }
 
         this.$axios({
@@ -216,12 +166,6 @@
       },
       resetForm(formName) {
         this.$refs[formName].resetFields();
-      },
-      onEditorBlur(){//失去焦点事件
-      },
-      onEditorFocus(){//获得焦点事件
-      },
-      onEditorChange(){//内容改变事件
       },
     }
   }

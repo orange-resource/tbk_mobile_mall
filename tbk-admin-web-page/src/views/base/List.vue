@@ -7,10 +7,10 @@
       <div slot="search">
         <el-form :inline="true" :model="seachForm" class="demo-form-inline" @submit.native.prevent>
           <el-form-item label="消息标题">
-            <el-input v-model="seachForm.title" placeholder="消息标题" @keyup.enter.native="search"/>
+            <el-input v-model="seachForm.title" placeholder="消息标题" clearable @keyup.enter.native="search"/>
           </el-form-item>
           <el-form-item label="消息内容">
-            <el-input v-model="seachForm.content" placeholder="消息内容" @keyup.enter.native="search"/>
+            <el-input v-model="seachForm.content" placeholder="消息内容" clearable @keyup.enter.native="search"/>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="search">查询</el-button>
@@ -31,12 +31,6 @@
           :data="table.tableData"
           border
           style="width: 100%;margin-top: 10px">
-          <el-table-column type="expand">
-            <template slot-scope="props">
-              <div v-html="props.row.content">
-              </div>
-            </template>
-          </el-table-column>
           <el-table-column
             prop="createDate"
             label="创建时间"
@@ -53,7 +47,7 @@
             align="center"
           >
             <template slot-scope="scope">
-              <img style="height: 60px;" :src="scope.row.image" />
+              <img style="height: 150px;" :src="scope.row.image" />
             </template>
           </el-table-column>
           <el-table-column

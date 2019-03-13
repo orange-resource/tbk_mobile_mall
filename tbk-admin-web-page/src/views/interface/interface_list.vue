@@ -71,12 +71,25 @@
               prop="ipVisits"
               align="center"
               label="间隔次数"
-            />
+            >
+              <template slot-scope="scope">
+                <el-input
+                  v-model="scope.row.ipVisits"
+                  clearable>
+                </el-input>
+              </template>
+            </el-table-column>
             <el-table-column
               prop="ipRedisInterval"
               label="缓存时间(分钟)"
               align="center"
             >
+              <template slot-scope="scope">
+                <el-input
+                  v-model="scope.row.ipRedisInterval"
+                  clearable>
+                </el-input>
+              </template>
             </el-table-column>
             <el-table-column
               fixed="right"
@@ -85,7 +98,7 @@
               width="200">
 
               <template slot-scope="scope">
-                <el-button type="text" size="small" @click="updateRow(scope.row)">编辑</el-button>
+                <el-button type="text" size="small" @click="updateRow(scope.row)">确认修改</el-button>
               </template>
 
             </el-table-column>
@@ -143,7 +156,18 @@ export default {
       this.getTableData()
     },
     updateRow(row) {
-      this.openForm({ id: row.key })
+      let form = {
+        key: row.key,
+        ipVisits: row.ipVisits,
+        ipRedisInterval: row.ipRedisInterval,
+      };
+      this.$axios({
+        method: 'post',
+        url: 'interfaceManagement/update',
+        data: this.$qs.stringify(form),
+      }).then((rsp) => {
+        this.$message(rsp.msg);
+      });
     },
     visitChange(value,row) {
 

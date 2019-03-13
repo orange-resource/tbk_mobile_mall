@@ -41,16 +41,16 @@ public class SystemMessage implements Serializable {
     private String author;
 
     /**
-     * 消息主图
-     * image
-     */
-    private String image;
-
-    /**
      * 消息内容
      * content
      */
     private String content;
+
+    /**
+     * 消息主图
+     * image
+     */
+    private String image;
 
     public String getId() {
         return id;
@@ -108,19 +108,19 @@ public class SystemMessage implements Serializable {
         this.author = author == null ? null : author.trim();
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image == null ? null : image.trim();
-    }
-
     public String getContent() {
         return content;
     }
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 }

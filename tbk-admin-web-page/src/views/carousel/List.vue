@@ -2,21 +2,7 @@
 
   <div>
 
-    <orange-table-card isShowSearch="true">
-
-      <div slot="search">
-        <el-form :inline="true" :model="seachForm" class="demo-form-inline" @submit.native.prevent>
-          <el-form-item label="消息标题">
-            <el-input v-model="seachForm.title" placeholder="消息标题" clearable @keyup.enter.native="search"/>
-          </el-form-item>
-          <el-form-item label="消息内容">
-            <el-input v-model="seachForm.content" placeholder="消息内容" clearable @keyup.enter.native="search"/>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="search">查询</el-button>
-          </el-form-item>
-        </el-form>
-      </div>
+    <orange-table-card isShowSearch="false">
 
       <div slot="operation" style="display: inline">
         <span style="color: #409EFF;cursor: pointer;margin-left: 20px" @click="search(true)">刷新数据</span>
@@ -31,12 +17,6 @@
           :data="table.tableData"
           border
           style="width: 100%;margin-top: 10px">
-          <el-table-column type="expand">
-            <template slot-scope="props">
-              <div v-html="props.row.content">
-              </div>
-            </template>
-          </el-table-column>
           <el-table-column
             prop="createDate"
             label="创建时间"
@@ -57,13 +37,13 @@
             </template>
           </el-table-column>
           <el-table-column
-            prop="title"
-            label="系统消息标题"
+            prop="sort"
+            label="排序"
             align="center"
           />
           <el-table-column
-            prop="author"
-            label="作者"
+            prop="clickUrl"
+            label="点击跳转链接"
             align="center"
           />
           <el-table-column
@@ -79,16 +59,6 @@
           </el-table-column>
         </el-table>
 
-        <!--分页-->
-        <el-pagination
-          :page-sizes="table.tablePageSizes"
-          :page-size="table.tablePageSize"
-          :total="table.tableTotal"
-          style="margin-top: 15px"
-          background
-          layout="total, sizes, prev, pager, next, jumper"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"/>
       </div>
 
     </orange-table-card>
@@ -109,10 +79,6 @@
     data() {
       return {
 
-        seachForm: {
-          title: '',
-          content: '',
-        },
         table: {
           tableTotal: 0,
           tableData: [],
@@ -121,7 +87,7 @@
           tablePageSizes: [10, 50, 100, 200]
         },
         open: {
-          url: 'SystemMessageForm',
+          url: 'CarouselForm',
         }
 
       }
@@ -137,19 +103,12 @@
       },
       getTableData() {
 
-        let data = this.seachForm
-        data.current = this.table.tablePageNum
-        data.size = this.table.tablePageSize
-
-        this.$axios.get('systemMessage/page', {
-          params: data
-        }).then((rsp) => {
-          this.table.tableTotal = rsp.data.total
-          for (let i = 0; i < rsp.data.records.length; i++) {
-            rsp.data.records[i].createDate = time.timeStampDate({time:rsp.data.records[i].createDate})
-            rsp.data.records[i].updateDate = time.timeStampDate({time:rsp.data.records[i].updateDate})
+        this.$axios.get('carousel/getListByCreateDate').then((rsp) => {
+          for (let i = 0; i < rsp.data.length; i++) {
+            rsp.data[i].createDate = time.timeStampDate({time:rsp.data[i].createDate})
+            rsp.data[i].updateDate = time.timeStampDate({time:rsp.data[i].updateDate})
           }
-          this.table.tableData = rsp.data.records
+          this.table.tableData = rsp.data
         }).catch((e) => {
           this.$notify.error({
             title: '系统错误',
@@ -177,8 +136,8 @@
         this.openForm({ id: row.id })
       },
       removeRow(row) {
-        this.$axios.post('systemMessage/delete', this.$qs.stringify({
-          systemMessageId: row.id
+        this.$axios.post('carousel/delete', this.$qs.stringify({
+          carouselId: row.id
         })).then((rsp) => {
           this.getTableData()
           this.$message(rsp.msg)

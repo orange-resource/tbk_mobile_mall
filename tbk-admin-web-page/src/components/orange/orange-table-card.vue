@@ -4,7 +4,7 @@
 
     <!--搜索操作区-->
     <!-- gutter = 间距(控制每块col间距大小)-->
-    <el-row v-if="isShowSearch" :gutter="0">
+    <el-row v-if="isShowSearch == true" :gutter="0">
 
       <el-col :span="24" style="margin-top: 10px">
 

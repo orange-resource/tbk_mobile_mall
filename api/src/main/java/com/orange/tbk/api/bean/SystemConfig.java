@@ -36,9 +36,9 @@ public class SystemConfig implements Serializable {
 
     /**
      * 关于我们
-     * with
+     * about
      */
-    private String with;
+    private String about;
 
     /**
      * 网站底部
@@ -94,12 +94,12 @@ public class SystemConfig implements Serializable {
         this.contact = contact == null ? null : contact.trim();
     }
 
-    public String getWith() {
-        return with;
+    public String getAbout() {
+        return about;
     }
 
-    public void setWith(String with) {
-        this.with = with == null ? null : with.trim();
+    public void setAbout(String about) {
+        this.about = about == null ? null : about.trim();
     }
 
     public String getFooter() {

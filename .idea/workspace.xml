@@ -2,15 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/vo/open/CarouselVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/admin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.base.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.dev.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/build/webpack.prod.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/adminweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/components/orange/orange-table-card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/components/orange/orange-table-card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/account/account_list.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/base/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/base/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/card/card_type_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/baidu_map_api_form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/config/email_account_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/interface/interface_list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_login_log_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_map.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/log/soft_register_log_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_form.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_leave_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/soft/soft_versions_form.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/Form.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/system-message/List.vue" afterDir="false" />
     </list>
@@ -41,33 +63,33 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="162" />
+          <entry key="java" value="183" />
           <entry key="md" value="1" />
-          <entry key="properties" value="10" />
+          <entry key="properties" value="11" />
           <entry key="xml" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="162" />
+          <entry key="JAVA" value="183" />
           <entry key="Markdown" value="1" />
-          <entry key="Properties" value="10" />
+          <entry key="Properties" value="11" />
           <entry key="XML" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2652" />
+          <entry key="java" value="2810" />
           <entry key="properties" value="73" />
-          <entry key="txt" value="148" />
+          <entry key="txt" value="171" />
           <entry key="xml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2652" />
-          <entry key="PLAIN_TEXT" value="148" />
+          <entry key="JAVA" value="2810" />
+          <entry key="PLAIN_TEXT" value="171" />
           <entry key="Properties" value="73" />
           <entry key="XML" value="78" />
         </counts>
@@ -76,11 +98,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="280">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/InterfaceManagementController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/InterfaceManagementService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/InterfaceManagementImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -118,7 +194,6 @@
         <option value="$PROJECT_DIR$/admin/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyBatisPlusConfiguration.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/AliyunOssMapper.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/HdkConfigMapper.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemConfigMapper.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/AdminApplication.java" />
@@ -137,8 +212,6 @@
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/SystemMessageImpl.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CourseService.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CourseImpl.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/SystemConfigImpl.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/SystemConfigService.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/HdkConfigService.java" />
@@ -147,7 +220,6 @@
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/HdkConfigController.java" />
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CourseController.java" />
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java" />
-        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemMessageMapper.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CourseMapper.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/utils/aliyunoss/AliyunOSSUtil.java" />
@@ -163,6 +235,11 @@
         <option value="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/FileUploadConfig.java" />
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/vo/open/CarouselVo.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java" />
       </list>
     </option>
   </component>
@@ -530,7 +607,20 @@
               <item name="orange" type="462c0819:PsiDirectoryNode" />
               <item name="tbk" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="orange" type="462c0819:PsiDirectoryNode" />
+              <item name="tbk" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
@@ -615,7 +705,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552467340585" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552474631771" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -653,7 +743,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminWebApplication">
+  <component name="RunManager" selected="Application.Generator">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -750,7 +840,7 @@
       <workItem from="1552026225759" duration="5017000" />
       <workItem from="1552285482102" duration="7771000" />
       <workItem from="1552361193094" duration="24543000" />
-      <workItem from="1552445699637" duration="1333000" />
+      <workItem from="1552445699637" duration="6818000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -934,11 +1024,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552415795058</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="增加vue quill editor 富文本">
+      <created>1552467582405</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1552467582405</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52008000" />
+    <option name="totallyTimeSpent" value="57493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1050,7 +1147,8 @@
     <MESSAGE value="后台框架初步搭建" />
     <MESSAGE value="增加接口" />
     <MESSAGE value="完善上传图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善上传图片" />
+    <MESSAGE value="增加vue quill editor 富文本" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加vue quill editor 富文本" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1100,13 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1217,27 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/InterfaceManagementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/InterfaceManagementImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/UserImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1280,31 +1350,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="98" selection-start-line="9" selection-start-column="98" selection-end-line="9" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/SystemConfigService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/SystemConfigImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1329,52 +1378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/HdkConfigController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/InterfaceManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemConfigController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemMessageMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1389,13 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1450,13 +1450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.0.6/mybatis-plus-core-3.0.6-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="204" column="12" selection-start-line="204" selection-start-column="12" selection-end-line="204" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/AliyunOssService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1482,20 +1475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="2420" column="20" selection-start-line="2420" selection-start-column="20" selection-end-line="2420" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemConfigMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -1549,10 +1528,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemMessageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
+        <state relative-caret-position="980">
           <caret line="59" column="34" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemConfigController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/SystemConfigMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.0.6/mybatis-plus-core-3.0.6-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1176">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1050">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/SystemConfigImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/HdkConfigController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="37" column="42" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="46" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/vo/open/CarouselVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/CarouselMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/InterfaceManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/InterfaceManagementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/InterfaceManagementImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>

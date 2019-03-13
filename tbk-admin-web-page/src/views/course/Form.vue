@@ -27,11 +27,11 @@
             <el-input v-model="form.image" class="common-width" placeholder="点击上传图片或者手动输入图片链接"></el-input>
           </el-form-item>
 
-          <el-form-item label="系统消息标题" prop="title">
+          <el-form-item label="教程标题" prop="title">
             <el-input v-model="form.title" class="common-width" ></el-input>
           </el-form-item>
 
-          <el-form-item label="系统内容" prop="content">
+          <el-form-item label="教程内容" prop="content">
             <quill-editor
               v-model="form.content"
               ref="myQuillEditor"
@@ -73,9 +73,9 @@
     mounted() {
 
       if (this.$route.params.id != null) {
-        this.$axios.get("systemMessage/single",{
+        this.$axios.get("course/single",{
           params: {
-            systemMessageId: this.$route.params.id,
+            courseId: this.$route.params.id,
           }
         }).then((rsp) => {
           this.form = rsp.data;
@@ -88,7 +88,7 @@
     data() {
       return {
         open: {
-          url: 'SystemMessageList',
+          url: 'CourseList',
         },
         formButtonName: '立即创建',
 
@@ -200,10 +200,10 @@
 
         let data = this.form;
 
-        let url = "systemMessage/create";
+        let url = "course/create";
         if (isUpdate == true) {
           data.id = this.$route.params.id;
-          url = "systemMessage/alter";
+          url = "course/alter";
         }
 
         this.$axios({

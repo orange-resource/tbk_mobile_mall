@@ -29,16 +29,22 @@ public class Carousel implements Serializable {
     private Long updateDate;
 
     /**
-     * 轮播主图
-     * image
-     */
-    private String image;
-
-    /**
      * 点击跳转地址
      * click_url
      */
     private String clickUrl;
+
+    /**
+     * 排序
+     * sort
+     */
+    private Long sort;
+
+    /**
+     * 轮播主图
+     * image
+     */
+    private String image;
 
     public String getId() {
         return id;
@@ -80,19 +86,27 @@ public class Carousel implements Serializable {
         this.updateDate = updateDate;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image == null ? null : image.trim();
-    }
-
     public String getClickUrl() {
         return clickUrl;
     }
 
     public void setClickUrl(String clickUrl) {
         this.clickUrl = clickUrl == null ? null : clickUrl.trim();
+    }
+
+    public Long getSort() {
+        return sort;
+    }
+
+    public void setSort(Long sort) {
+        this.sort = sort;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
     }
 }

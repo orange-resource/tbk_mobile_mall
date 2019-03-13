@@ -6,6 +6,7 @@ import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.Carousel;
 import com.orange.tbk.api.service.CarouselService;
+import com.orange.tbk.api.vo.open.CarouselVo;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +23,22 @@ public class CarouselController {
     private CarouselService carouselService;
 
     @RspHandle
-    @RequestMapping(value = "list",method = RequestMethod.GET)
+    @RequestMapping(value = "getListBySort",method = RequestMethod.GET)
     @ResponseBody
-    public Response list() {
+    public Response getListBySort() {
 
-        List<Carousel> carouselList = carouselService.list();
+        List<CarouselVo> carouselVoList = carouselService.getListBySort();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,carouselVoList);
+    }
+
+    @RspHandle
+    @RequiresUser
+    @RequestMapping(value = "getListByCreateDate",method = RequestMethod.GET)
+    @ResponseBody
+    public Response getListByCreateDate() {
+
+        List<Carousel> carouselList = carouselService.getListByCreateDate();
 
         return Response.build(ResponseCode.QUERY_SUCCESS,carouselList);
     }

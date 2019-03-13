@@ -51,13 +51,6 @@ export const constantRouterMap = [
         component: () => import('@/views/interface/interface_list'),
         meta: { title: '开放接口列表', icon: 'eye' }
       },
-      {
-        path: 'interface_form',
-        name: 'InterfaceForm',
-        hidden: true,
-        component: () => import('@/views/interface/interface_form'),
-        meta: { title: '接口操作', icon: 'eye' }
-      },
     ]
   },
 
@@ -86,6 +79,54 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/course',
+    component: Layout,
+    alwaysShow: true,
+    name: 'Course',
+    redirect: 'noredirect',
+    meta: { title: '新手教程', icon: 'eye' },
+    children: [
+      {
+        path: 'list',
+        name: 'CourseList',
+        component: () => import('@/views/course/List'),
+        meta: { title: '教程列表', icon: 'eye' }
+      },
+      {
+        path: 'form',
+        name: 'CourseForm',
+        component: () => import('@/views/course/Form'),
+        meta: { title: '新手教程操作', icon: 'eye' },
+        hidden: true,
+      },
+    ]
+  },
+
+  {
+    path: '/carousel',
+    component: Layout,
+    alwaysShow: true,
+    name: 'Carousel',
+    redirect: 'noredirect',
+    meta: { title: '首页轮播', icon: 'eye' },
+    children: [
+      {
+        path: 'list',
+        name: 'CarouselList',
+        component: () => import('@/views/carousel/List'),
+        meta: { title: '轮播列表', icon: 'eye' }
+      },
+      {
+        path: 'form',
+        name: 'CarouselForm',
+        component: () => import('@/views/carousel/Form'),
+        meta: { title: '轮播操作', icon: 'eye' },
+        hidden: true,
+      },
+    ]
+  },
+
+  {
     path: '/oss',
     component: Layout,
     alwaysShow: true,
@@ -103,149 +144,35 @@ export const constantRouterMap = [
   },
 
   {
-    path: '/soft',
+    path: '/hdkConfig',
     component: Layout,
     alwaysShow: true,
-    name: 'Soft',
+    name: 'HdkConfig',
     redirect: 'noredirect',
-    meta: { title: '软件管理', icon: 'software' },
+    meta: { title: '好单库配置', icon: 'eye' },
     children: [
       {
-        path: 'soft_list',
-        name: 'SoftList',
-        component: () => import('@/views/soft/soft_list'),
-        meta: { title: '软件列表', icon: '软件管理' }
-      },
-      {
-        path: 'soft_form',
-        name: 'SoftForm',
-        hidden: true,
-        component: () => import('@/views/soft/soft_form'),
-        meta: { title: '软件操作', icon: 'tree' }
-      },
-      {
-        path: 'soft_versions_form',
-        name: 'SoftVersionsForm',
-        hidden: true,
-        component: () => import('@/views/soft/soft_versions_form'),
-        meta: { title: '软件版本操作', icon: 'tree' }
-      },
-      {
-        path: 'soft_leave_list',
-        name: 'SoftLeaveList',
-        component: () => import('@/views/soft/soft_leave_list'),
-        meta: { title: '反馈列表', icon: '反馈管理' }
-      },
-    ]
-  },
-  {
-    path: '/log',
-    component: Layout,
-    alwaysShow: true,
-    name: 'Log',
-    redirect: 'noredirect',
-    meta: { title: '日志管理', icon: 'eye' },
-    children: [
-      {
-        path: 'soft_map',
-        name: 'SoftMap',
-        component: () => import('@/views/log/soft_map'),
-        meta: { title: '软件日志图表', icon: 'eye' }
-      },
-      {
-        path: 'soft_login_log_list',
-        name: 'SoftLoginLogList',
-        component: () => import('@/views/log/soft_login_log_list'),
-        meta: { title: '登陆日志表格', icon: 'eye' }
-      },
-      {
-        path: 'soft_register_log_list',
-        name: 'SoftRegisterLogList',
-        component: () => import('@/views/log/soft_register_log_list'),
-        meta: { title: '注册日志表格', icon: 'eye' }
-      },
-    ]
-  },
-  {
-    path: '/card',
-    component: Layout,
-    alwaysShow: true,
-    name: 'Card',
-    redirect: 'noredirect',
-    meta: { title: '充值卡管理', icon: '充值' },
-    children: [
-      {
-        path: 'card_type_list',
-        name: 'CardTypeList',
-        component: () => import('@/views/card/card_type_list'),
-        meta: { title: '卡类列表', icon: '充值kl' }
-      },
-      {
-        path: 'card_type_form',
-        name: 'CardTypeForm',
-        hidden: true,
-        component: () => import('@/views/card/card_type_form'),
-        meta: { title: '卡类操作', icon: '充值kl' }
-      },
-      {
-        path: 'card_list',
-        name: 'CardList',
-        component: () => import('@/views/card/card_list'),
-        meta: { title: '卡密列表', icon: '充值缴费' }
-      },
-      {
-        path: 'card_form',
-        name: 'CardForm',
-        hidden: true,
-        component: () => import('@/views/card/card_form'),
-        meta: { title: '卡密操作', icon: 'table' }
+        path: 'form',
+        name: 'HdkConfigForm',
+        component: () => import('@/views/hdk-config/Form'),
+        meta: { title: '配置操作', icon: 'eye' }
       },
     ]
   },
 
   {
-    path: '/account',
+    path: '/systemConfig',
     component: Layout,
     alwaysShow: true,
-    name: 'Account',
+    name: 'SystemConfig',
     redirect: 'noredirect',
-    meta: { title: '用户管理', icon: '用户' },
+    meta: { title: '系统配置', icon: 'eye' },
     children: [
       {
-        path: 'account_list',
-        name: 'AccountList',
-        component: () => import('@/views/account/account_list'),
-        meta: { title: '用户列表', icon: '用户d' }
-      },
-    ]
-  },
-
-  {
-    path: '/config',
-    component: Layout,
-    alwaysShow: true,
-    name: 'Config',
-    redirect: 'noredirect',
-    meta: { title: '配置管理', icon: '配置' },
-    children: [
-      {
-        path: 'email_account_list',
-        name: 'EmailAccountList',
-        component: () => import('@/views/config/email_account_list'),
-        meta: { title: '邮箱列表', icon: '邮箱' }
-      },
-      {
-        path: 'email_account_form',
-        name: 'EmailAccountForm',
-        hidden: true,
-        component: () => import('@/views/config/email_account_form'),
-        meta: { title: '邮箱操作', icon: 'table' }
-      },
-      {
-        path: 'baidu_map_api_form',
-        name: 'BaiduMapApiForm',
-        component: () => import('@/views/config/baidu_map_api_form'),
-        meta: { title: '百度地理api', icon: '地图' }
+        path: 'form',
+        name: 'SystemConfigForm',
+        component: () => import('@/views/system-config/Form'),
+        meta: { title: '系统配置操作', icon: 'eye' }
       },
     ]
   },

@@ -6,11 +6,11 @@
 
       <div slot="search">
         <el-form :inline="true" :model="seachForm" class="demo-form-inline" @submit.native.prevent>
-          <el-form-item label="消息标题">
-            <el-input v-model="seachForm.title" placeholder="消息标题" clearable @keyup.enter.native="search"/>
+          <el-form-item label="教程标题">
+            <el-input v-model="seachForm.title" placeholder="教程标题" clearable @keyup.enter.native="search"/>
           </el-form-item>
-          <el-form-item label="消息内容">
-            <el-input v-model="seachForm.content" placeholder="消息内容" clearable @keyup.enter.native="search"/>
+          <el-form-item label="教程内容">
+            <el-input v-model="seachForm.content" placeholder="教程内容" clearable @keyup.enter.native="search"/>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="search">查询</el-button>
@@ -58,7 +58,7 @@
           </el-table-column>
           <el-table-column
             prop="title"
-            label="系统消息标题"
+            label="教程标题"
             align="center"
           />
           <el-table-column
@@ -121,7 +121,7 @@
           tablePageSizes: [10, 50, 100, 200]
         },
         open: {
-          url: 'SystemMessageForm',
+          url: 'CourseForm',
         }
 
       }
@@ -141,7 +141,7 @@
         data.current = this.table.tablePageNum
         data.size = this.table.tablePageSize
 
-        this.$axios.get('systemMessage/page', {
+        this.$axios.get('course/page', {
           params: data
         }).then((rsp) => {
           this.table.tableTotal = rsp.data.total
@@ -177,8 +177,8 @@
         this.openForm({ id: row.id })
       },
       removeRow(row) {
-        this.$axios.post('systemMessage/delete', this.$qs.stringify({
-          systemMessageId: row.id
+        this.$axios.post('course/delete', this.$qs.stringify({
+          courseId: row.id
         })).then((rsp) => {
           this.getTableData()
           this.$message(rsp.msg)
