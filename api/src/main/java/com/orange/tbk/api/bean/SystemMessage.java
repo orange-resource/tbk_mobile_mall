@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 系统消息模块
  * t_system_message
  * @author Orange
- * @date 2019/03/13
+ * @date 2019/03/14
  */
 @TableName("t_system_message")
 @KeySequence("SEQ_TEST")

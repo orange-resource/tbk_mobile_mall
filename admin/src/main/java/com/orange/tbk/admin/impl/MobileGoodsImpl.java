@@ -3,19 +3,19 @@ package com.orange.tbk.admin.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.orange.tbk.admin.mapper.HdkConfigMapper;
 import com.orange.tbk.admin.util.hdkvisit.HdkApiVisit;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiBrand;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiColumn;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiDeserver;
+import com.orange.tbk.admin.util.hdkvisit.request.ApiGoodsDetails;
+import com.orange.tbk.admin.util.hdkvisit.request.ApiGoodsLike;
+import com.orange.tbk.admin.util.hdkvisit.request.ApiGoodsRates;
 import com.orange.tbk.api.bean.HdkConfig;
 import com.orange.tbk.api.redis.RedisKeyConstant;
-import com.orange.tbk.api.service.MobileHomeService;
+import com.orange.tbk.api.service.MobileGoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class MobileHomeImpl implements MobileHomeService {
+public class MobileGoodsImpl implements MobileGoodsService {
 
     @Autowired
     private RedisTemplate<String,Object> redisTemplate;
@@ -24,23 +24,24 @@ public class MobileHomeImpl implements MobileHomeService {
     private HdkConfigMapper hdkConfigMapper;
 
     @Override
-    public String deserver() {
+    public String getDetails(String goodsId) {
 
-        String redisKey = RedisKeyConstant.API_DATA + "deserver";
+        String redisKey = RedisKeyConstant.API_DATA + "goods-details:" + goodsId;
 
         String data = (String) redisTemplate.opsForValue().get(redisKey);
         if (data == null || data.equals("")) {
 
             HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
 
-            ApiDeserver apiDeserver = new ApiDeserver();
-            apiDeserver.setApikey(hdkConfig.getAppkey());
+            ApiGoodsDetails apiGoodsDetails = new ApiGoodsDetails();
+            apiGoodsDetails.setApikey(hdkConfig.getAppkey());
+            apiGoodsDetails.setItemid(goodsId);
 
             try {
-                String execute = HdkApiVisit.execute(apiDeserver);
+                String execute = HdkApiVisit.execute(apiGoodsDetails);
 
                 redisTemplate.opsForValue().set(redisKey,execute,1,
-                        TimeUnit.HOURS);
+                        TimeUnit.DAYS);
 
                 return execute;
             } catch (Exception e) {
@@ -53,25 +54,26 @@ public class MobileHomeImpl implements MobileHomeService {
     }
 
     @Override
-    public String brand(Integer page,Integer tag) {
+    public String rates(String goodsId) {
 
-        String redisKey = RedisKeyConstant.API_DATA + "brand:" + page + "-" + tag;
+        String redisKey = RedisKeyConstant.API_DATA + "goods-rates:" + goodsId;
 
         String data = (String) redisTemplate.opsForValue().get(redisKey);
         if (data == null || data.equals("")) {
 
             HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
 
-            ApiBrand apiBrand = new ApiBrand();
-            apiBrand.setApikey(hdkConfig.getAppkey());
-            apiBrand.setMin_id(page);
-            apiBrand.setBrandcat(tag);
+            ApiGoodsRates apiGoodsRates = new ApiGoodsRates();
+            apiGoodsRates.setApikey(hdkConfig.getAppkey());
+            apiGoodsRates.setItemid(goodsId);
+            apiGoodsRates.setPid(hdkConfig.getPid());
+            apiGoodsRates.setTb_name(hdkConfig.getTbName());
 
             try {
-                String execute = HdkApiVisit.execute(apiBrand);
+                String execute = HdkApiVisit.execute(apiGoodsRates);
 
                 redisTemplate.opsForValue().set(redisKey,execute,1,
-                        TimeUnit.HOURS);
+                        TimeUnit.DAYS);
 
                 return execute;
             } catch (Exception e) {
@@ -84,27 +86,24 @@ public class MobileHomeImpl implements MobileHomeService {
     }
 
     @Override
-    public String district(Integer page, Integer tag, Integer type, Integer category) {
+    public String like(String goodsId) {
 
-        String redisKey = RedisKeyConstant.API_DATA + "district:" + page + "-" + tag + "-" + type + "-" + category;
+        String redisKey = RedisKeyConstant.API_DATA + "goods-like:" + goodsId;
 
         String data = (String) redisTemplate.opsForValue().get(redisKey);
         if (data == null || data.equals("")) {
 
             HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
 
-            ApiColumn apiColumn = new ApiColumn();
-            apiColumn.setApikey(hdkConfig.getAppkey());
-            apiColumn.setCid(category);
-            apiColumn.setMin_id(page);
-            apiColumn.setType(type);
-            apiColumn.setSort(tag);
+            ApiGoodsLike apiGoodsLike = new ApiGoodsLike();
+            apiGoodsLike.setApikey(hdkConfig.getAppkey());
+            apiGoodsLike.setItemid(goodsId);
 
             try {
-                String execute = HdkApiVisit.execute(apiColumn);
+                String execute = HdkApiVisit.execute(apiGoodsLike);
 
                 redisTemplate.opsForValue().set(redisKey,execute,1,
-                        TimeUnit.HOURS);
+                        TimeUnit.DAYS);
 
                 return execute;
             } catch (Exception e) {

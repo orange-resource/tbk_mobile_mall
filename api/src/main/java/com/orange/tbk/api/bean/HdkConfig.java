@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 好单库apikey配置
  * t_hdk_config
  * @author Orange
- * @date 2019/03/13
+ * @date 2019/03/14
  */
 @TableName("t_hdk_config")
 @KeySequence("SEQ_TEST")
@@ -32,6 +32,18 @@ public class HdkConfig implements Serializable {
      * appkey
      */
     private String appkey;
+
+    /**
+     * 推广位id
+     * pid
+     */
+    private String pid;
+
+    /**
+     * 淘宝号名称
+     * tb_name
+     */
+    private String tbName;
 
     public String getId() {
         return id;
@@ -79,5 +91,21 @@ public class HdkConfig implements Serializable {
 
     public void setAppkey(String appkey) {
         this.appkey = appkey == null ? null : appkey.trim();
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid == null ? null : pid.trim();
+    }
+
+    public String getTbName() {
+        return tbName;
+    }
+
+    public void setTbName(String tbName) {
+        this.tbName = tbName == null ? null : tbName.trim();
     }
 }

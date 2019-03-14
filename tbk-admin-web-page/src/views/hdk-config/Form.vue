@@ -11,6 +11,12 @@
           <el-form-item label="appkey" prop="appkey">
             <el-input v-model="form.appkey" class="common-width"></el-input>
           </el-form-item>
+          <el-form-item label="pid(推广位id)" prop="pid">
+            <el-input v-model="form.pid" class="common-width"></el-input>
+          </el-form-item>
+          <el-form-item label="淘宝号名称" prop="tbName">
+            <el-input v-model="form.tbName" class="common-width"></el-input>
+          </el-form-item>
 
           <el-form-item>
             <el-button type="primary" @click="submitForm('form')">{{ formButtonName }}</el-button>
@@ -87,10 +93,18 @@
         //表单配置
         form: {
           appkey: '',
+          pid: '',
+          tbName: '',
         },
         forms: {
           appkey: [
             {required: true, message: '请填写appkey', trigger: 'blur'},
+          ],
+          pid: [
+            {required: true, message: '请填写推广位pid', trigger: 'blur'},
+          ],
+          tbName: [
+            {required: true, message: '请填写淘宝名称', trigger: 'blur'},
           ],
         },
 

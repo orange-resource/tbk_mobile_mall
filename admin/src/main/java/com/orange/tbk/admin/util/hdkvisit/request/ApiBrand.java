@@ -4,6 +4,11 @@ import com.orange.tbk.admin.util.hdkvisit.base.BaseInterface;
 import com.orange.tbk.admin.util.hdkvisit.base.BaseRequest;
 import com.orange.tbk.admin.util.hdkvisit.type.HttpRequestMethod;
 
+/**
+ * 超值大牌
+ * @author Orange软件
+ * @date 2019.3.14
+ */
 public class ApiBrand extends BaseRequest implements BaseInterface {
 
     //页数

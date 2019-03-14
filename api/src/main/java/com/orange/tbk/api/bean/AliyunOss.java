@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 阿里云对象存储配置模块
  * t_aliyun_oss
  * @author Orange
- * @date 2019/03/13
+ * @date 2019/03/14
  */
 @TableName("t_aliyun_oss")
 @KeySequence("SEQ_TEST")

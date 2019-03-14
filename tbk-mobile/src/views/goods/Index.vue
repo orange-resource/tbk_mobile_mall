@@ -273,7 +273,7 @@
             },
             btv() { //领卷
                 this.$toast('正在前往淘宝官方领卷页面，请耐心等待...');
-                this.$axios.get('goods/ratesurl',{
+                this.$axios.get('goods/rates',{
                     params: {
                         goodsId: this.$route.query.id,
                     }

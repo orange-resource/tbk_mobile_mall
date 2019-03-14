@@ -4,6 +4,11 @@ import com.orange.tbk.admin.util.hdkvisit.base.BaseInterface;
 import com.orange.tbk.admin.util.hdkvisit.base.BaseRequest;
 import com.orange.tbk.admin.util.hdkvisit.type.HttpRequestMethod;
 
+/**
+ * 商品筛选 ... 获取9.9包邮,聚划算,淘抢购等等商品...
+ * @author Orange软件
+ * @date 2019.3.14
+ */
 public class ApiColumn extends BaseRequest implements BaseInterface {
 
     //商品筛选类型
