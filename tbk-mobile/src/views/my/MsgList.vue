@@ -40,7 +40,7 @@
                 window.history.go(-1);
             },
             onClickRight() {
-                location.assign("/my");
+                this.$router.push({ path: "/my" });
             },
         },
     }

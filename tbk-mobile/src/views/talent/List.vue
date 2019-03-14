@@ -7,7 +7,14 @@
 			<div class="orange-content content">
 
 				<!--头部-->
-				<van-nav-bar title="达人说"></van-nav-bar>
+				<van-nav-bar
+						title="达人说"
+						left-text="返回"
+						right-text="首页"
+						left-arrow
+						@click-right="onClickRight"
+						@click-left="onClickLeft"
+				/>
 
 				<!--头部滑动卡片-->
 				<div style="height: 200px;" class="head">
@@ -32,7 +39,7 @@
 								topTag="最新"
 								:title="i.name"
 								:image="i.image"
-								:to='"talent/article?id=" + i.id'
+								:to='"/talent/article?id=" + i.id'
 								style="margin-top: 10px"
 						></orange-goods-card>
 					</van-tab>
@@ -43,7 +50,7 @@
 								:topTag="list.name"
 								:title="i.name"
 								:image="i.image"
-								:to='"talent/article?id=" + i.id'
+								:to='"/talent/article?id=" + i.id'
 								style="margin-top: 10px"
 						></orange-goods-card>
 					</van-tab>
@@ -55,10 +62,6 @@
 			</div>
 
 
-		</div>
-
-		<div class="footer">
-		    <orange-footer></orange-footer>
 		</div>
 
 	</div>
@@ -117,6 +120,12 @@
             openArticle(articleId) {
                 this.$router.push({ path: 'talent/article?id=' + articleId });
 			},
+            onClickLeft() {
+                window.history.go(-1);
+            },
+            onClickRight() {
+                this.$router.push({ path: "/" });
+            },
 	    }
 	}
 

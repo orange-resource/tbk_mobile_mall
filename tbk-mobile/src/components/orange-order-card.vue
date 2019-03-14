@@ -64,7 +64,7 @@
         props: ["logo","title","status","number","money","to"],
         methods: {
             open(to) {
-                location.assign(this.to);
+                this.$router.push({ path: to });
             },
         },
     }

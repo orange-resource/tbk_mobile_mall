@@ -49,7 +49,7 @@
                     :price="i.itemendprice"
                     :originalPrice="i.itemprice"
                     :payment="i.itemsale"
-                    :to='"../goods?id=" + i.itemid'
+                    :to='"/goods?id=" + i.itemid'
                     style="margin: 5px 0 5px 0"
             ></orange-goods-sell>
 

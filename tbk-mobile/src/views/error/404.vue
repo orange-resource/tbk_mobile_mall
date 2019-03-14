@@ -29,7 +29,7 @@
         name: "404",
         methods: {
             openHome() {
-                location.assign("/");
+                this.$router.push({ path: "/" });
             },
         },
     }

@@ -8,7 +8,7 @@
             <van-nav-bar
                     title="搜索商品"
                     left-text="返回"
-                    right-text="首页"
+                    right-text="搜索"
                     left-arrow
                     @click-right="onClickRight"
                     @click-left="onClickLeft"
@@ -44,7 +44,7 @@
                                 :price="i.itemendprice"
                                 :originalPrice="i.itemprice"
                                 :payment="i.itemsale"
-                                :to='"../goods?id=" + i.itemid'
+                                :to='"/goods?id=" + i.itemid'
                         ></orange-goods-sell>
                     </van-list>
 
@@ -86,7 +86,7 @@
                 window.history.go(-1);
             },
             onClickRight() {
-                location.assign("/");
+                this.$router.push({ path: "/search/main" });
             },
             onSearch() { //搜索按钮触发
                 try {

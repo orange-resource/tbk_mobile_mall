@@ -43,11 +43,13 @@ public class RspHandleAspect {
     }
 
     @Around("annotationPointCut()")
-    public Response arround(ProceedingJoinPoint pjp) throws Throwable {
+    public Object arround(ProceedingJoinPoint pjp) throws Throwable {
 
         RspHandle rspHandle = getRspHandle(pjp);
 
         boolean setErrorInfo = rspHandle.isSetErrorInfo();
+
+        boolean returnObject = rspHandle.isReturnObject();
 
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = (HttpServletRequest) requestAttributes.resolveReference(RequestAttributes.REFERENCE_REQUEST);
@@ -81,15 +83,19 @@ public class RspHandleAspect {
 
         try {
 
-            long startTime = System.currentTimeMillis();
+            if (returnObject == false) {
+                long startTime = System.currentTimeMillis();
 
-            Response response = (Response) pjp.proceed();
+                Response response = (Response) pjp.proceed();
 
-            long endTime = System.currentTimeMillis();
+                long endTime = System.currentTimeMillis();
 
-            response.setTotalTime(endTime - startTime);
+                response.setTotalTime(endTime - startTime);
 
-            return response;
+                return response;
+            } else {
+                return pjp.proceed();
+            }
 
         } catch (ParameterError e) {
             return Response.build(ResponseCode.PARAMETER_ERROR,e.getMessage());

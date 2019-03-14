@@ -3,8 +3,8 @@
         <van-tabbar v-model="active">
             <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
             <van-tabbar-item to="/hot" icon="fire-o">热销区</van-tabbar-item>
+            <van-tabbar-item to="/search/main" icon="search">搜索商品</van-tabbar-item>
             <van-tabbar-item to="/discovery" icon="aim">发现</van-tabbar-item>
-            <van-tabbar-item to="/talent" icon="thumb-circle-o">达人说</van-tabbar-item>
             <van-tabbar-item to="/my" icon="manager-o">我的</van-tabbar-item>
         </van-tabbar>
     </div>
@@ -28,10 +28,10 @@
                 case "hot":
                     this.active = 1;
                     break;
-                case "discovery":
+                case "searchMain":
                     this.active = 2;
                     break;
-                case "talent":
+                case "discovery":
                     this.active = 3;
                     break;
                 case "my":

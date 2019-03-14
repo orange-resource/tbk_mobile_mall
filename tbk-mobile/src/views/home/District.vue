@@ -33,7 +33,7 @@
                                 :price="i.itemendprice"
                                 :originalPrice="i.itemprice"
                                 :payment="i.itemsale"
-                                :to='"../goods?id=" + i.itemid'
+                                :to='"/goods?id=" + i.itemid'
                         ></orange-goods-sell>
                     </van-list>
 
@@ -72,7 +72,7 @@
                 window.history.go(-1);
             },
             onClickRight() {
-                location.assign("/");
+                this.$router.push({ path: "/" });
             },
             tabSearch(index, title) { //点击标签，换标签触发
                 this.tagIndex = index;

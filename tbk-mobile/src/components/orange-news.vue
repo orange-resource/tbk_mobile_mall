@@ -65,13 +65,7 @@
         ],
         methods: {
             openGoods(to) {
-                this.$dialog.confirm({
-                    message: '查看此商品？'
-                }).then(() => {
-                    this.$toast('正在跳转...');
-                    location.assign(to);
-                }).catch(() => {
-                });
+                this.$router.push({ path: to });
             },
         },
         filters: {

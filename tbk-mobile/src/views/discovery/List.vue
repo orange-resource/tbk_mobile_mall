@@ -169,7 +169,7 @@
                                 rsp.data.data[i].goods.push({
                                     image: itemData[p].itempic,
                                     price: '卷后价格' + itemData[p].itemendprice,
-                                    to: "goods?id=" + itemData[p].itemid,
+                                    to: "/goods?id=" + itemData[p].itemid,
                                 });
 							}
 
@@ -198,7 +198,7 @@
                 })
 			},
 			openTheme(themeId) {
-                location.assign("/discovery/theme?id=" + themeId);
+                this.$router.push({ path: "/discovery/theme?id=" + themeId });
 			},
 	    }
 	}

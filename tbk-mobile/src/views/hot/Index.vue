@@ -32,7 +32,7 @@
                                         :price="i.itemendprice"
                                         :originalPrice="i.itemprice"
                                         :payment="i.itemsale"
-                                        :to='"../goods?id=" + i.itemid'
+                                        :to='"/goods?id=" + i.itemid'
                                 ></orange-goods-sell>
                             </van-col>
 

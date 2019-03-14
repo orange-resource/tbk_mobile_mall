@@ -15,4 +15,7 @@ public @interface RspHandle {
     //方法体报错 是否返回错误信息
     boolean isSetErrorInfo() default false;
 
+    //默认返回Response此类...
+    boolean isReturnObject() default false;
+
 }

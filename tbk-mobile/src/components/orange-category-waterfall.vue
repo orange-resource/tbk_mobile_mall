@@ -45,7 +45,7 @@
         props: ["data"],
         methods: {
             open(to) {
-                location.assign(this.to);
+                this.$router.push({ path: to });
             },
         }
     }

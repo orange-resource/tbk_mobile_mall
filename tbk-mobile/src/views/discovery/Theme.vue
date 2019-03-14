@@ -31,7 +31,7 @@
                         :price="i.itemprice"
                         :priceTag="i.itemendprice"
                         :ratio="true"
-                        :to='"../goods?id=" + i.itemid'
+                        :to='"/goods?id=" + i.itemid'
                         style="margin-top: 10px"
                 ></orange-goods-card>
 

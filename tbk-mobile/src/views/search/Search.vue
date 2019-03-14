@@ -7,11 +7,6 @@
             <!--头部-->
             <van-nav-bar
                     title="搜索"
-                    left-text="返回"
-                    right-text="首页"
-                    left-arrow
-                    @click-left="onClickLeft"
-                    @click-right="onClickRight"
             />
             <!--头部 end-->
 
@@ -64,7 +59,13 @@
                 </van-col>
             </van-row>
             <!--热门搜索 end-->
+            <br><br>
+            <br>
 
+        </div>
+
+        <div class="footer">
+            <orange-footer></orange-footer>
         </div>
 
     </div>
@@ -124,16 +125,10 @@
                 } catch (e) {
                     console.log(e);
                 }
-                location.assign("/search/goods?keyword=" + this.keyword);
+                this.$router.push({ path: "/search/goods?keyword=" + this.keyword });
             },
             tagSearch(keyword) {
-                location.assign("/search/goods?keyword=" + keyword);
-            },
-            onClickLeft() {
-                window.history.go(-1);
-            },
-            onClickRight() {
-                location.assign("/");
+                this.$router.push({ path: "/search/goods?keyword=" + keyword });
             },
             deleteKeyword() { //清空最近搜索的关键词
                 this.recentKeyword = [];

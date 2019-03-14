@@ -230,13 +230,18 @@
             clickCollect() { //收藏
                 if (this.collect.isCollect == true) {
                     queue.removeItem(this.collectKey,[this.details.itemId]);
+                    this.collect.name = "收藏";
+                    this.collect.icon = "star-o";
+                    this.collect.isCollect = false;
                 } else {
                     queue.insert({
                         key: this.collectKey,
                         value: this.details,
                     });
+                    this.collect.name = "已收藏";
+                    this.collect.icon = "star";
+                    this.collect.isCollect = true;
                 }
-                location.assign(window.location.href);
             },
             onClickLeft() {
                 window.history.go(-1);

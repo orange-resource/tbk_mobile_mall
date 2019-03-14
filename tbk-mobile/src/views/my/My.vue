@@ -137,13 +137,13 @@
         },
         methods: {
             openCollect() {
-                location.assign("/my/collect");
+                this.$router.push({ path: "/my/collect" });
             },
             openFootprint() {
-                location.assign("/my/footprint");
+                this.$router.push({ path: "/my/footprint" });
             },
             openMsg() {
-                location.assign("/my/msg/list");
+                this.$router.push({ path: "/my/list" });
             },
             openTutorial() {
 

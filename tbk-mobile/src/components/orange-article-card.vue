@@ -46,7 +46,7 @@
         props:["title","author","date","visit","to"],
         methods: {
             open(to) {
-                location.assign(this.to);
+                this.$router.push({ path: to });
             },
         },
     }

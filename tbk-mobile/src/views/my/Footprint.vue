@@ -38,7 +38,7 @@
                     :price="i.itemendprice"
                     :originalPrice="i.itemprice"
                     :payment="i.itemsale"
-                    :to='"../goods?id=" + i.itemid'
+                    :to='"/goods?id=" + i.itemid'
             ></orange-goods-sell>
 
             <orange-up></orange-up>
@@ -69,11 +69,11 @@
                 window.history.go(-1);
             },
             onClickRight() {
-                location.assign("/my");
+                this.$router.push({ path: "/my" });
             },
             remove() {
                 queue.remove(this.footprintKey);
-                location.assign(window.location.href);
+                this.data = queue.get(this.footprintKey);
             }
         }
     }

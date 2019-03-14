@@ -22,23 +22,28 @@
                 </div>
                 <!--分类区 end-->
 
-                <!--广告区1-->
+                <!--聚划算，淘抢购-->
                 <div v-for="(i,index) in pretty" :key="'t' + index">
                     <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen(i.toUrl)">
                         <img :src="i.imageUrl" width="100%" height="100%"/>
                     </div>
                 </div>
 
-                <!--广告区1 end-->
+                <!--达人说-->
+                <van-row type="flex" justify="center" style="clear: both;">
+                    <van-col span="24" style="display: flex;justify-content: center;align-items: center">
+                        <img src="https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536796690071.jpg"
+                             width="100%" height="100%" @click="openTalent()">
+                    </van-col>
+                </van-row>
 
-                <!--广告区 2-->
+                <!--超值品牌-->
                 <van-row type="flex" justify="center" style="clear: both;">
                     <van-col span="24" style="display: flex;justify-content: center;align-items: center">
                         <img src="https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536803202470.jpg"
                              width="100%" height="100%" @click="openBrand()">
                     </van-col>
                 </van-row>
-                <!--广告区2 end-->
 
                 <!--商品推荐-->
                 <div style="clear: both;">
@@ -57,7 +62,7 @@
                             :price="i.itemprice"
                             :priceTag="i.itemendprice"
                             :ratio="true"
-                            :to='"../goods?id=" + i.itemid'
+                            :to='"/goods?id=" + i.itemid'
                             style="margin-top: 10px"
                     ></orange-goods-card>
                 </div>
@@ -148,10 +153,13 @@
         },
         methods: {
             gridOpen(to) {
-                location.assign(to);
+                this.$router.push({ path: to });
             },
             openBrand() {
-                location.assign("/home/brand");
+                this.$router.push({ path: "/home/brand" });
+            },
+            openTalent() {
+                this.$router.push({ path: "/talent" });
             },
         }
     }

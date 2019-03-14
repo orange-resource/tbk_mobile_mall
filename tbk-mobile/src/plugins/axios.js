@@ -15,7 +15,7 @@ Vue.use(Toast);
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 let config = {
-  baseURL: "https://www.easy-mock.com/mock/5c12866a3992fd7b3bdecd23/tbk",
+  baseURL: "http://localhost/tbk",
   // baseURL: "",
   timeout: 60 * 1000, // Timeout
   withCredentials: true, // Check cross-site Access-Control

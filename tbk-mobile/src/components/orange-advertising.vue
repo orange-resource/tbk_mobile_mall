@@ -13,7 +13,7 @@
         props: ["src","to"],
         methods: {
             open() {
-                location.assign(this.to);
+                this.$router.push({ path: this.to });
             },
         }
     }
