@@ -15,7 +15,7 @@
                 <div v-for="(g,index) in grid"
                      :key="'g' + index"
                      style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
-                     @click="gridOpen(g.toUrl)">
+                     @click="gridOpen(g.toUrl + '&title=' + g.name)">
                     <img :src="g.imageUrl"
                          style="height: 70px"/>
                     <span style="font-size: 10px;text-align: center;color: #999999">{{g.name}}</span>
@@ -24,7 +24,7 @@
 
                 <!--聚划算，淘抢购-->
                 <div v-for="(i,index) in pretty" :key="'t' + index">
-                    <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen(i.toUrl)">
+                    <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen(i.toUrl + '&title=' + i.name)">
                         <img :src="i.imageUrl" width="100%" height="100%"/>
                     </div>
                 </div>
@@ -141,10 +141,12 @@
                 ],
                 pretty: [
                     {
+                        name: '聚划算',
                         imageUrl: "https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536793226579.jpg",
                         toUrl: '/home/district?type=4',
                     },
                     {
+                        name: '淘抢购',
                         imageUrl: "https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536793228116.jpg",
                         toUrl: '/home/district?type=5',
                     },

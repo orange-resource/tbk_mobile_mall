@@ -127,6 +127,7 @@
                         }
                         this.tab[index].loading = false;
                     } else {
+                        this.tab[index].loading = false;
                         this.tab[index].finished = true;
                         this.$alert.notifyNoData(rsp.data.msg);
                     }

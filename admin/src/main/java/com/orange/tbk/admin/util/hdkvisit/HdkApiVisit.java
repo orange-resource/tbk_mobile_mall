@@ -5,7 +5,9 @@ import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpStatus;
+import cn.hutool.json.JSONObject;
 import com.orange.tbk.admin.util.hdkvisit.exception.ApiKeyNotNull;
+import com.orange.tbk.admin.util.hdkvisit.exception.ApiNoData;
 import com.orange.tbk.admin.util.hdkvisit.exception.ApiVisitFail;
 import com.orange.tbk.admin.util.hdkvisit.type.HttpRequestMethod;
 
@@ -60,7 +62,13 @@ public class HdkApiVisit {
 
             String body = UnicodeUtil.toString(execute.body());
 
-            return body;
+            JSONObject jsonObject = new JSONObject(body);
+            String msg = (String) jsonObject.get("msg");
+            if ("SUCCESS".equals(msg)) {
+                return body;
+            }
+
+            throw new ApiNoData((String) jsonObject.get("msg"));
         }
 
         throw new ApiVisitFail("API访问失败，状态码：" + execute.getStatus());

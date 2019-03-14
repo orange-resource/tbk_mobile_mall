@@ -6,7 +6,7 @@
 
             <!--头部-->
             <van-nav-bar
-                    title="淘优惠，就要优惠"
+                    :title="title"
                     left-text="返回"
                     right-text="首页"
                     left-arrow
@@ -16,7 +16,11 @@
             <!--头部 end-->
 
             <!--出来商品-->
-            <van-tabs @click="tabSearch">
+            <!--<van-tabs @click="choiceCategory">-->
+                <!--<van-tab v-for="(name,index) in category" :key="index" :title="name">-->
+                <!--</van-tab>-->
+            <!--</van-tabs>-->
+            <van-tabs @click="tabSearch" type="card" style="margin-top: 10px">
                 <van-tab v-for="(t,index) in tab" :key="index" :title="t.name">
 
                     <van-list
@@ -53,6 +57,19 @@
     export default {
         name: "SearchGoods",
         mounted() {
+
+            if (this.$route.query.title == '9.9包邮' && this.$route.query.type == 2) {
+            } else if (this.$route.query.title == '今日上新' && this.$route.query.type == 1) {
+            } else if (this.$route.query.title == '30元封顶' && this.$route.query.type == 3) {
+            } else if (this.$route.query.title == '天猫商品' && this.$route.query.type == 9) {
+            } else if (this.$route.query.title == '品牌爆款' && this.$route.query.type == 8) {
+            } else if (this.$route.query.title == '聚划算' && this.$route.query.type == 4) {
+            } else if (this.$route.query.title == '淘抢购' && this.$route.query.type == 5) {
+            } else {
+                this.$router.push({ path: "/error/404" });
+            }
+
+            this.title = this.$route.query.title;
             this.type = this.$route.query.type;
         },
         data() {
@@ -65,6 +82,28 @@
                     {name: '超优惠',loading: false,finished: false,total: 0,data: []},
                 ],
                 tagIndex: 0,
+                // category: [
+                //     '全部',
+                //     '女装',
+                //     '男装',
+                //     '内衣',
+                //     '美妆',
+                //     '配饰',
+                //     '鞋品',
+                //     '箱包',
+                //     '儿童',
+                //     '母婴',
+                //     '居家',
+                //     '美食',
+                //     '数码',
+                //     '家电',
+                //     '其他',
+                //     '车品',
+                //     '文体',
+                //     '宠物',
+                // ],
+                cid: 0,
+                title: '',
             }
         },
         methods:{
@@ -88,6 +127,7 @@
                         tag: index,
                         page: page,
                         type: this.type,
+                        category: this.cid,
                     }
                 }).then((rsp) => {
 
@@ -100,6 +140,7 @@
                         }
                         this.tab[index].loading = false;
                     } else {
+                        this.tab[index].loading = false;
                         this.tab[index].finished = true;
                         this.$alert.notifyNoData(rsp.data.msg);
                     }

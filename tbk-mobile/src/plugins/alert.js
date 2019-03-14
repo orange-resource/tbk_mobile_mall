@@ -24,7 +24,7 @@ var alert = {
     },
 
     notifyNoData: function (msg) {
-        Notify('数据获取异常，请重新刷新页面,原因：' + msg);
+        Notify('数据获取完毕');
     }
 
 };

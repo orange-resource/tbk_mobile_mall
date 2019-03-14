@@ -26,5 +26,26 @@ public class MobileHomeController {
 
         return mobileHomeService.deserver();
     }
+    
+    /**
+     * 获取超值大牌
+     */
+    @RspHandle(isReturnObject = true)
+    @RequestMapping(value = "brand",method = RequestMethod.GET)
+    @ResponseBody
+    public Object brand(Integer page,Integer tag) {
 
+        return mobileHomeService.brand(page,tag);
+    }
+
+    /**
+     * 商品筛选 主要获取聚划算,淘抢购,9.9包邮...
+     */
+    @RspHandle(isReturnObject = true)
+    @RequestMapping(value = "district",method = RequestMethod.GET)
+    @ResponseBody
+    public Object district(Integer page,Integer tag,Integer type,Integer category) {
+
+        return mobileHomeService.district(page,tag,type,category);
+    }
 }
