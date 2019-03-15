@@ -6,6 +6,7 @@ import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.SystemConfig;
 import com.orange.tbk.api.service.SystemConfigService;
+import com.orange.tbk.api.vo.open.SystemConfigVo;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,16 @@ public class SystemConfigController {
 
     @Reference
     private SystemConfigService systemConfigService;
+
+    @RspHandle
+    @RequestMapping(value = "getSystemConfig",method = RequestMethod.GET)
+    @ResponseBody
+    public Response getSystemConfig() {
+
+        SystemConfigVo systemConfigVo = systemConfigService.getSystemConfigVo();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,systemConfigVo);
+    }
 
     @RspHandle
     @RequiresUser

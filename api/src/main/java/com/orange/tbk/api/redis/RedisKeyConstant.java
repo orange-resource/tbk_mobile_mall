@@ -25,6 +25,11 @@ public class RedisKeyConstant {
     /**
      * API数据 KEY 前缀key
      */
-    public final  static String API_DATA = "orange.tbk:api-data:";
+    public final static String API_DATA = "orange.tbk:api-data:";
+
+    /**
+     * admin system config impl key
+     */
+    public final static String SYSTEMCONFIG_IMPL = "orange.tbk:data:SystemConfigImpl:";
 
 }

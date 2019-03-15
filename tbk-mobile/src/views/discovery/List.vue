@@ -179,11 +179,14 @@
                             rsp.data.data[i].goods = [];
                             let itemData = rsp.data.data[i].item_data;
                             for (let p = 0;p < itemData.length;p++) {
-                                rsp.data.data[i].goods.push({
-                                    image: itemData[p].itempic,
-                                    price: '卷后价格' + itemData[p].itemendprice,
-                                    to: "/goods?id=" + itemData[p].itemid,
-                                });
+                                //有些商品出现无效情况，所以判断...
+                                if (itemData[p].itemendprice != undefined) {
+                                    rsp.data.data[i].goods.push({
+                                        image: itemData[p].itempic,
+                                        price: '卷后价格' + itemData[p].itemendprice,
+                                        to: "/goods?id=" + itemData[p].itemid,
+                                    });
+								}
 							}
 
                             rsp.data.data[i].show_text = rsp.data.data[i].show_text

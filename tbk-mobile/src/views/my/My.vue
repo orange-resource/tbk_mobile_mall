@@ -53,13 +53,9 @@
                 <van-actionsheet v-model="cs" title="客服联系">
                     <van-row type="flex" justify="center" style="margin: 20px 0 20px 0">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
-                            <span style="font-size: 15px;color: #999999">
-                                QQ1067357662
-                            </span>
-                            <br><br>
-                            <span style="font-size: 15px;color: #999999">
-                                微信xiaocry1314
-                            </span>
+                            <div v-html="systemConfig.contact" style="font-size: 15px;color: #999999">
+
+                            </div>
                         </van-col>
                     </van-row>
                 </van-actionsheet>
@@ -68,13 +64,9 @@
                 <van-actionsheet v-model="gy" title="关于我们">
                     <van-row type="flex" justify="center" style="margin: 20px 0 20px 0">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
-                            <span style="font-size: 15px;color: #999999">
-                                淘优惠
-                            </span>
-                            <br><br>
-                            <span style="font-size: 15px;color: #999999">
-                                天天双11,网购能省钱还能赚钱
-                            </span>
+                            <div v-html="systemConfig.about" style="font-size: 15px;color: #999999">
+
+                            </div>
                         </van-col>
                     </van-row>
                 </van-actionsheet>
@@ -100,11 +92,32 @@
             this.user.data.collectNumber = queue.getCount(this.collectKey);
             this.user.data.footprintNumber = queue.getCount(this.footprintKey);
 
-            this.$axios.get('my/getNumber').then((rsp) => {
+            this.$axios.get('systemMessage/count').then((rsp) => {
 
-                if (rsp.data.code == 1) {
-                    this.user.data.msgNumber = rsp.data.data.msgNumber;
-                    this.user.data.tutorialNumber = rsp.data.data.tutorialNumber;
+                if (rsp.data.code == 9) {
+                    this.user.data.msgNumber = rsp.data.data;
+                } else {
+                    this.$alert.notifyNoData(rsp.data.msg);
+                }
+
+            }).catch((e) => {
+                this.$alert.dialogUnknown(e);
+            });
+            this.$axios.get('course/count').then((rsp) => {
+
+                if (rsp.data.code == 9) {
+                    this.user.data.tutorialNumber = rsp.data.data;
+                } else {
+                    this.$alert.notifyNoData(rsp.data.msg);
+                }
+
+            }).catch((e) => {
+                this.$alert.dialogUnknown(e);
+            });
+            this.$axios.get('systemConfig/getSystemConfig').then((rsp) => {
+
+                if (rsp.data.code == 9) {
+                    this.systemConfig = rsp.data.data;
                 } else {
                     this.$alert.notifyNoData(rsp.data.msg);
                 }
@@ -121,6 +134,7 @@
               gy: false,
               footprintKey: 'orange-tyh-footprint',
               collectKey: 'orange-tyh-collect',
+              systemConfig: {},
               user: {
                   data: {
                       //收藏夹数量
@@ -143,10 +157,10 @@
                 this.$router.push({ path: "/my/footprint" });
             },
             openMsg() {
-                this.$router.push({ path: "/my/list" });
+                this.$router.push({ path: "/my/msg/msgList" });
             },
             openTutorial() {
-
+                this.$router.push({ path: "/my/msg/courseList" });
             },
         },
     }

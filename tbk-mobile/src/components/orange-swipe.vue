@@ -2,7 +2,7 @@
 
     <van-swipe :autoplay="3000">
         <van-swipe-item v-for="(image,index) in images" :key="index">
-            <img :src="image.src" width="100%" height="100%" @click="open(image.to)" />
+            <img :src="image.src" width="100%" height="170px" @click="open(image.to)" />
         </van-swipe-item>
 
     </van-swipe>
@@ -15,7 +15,7 @@
         props: ["images"],
         methods: {
             open(to) {
-                this.$router.push({ path: to });
+                location.assign(to);
             },
         }
     }

@@ -87,6 +87,23 @@
         name: "Home",
         mounted() {
 
+            this.$axios.get('carousel/getListBySort').then((rsp) => {
+
+                if (rsp.data.code == 9) {
+                    for (let i = 0;i < rsp.data.data.length;i++) {
+                        this.swipe.push({
+                            src: rsp.data.data[i].image,
+                            to: rsp.data.data[i].clickUrl,
+                        });
+                    }
+                } else {
+                    this.$alert.notifyNoData(rsp.data.msg);
+                }
+
+            }).catch((e) => {
+                this.$alert.dialogUnknown(e);
+            });
+
             this.$axios.get('home/deserver').then((rsp) => {
 
                 if (rsp.data.code == 1) {
@@ -102,14 +119,7 @@
         data() {
             return {
                 swipe: [ //轮播大图
-                    {
-                        src: 'https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536792288923.jpg',
-                        to: 'https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536792288923.jpg',
-                    },
-                    {
-                        src: 'https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536792289990.jpg',
-                        to: 'https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536792289990.jpg',
-                    },
+
                 ],
                 deserver: [], //今日值得买数据
                 grid: [

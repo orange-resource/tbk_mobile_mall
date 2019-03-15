@@ -61,24 +61,24 @@ export default new Router({
           component: () => import('./views/my/Collect')
       },
       {
-          path: '/my/msg/list',
+          path: '/my/msg/msgList',
           name: 'myMsgList',
           component: () => import('./views/my/MsgList')
+      },
+      {
+          path: '/my/msg/courseList',
+          name: 'myMsgList',
+          component: () => import('./views/my/CourseList')
+      },
+      {
+          path: '/my/msg/article',
+          name: 'myMsgList',
+          component: () => import('./views/my/Article')
       },
       {
           path: '/goods',
           name: 'goods',
           component: () => import('@/views/goods/Index'),
-      },
-      {
-          path: '/article/list',
-          name: 'articleList',
-          component: () => import('@/views/article/List'),
-      },
-      {
-          path: '/article/main',
-          name: 'articleMain',
-          component: () => import('@/views/article/Article'),
       },
       {
           path: '/search/main',

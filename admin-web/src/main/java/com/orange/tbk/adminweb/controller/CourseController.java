@@ -7,18 +7,47 @@ import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.Course;
 import com.orange.tbk.api.service.CourseService;
+import com.orange.tbk.api.vo.open.CourseVo;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
+/**
+ * 新手教程
+ */
 @Controller
 @RequestMapping(value = "course")
 public class CourseController {
 
     @Reference
     private CourseService courseService;
+
+    /**
+     * 只会显示前30条
+     */
+    @RspHandle
+    @RequestMapping(value = "list",method = RequestMethod.GET)
+    @ResponseBody
+    public Response list() {
+
+        List<CourseVo> list = courseService.getList();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,list);
+    }
+
+    @RspHandle
+    @RequestMapping(value = "article",method = RequestMethod.GET)
+    @ResponseBody
+    public Response article(String articleId) {
+
+        CourseVo article = courseService.article(articleId);
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,article);
+    }
 
     @RspHandle
     @RequiresUser
@@ -29,6 +58,16 @@ public class CourseController {
         Page<Course> coursePage = courseService.page(course, page);
 
         return Response.build(ResponseCode.QUERY_SUCCESS,coursePage);
+    }
+
+    @RspHandle
+    @RequestMapping(value = "count",method = RequestMethod.GET)
+    @ResponseBody
+    public Response count() {
+
+        int count = courseService.count();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,count);
     }
 
     @RspHandle
@@ -80,5 +119,6 @@ public class CourseController {
         }
         return Response.build(ResponseCode.ERROR);
     }
+
 
 }

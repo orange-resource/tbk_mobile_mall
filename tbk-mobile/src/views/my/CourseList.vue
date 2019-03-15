@@ -6,7 +6,7 @@
 
             <!--头部-->
             <van-nav-bar
-                    title="系统消息"
+                    title="新手教程"
                     left-text="返回"
                     right-text="我的"
                     left-arrow
@@ -22,7 +22,7 @@
                     :author="single.author"
                     :date="single.createDate"
                     :image="single.image"
-                    :to='"/my/msg/article?type=1&id=" + single.id'
+                    :to='"/my/msg/article?type=2&id=" + single.id'
                     style="margin-top: 10px"
             ></orange-article-card>
 
@@ -39,7 +39,7 @@
     export default {
         name: "MsgList",
         mounted() {
-            this.$axios.get('systemMessage/list').then((rsp) => {
+            this.$axios.get('course/list').then((rsp) => {
 
                 if (rsp.data.code == 9) {
                     for (let i = 0;i < rsp.data.data.length;i++) {

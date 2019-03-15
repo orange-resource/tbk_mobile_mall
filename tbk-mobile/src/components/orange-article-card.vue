@@ -6,6 +6,12 @@
 
         <van-row type="flex" justify="center" style="padding-top: 10px;padding-bottom: 5px">
             <van-col span="22">
+                <img :src="image" height="150px" width="100%" />
+            </van-col>
+        </van-row>
+
+        <van-row type="flex" justify="center" style="padding-top: 10px;padding-bottom: 5px">
+            <van-col span="22">
                 <span>{{ title }}</span>
             </van-col>
         </van-row>
@@ -43,7 +49,7 @@
 <script>
     export default {
         name: "orange-article-card",
-        props:["title","author","date","visit","to"],
+        props:["title","image","author","date","visit","to"],
         methods: {
             open(to) {
                 this.$router.push({ path: to });

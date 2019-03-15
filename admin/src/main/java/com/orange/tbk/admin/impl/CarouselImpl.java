@@ -20,7 +20,8 @@ public class CarouselImpl extends ServiceImpl<CarouselMapper, Carousel> implemen
 
     @Override
     public List<CarouselVo> getListBySort() {
-        return null;
+
+        return super.baseMapper.getListBySort();
     }
 
 }

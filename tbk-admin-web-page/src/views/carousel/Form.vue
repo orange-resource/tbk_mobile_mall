@@ -134,7 +134,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            if (this.$route.params.versionsNum != null) {
+            if (this.$route.params.id != null) {
               this.submit(true);
             } else {
               this.submit(false);
@@ -150,10 +150,9 @@
         let data = this.form;
 
         let url = "carousel/create";
-        data.softId = this.$route.params.id;
         if (isUpdate == true) {
-          data.id = this.id;
-          url = "carousel/update";
+          data.id = this.$route.params.id;
+          url = "carousel/alter";
         }
 
         this.$axios({

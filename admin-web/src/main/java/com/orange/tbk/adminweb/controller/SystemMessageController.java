@@ -7,18 +7,47 @@ import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.SystemMessage;
 import com.orange.tbk.api.service.SystemMessageService;
+import com.orange.tbk.api.vo.open.SystemMessageVo;
 import org.apache.shiro.authz.annotation.RequiresUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
+/**
+ * 系统消息
+ */
 @Controller
 @RequestMapping(value = "systemMessage")
 public class SystemMessageController {
 
     @Reference
     private SystemMessageService systemMessageService;
+
+    /**
+     * 只会显示前30条系统消息
+     */
+    @RspHandle
+    @RequestMapping(value = "list",method = RequestMethod.GET)
+    @ResponseBody
+    public Response list() {
+
+        List<SystemMessageVo> list = systemMessageService.getList();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,list);
+    }
+
+    @RspHandle
+    @RequestMapping(value = "article",method = RequestMethod.GET)
+    @ResponseBody
+    public Response article(String articleId) {
+
+        SystemMessageVo article = systemMessageService.article(articleId);
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,article);
+    }
 
     @RspHandle
     @RequiresUser
@@ -29,6 +58,16 @@ public class SystemMessageController {
         Page<SystemMessage> systemMessagePage = systemMessageService.page(systemMessage, page);
 
         return Response.build(ResponseCode.QUERY_SUCCESS,systemMessagePage);
+    }
+
+    @RspHandle
+    @RequestMapping(value = "count",method = RequestMethod.GET)
+    @ResponseBody
+    public Response count() {
+
+        int count = systemMessageService.count();
+
+        return Response.build(ResponseCode.QUERY_SUCCESS,count);
     }
 
     @RspHandle

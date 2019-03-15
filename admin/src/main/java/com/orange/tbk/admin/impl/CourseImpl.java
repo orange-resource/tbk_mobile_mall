@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.orange.tbk.admin.mapper.CourseMapper;
 import com.orange.tbk.api.bean.Course;
 import com.orange.tbk.api.service.CourseService;
+import com.orange.tbk.api.vo.open.CourseVo;
+
+import java.util.List;
 
 @Service
 public class CourseImpl extends ServiceImpl<CourseMapper, Course> implements CourseService {
@@ -14,6 +17,18 @@ public class CourseImpl extends ServiceImpl<CourseMapper, Course> implements Cou
     public Page<Course> page(Course course, Page page) {
 
         return page.setRecords(super.baseMapper.page(course,page));
+    }
+
+    @Override
+    public List<CourseVo> getList() {
+
+        return super.baseMapper.getList();
+    }
+
+    @Override
+    public CourseVo article(String articleId) {
+
+        return super.baseMapper.article(articleId);
     }
 
 }
