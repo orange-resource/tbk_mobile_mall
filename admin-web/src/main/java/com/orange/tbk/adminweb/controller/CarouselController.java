@@ -1,6 +1,7 @@
 package com.orange.tbk.adminweb.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
@@ -15,6 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * 首页轮播
+ */
 @Controller
 @RequestMapping(value = "carousel")
 public class CarouselController {
@@ -22,6 +26,7 @@ public class CarouselController {
     @Reference
     private CarouselService carouselService;
 
+    @Open(explain = "获取首页轮播 按照sort字段排序")
     @RspHandle
     @RequestMapping(value = "getListBySort",method = RequestMethod.GET)
     @ResponseBody

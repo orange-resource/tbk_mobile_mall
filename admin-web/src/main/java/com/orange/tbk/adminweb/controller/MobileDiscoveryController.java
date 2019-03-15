@@ -1,6 +1,7 @@
 package com.orange.tbk.adminweb.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.api.service.MobileDiscoveryService;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 发现
+ */
 @Controller
 @RequestMapping(value = "discovery")
 public class MobileDiscoveryController {
@@ -18,6 +22,7 @@ public class MobileDiscoveryController {
     /**
      * 获取精选单品
      */
+    @Open(explain = "获取精选单品")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "handpick",method = RequestMethod.GET)
     @ResponseBody
@@ -29,6 +34,7 @@ public class MobileDiscoveryController {
     /**
      * 获取好货专场
      */
+    @Open(explain = "获取好货专场")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "news",method = RequestMethod.GET)
     @ResponseBody
@@ -40,6 +46,7 @@ public class MobileDiscoveryController {
     /**
      * 获取精选主题 list
      */
+    @Open(explain = "获取精选主题 list")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "themeList",method = RequestMethod.GET)
     @ResponseBody
@@ -51,6 +58,7 @@ public class MobileDiscoveryController {
     /**
      * 获取精选主题 item
      */
+    @Open(explain = "获取精选主题 item")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "theme",method = RequestMethod.GET)
     @ResponseBody

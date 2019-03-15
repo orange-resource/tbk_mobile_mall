@@ -1,6 +1,7 @@
 package com.orange.tbk.adminweb.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
@@ -23,6 +24,7 @@ public class UserController {
     @Reference
     private UserService userService;
 
+    @Open(explain = "系统后台登陆接口...")
     @RspHandle
     @RequestMapping(value = "login",method = RequestMethod.POST)
     @ResponseBody

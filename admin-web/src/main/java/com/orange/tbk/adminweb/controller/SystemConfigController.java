@@ -1,6 +1,7 @@
 package com.orange.tbk.adminweb.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
@@ -22,6 +23,7 @@ public class SystemConfigController {
     @Reference
     private SystemConfigService systemConfigService;
 
+    @Open(explain = "获取系统配置信息...网站底部...")
     @RspHandle
     @RequestMapping(value = "getSystemConfig",method = RequestMethod.GET)
     @ResponseBody

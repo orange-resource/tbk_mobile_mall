@@ -2,6 +2,7 @@ package com.orange.tbk.adminweb.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
@@ -29,6 +30,7 @@ public class CourseController {
     /**
      * 只会显示前30条
      */
+    @Open(explain = "获取新手教程列表 只会显示前30条")
     @RspHandle
     @RequestMapping(value = "list",method = RequestMethod.GET)
     @ResponseBody
@@ -39,6 +41,7 @@ public class CourseController {
         return Response.build(ResponseCode.QUERY_SUCCESS,list);
     }
 
+    @Open(explain = "获取新手教程文章")
     @RspHandle
     @RequestMapping(value = "article",method = RequestMethod.GET)
     @ResponseBody

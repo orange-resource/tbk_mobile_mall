@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * 好单库 配置
+ */
 @Controller
 @RequestMapping(value = "hdkConfig")
 public class HdkConfigController {

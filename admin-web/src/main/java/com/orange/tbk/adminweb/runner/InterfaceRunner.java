@@ -1,14 +1,19 @@
 package com.orange.tbk.adminweb.runner;
 
+import cn.hutool.core.util.ClassUtil;
+import com.orange.tbk.adminweb.annotation.Open;
 import com.orange.tbk.api.bean.InterfaceManagement;
+import com.orange.tbk.api.redis.RedisKeyConstant;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -16,8 +21,9 @@ import java.util.Set;
 /**
  * 全部开放接口全部统一管理，提供参数配置，系统可以后台可配置
  * redis作为存储
- * 系统启动第一时间执行
- * @author Orange
+ * 系统启动后第一时间执行
+ * @author Orange软件
+ * @date 2019.3.15
  */
 @Component
 @Order(value = 1)
@@ -25,10 +31,11 @@ public class InterfaceRunner implements CommandLineRunner {
     
     private static final Logger log = LoggerFactory.getLogger(InterfaceRunner.class);
 
+    @Value("${interface.scan.path}")
+    private String interfaceScanPath;
+
     @Autowired
     private RedisTemplate<String,Object> template;
-
-    private static final String PREFIX = "orange.tbk:open.interface:";
 
     @Override
     public void run(String... args) throws Exception {
@@ -59,12 +66,13 @@ public class InterfaceRunner implements CommandLineRunner {
 
         }
 
-        Set<String> keys = template.keys(PREFIX + "*");
+        Set<String> keys = template.keys(RedisKeyConstant.OPEN_INTERFACE + "*");
         for (String key : keys) {
             int l = 0;
             for (Map.Entry<String, String> m : productionInterface.entrySet()) {
                 if (m.getKey().equals(key)) {
                     l = 1;
+                    break;
                 }
             }
             if (l == 0) {
@@ -88,37 +96,21 @@ public class InterfaceRunner implements CommandLineRunner {
 
         Map<String,String> map = new HashMap<String,String>();
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.getPublicKey",
-                "获取RSA公钥");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.getVerificationCode",
-                "获取注册验证码");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.register",
-                "用户-注册");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.login",
-                "用户-登陆");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.bindingCard",
-                "用户-绑定卡密");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.bindingCode",
-                "用户-绑定机器");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.AccountController.updatePassword",
-                "用户-修改密码");
+        Set<Class<?>> classes = ClassUtil.scanPackage(interfaceScanPath);
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.SoftController.getSoftDesc",
-                "获取软件信息");
+        for (Class c : classes) {
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.SoftLeaveMessageController.create",
-                "用户-提交留言(反馈)");
+            Method[] methods = c.getMethods();
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.CardController.getCardTimeLimit",
-                "用户-查看卡密什么时候开始用的，什么时候结束的");
+            for (Method method : methods) {
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.SoftVersionsController.getVersions",
-                "获取软件版本信息");
+                Open annotation = method.getAnnotation(Open.class);
+                if (annotation != null) {
+                    map.put(RedisKeyConstant.OPEN_INTERFACE + c.getName() + "." + method.getName(),annotation.explain());
+                }
+            }
 
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.UserController.login",
-                "系统管理员-登陆");
-        map.put(PREFIX + "com.orange.verify.adminweb.controller.UserController.logout",
-                "系统管理员-退出");
+        }
 
         return map;
     }

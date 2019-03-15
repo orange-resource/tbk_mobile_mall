@@ -18,11 +18,6 @@ public class RedisKeyConstant {
     public final static String IP_LIBRARY = "orange.tbk:ip-library:";
 
     /**
-     * admin aliyunoss impl key
-     */
-    public final static String ALIYUNOSSIMPL = "orange.tbk:data:aliyunoss-impl:";
-    
-    /**
      * API数据 KEY 前缀key
      */
     public final static String API_DATA = "orange.tbk:api-data:";
