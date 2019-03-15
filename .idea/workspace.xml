@@ -2,30 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/Open.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/admin.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/AliyunOssController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/HdkConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/HdkConfigController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/InterfaceManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/InterfaceManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileSearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileSearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemConfigController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/SystemMessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/AliyunOssImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/mapper/AliyunOssMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/AliyunOss.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/redis/RedisKeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/redis/RedisKeyConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/AliyunOssService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/adminweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/example.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/eye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/nested.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/password.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/software.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/tree.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值kl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/充值缴费.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/反馈管理.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/地图.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/用户d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/软件管理.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/邮箱.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/icons/svg/配置.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/aliyun-oss/Form.vue" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,14 +78,14 @@
           <entry key="dummy" value="1" />
           <entry key="java" value="8609" />
           <entry key="properties" value="85" />
-          <entry key="txt" value="239" />
+          <entry key="txt" value="248" />
           <entry key="xml" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8609" />
-          <entry key="PLAIN_TEXT" value="240" />
+          <entry key="PLAIN_TEXT" value="249" />
           <entry key="Properties" value="85" />
           <entry key="XML" value="83" />
         </counts>
@@ -689,7 +689,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552664647376" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552665465551" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -842,7 +842,7 @@
       <workItem from="1552361193094" duration="24543000" />
       <workItem from="1552445699637" duration="6818000" />
       <workItem from="1552559213402" duration="13829000" />
-      <workItem from="1552619626490" duration="23905000" />
+      <workItem from="1552619626490" duration="24529000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -1068,11 +1068,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552662175316</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="接口优化...">
+      <created>1552665429393</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1552665429393</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95227000" />
+    <option name="totallyTimeSpent" value="95851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1163,7 +1170,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/tbk-mobile" />
     </ignored-roots>
-    <MESSAGE value="init" />
     <MESSAGE value="update" />
     <MESSAGE value="普通更新..." />
     <MESSAGE value="增加达人说模块" />
@@ -1188,7 +1194,8 @@
     <MESSAGE value="增加api接口.." />
     <MESSAGE value="好单库api全部对接完成..." />
     <MESSAGE value="商城写完了...哈哈哈....开始优化咯..." />
-    <option name="LAST_COMMIT_MESSAGE" value="商城写完了...哈哈哈....开始优化咯..." />
+    <MESSAGE value="接口优化..." />
+    <option name="LAST_COMMIT_MESSAGE" value="接口优化..." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/RedisConfig.java">

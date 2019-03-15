@@ -43,13 +43,13 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'Interface',
     redirect: 'noredirect',
-    meta: { title: '接口管理', icon: 'eye' },
+    meta: { title: '接口管理', icon: '接口变更动态' },
     children: [
       {
         path: 'interface_list',
         name: 'InterfaceList',
         component: () => import('@/views/interface/interface_list'),
-        meta: { title: '开放接口列表', icon: 'eye' }
+        meta: { title: '接口列表', icon: '列表' }
       },
     ]
   },
@@ -60,19 +60,19 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'SystemMessage',
     redirect: 'noredirect',
-    meta: { title: '系统消息', icon: 'eye' },
+    meta: { title: '系统消息', icon: '消息' },
     children: [
       {
         path: 'list',
         name: 'SystemMessageList',
         component: () => import('@/views/system-message/List'),
-        meta: { title: '消息列表', icon: 'eye' }
+        meta: { title: '消息列表', icon: '列表' }
       },
       {
         path: 'form',
         name: 'SystemMessageForm',
         component: () => import('@/views/system-message/Form'),
-        meta: { title: '系统消息操作', icon: 'eye' },
+        meta: { title: '消息操作', icon: 'eye' },
         hidden: true,
       },
     ]
@@ -84,13 +84,13 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'Course',
     redirect: 'noredirect',
-    meta: { title: '新手教程', icon: 'eye' },
+    meta: { title: '新手教程', icon: '教程' },
     children: [
       {
         path: 'list',
         name: 'CourseList',
         component: () => import('@/views/course/List'),
-        meta: { title: '教程列表', icon: 'eye' }
+        meta: { title: '教程列表', icon: '列表' }
       },
       {
         path: 'form',
@@ -108,13 +108,13 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'Carousel',
     redirect: 'noredirect',
-    meta: { title: '首页轮播', icon: 'eye' },
+    meta: { title: '首页轮播', icon: '轮播效果' },
     children: [
       {
         path: 'list',
         name: 'CarouselList',
         component: () => import('@/views/carousel/List'),
-        meta: { title: '轮播列表', icon: 'eye' }
+        meta: { title: '轮播列表', icon: '列表' }
       },
       {
         path: 'form',
@@ -127,35 +127,18 @@ export const constantRouterMap = [
   },
 
   {
-    path: '/oss',
-    component: Layout,
-    alwaysShow: true,
-    name: 'Oss',
-    redirect: 'noredirect',
-    meta: { title: 'OSS配置', icon: 'eye' },
-    children: [
-      {
-        path: 'form',
-        name: 'OssForm',
-        component: () => import('@/views/aliyun-oss/Form'),
-        meta: { title: '配置操作', icon: 'eye' }
-      },
-    ]
-  },
-
-  {
     path: '/hdkConfig',
     component: Layout,
     alwaysShow: true,
     name: 'HdkConfig',
     redirect: 'noredirect',
-    meta: { title: '好单库配置', icon: 'eye' },
+    meta: { title: '好单库配置', icon: '配置' },
     children: [
       {
         path: 'form',
         name: 'HdkConfigForm',
         component: () => import('@/views/hdk-config/Form'),
-        meta: { title: '配置操作', icon: 'eye' }
+        meta: { title: '配置操作', icon: '列表' }
       },
     ]
   },
@@ -166,13 +149,13 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'SystemConfig',
     redirect: 'noredirect',
-    meta: { title: '系统配置', icon: 'eye' },
+    meta: { title: '系统配置', icon: '配置' },
     children: [
       {
         path: 'form',
         name: 'SystemConfigForm',
         component: () => import('@/views/system-config/Form'),
-        meta: { title: '系统配置操作', icon: 'eye' }
+        meta: { title: '配置操作', icon: '列表' }
       },
     ]
   },
