@@ -97,9 +97,9 @@
         },
         methods: {
             getData() {
-                this.$axios.get('hot/get',{
+                this.$axios.get('/home/hot',{
                     params: {
-                        cid: this.activeKey,
+                        category: this.activeKey,
                     }
                 }).then((rsp) => {
 

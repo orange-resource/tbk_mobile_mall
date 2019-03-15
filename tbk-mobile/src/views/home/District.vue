@@ -16,10 +16,10 @@
             <!--头部 end-->
 
             <!--出来商品-->
-            <!--<van-tabs @click="choiceCategory">-->
-                <!--<van-tab v-for="(name,index) in category" :key="index" :title="name">-->
-                <!--</van-tab>-->
-            <!--</van-tabs>-->
+            <van-tabs @click="choiceCategory">
+                <van-tab v-for="(name,index) in category" :key="index" :title="name">
+                </van-tab>
+            </van-tabs>
             <van-tabs @click="tabSearch" type="card" style="margin-top: 10px">
                 <van-tab v-for="(t,index) in tab" :key="index" :title="t.name">
 
@@ -71,37 +71,40 @@
 
             this.title = this.$route.query.title;
             this.type = this.$route.query.type;
+
+            this.getData(this.tagIndex,this.tab[this.tagIndex].total);
+
         },
         data() {
             return {
                 type: '',
                 tab: [
-                    {name: '综合',loading: false,finished: false,total: 0,data: []},
-                    {name: '卷后价',loading: false,finished: false,total: 0,data: []},
-                    {name: '销量',loading: false,finished: false,total: 0,data: []},
-                    {name: '超优惠',loading: false,finished: false,total: 0,data: []},
+                    {name: '综合',loading: true,finished: false,total: 1,data: []},
+                    {name: '卷后价',loading: true,finished: false,total: 1,data: []},
+                    {name: '销量',loading: true,finished: false,total: 1,data: []},
+                    {name: '超优惠',loading: true,finished: false,total: 1,data: []},
                 ],
                 tagIndex: 0,
-                // category: [
-                //     '全部',
-                //     '女装',
-                //     '男装',
-                //     '内衣',
-                //     '美妆',
-                //     '配饰',
-                //     '鞋品',
-                //     '箱包',
-                //     '儿童',
-                //     '母婴',
-                //     '居家',
-                //     '美食',
-                //     '数码',
-                //     '家电',
-                //     '其他',
-                //     '车品',
-                //     '文体',
-                //     '宠物',
-                // ],
+                category: [
+                    '全部',
+                    '女装',
+                    '男装',
+                    '内衣',
+                    '美妆',
+                    '配饰',
+                    '鞋品',
+                    '箱包',
+                    '儿童',
+                    '母婴',
+                    '居家',
+                    '美食',
+                    '数码',
+                    '家电',
+                    '其他',
+                    '车品',
+                    '文体',
+                    '宠物',
+                ],
                 cid: 0,
                 title: '',
             }
@@ -115,6 +118,13 @@
             },
             tabSearch(index, title) { //点击标签，换标签触发
                 this.tagIndex = index;
+                this.tab[this.tagIndex].total = 1;
+                this.getData(this.tagIndex,1);
+            },
+            choiceCategory(index, title) { //点击标签，换标签触发
+                this.cid = index;
+                this.tab[this.tagIndex].total = 1;
+                this.getData(this.tagIndex,1);
             },
             onLoad() { //继续加载数据事件
                 this.tab[this.tagIndex].total+=1;

@@ -2,28 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileGoodsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoodsDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoodsLike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoodsRates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileGoodsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileSearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileDiscoveryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileSearchImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHandpick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiKeyword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiSearchGoods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalentArticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiThemeList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileDiscoveryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileSearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/admin.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileHomeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileHomeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiBrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiBrand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/AliyunOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/AliyunOss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Carousel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/HdkConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/HdkConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/SystemMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/admin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/adminweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/adminweb.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/hdk-config/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/hdk-config/Form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/goods/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/Theme.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/discovery/Theme.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/Brand.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Brand.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/District.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/District.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/hot/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/hot/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/Search.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/search/SearchGoods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/Article.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/talent/List.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,19 +50,21 @@
     <session id="1371826762">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="3" />
-          <entry key="java" value="240" />
+          <entry key="class" value="4" />
+          <entry key="java" value="276" />
+          <entry key="log" value="1" />
           <entry key="md" value="1" />
           <entry key="properties" value="12" />
           <entry key="xml" value="18" />
@@ -61,9 +72,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="240" />
+          <entry key="CLASS" value="4" />
+          <entry key="JAVA" value="276" />
           <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="12" />
           <entry key="XML" value="18" />
         </counts>
@@ -71,7 +83,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="4812" />
+          <entry key="java" value="6851" />
           <entry key="properties" value="73" />
           <entry key="txt" value="189" />
           <entry key="xml" value="81" />
@@ -79,7 +91,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4812" />
+          <entry key="JAVA" value="6851" />
           <entry key="PLAIN_TEXT" value="190" />
           <entry key="Properties" value="73" />
           <entry key="XML" value="81" />
@@ -89,20 +101,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/SystemConfigImpl.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileHomeImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileDiscoveryService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+            <state relative-caret-position="210">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileDiscoveryImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1904">
+              <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -191,10 +212,7 @@
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandle.java" />
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/RspHandleAspect.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/exception/ApiNoData.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/base/BaseRequest.java" />
-        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoods.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoodsDetails.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiGoodsLike.java" />
@@ -203,7 +221,25 @@
         <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileGoodsService.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileGoodsImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalent.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalentArticle.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiKeyword.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiSearchGoods.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileSearchService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileSearchImpl.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileSearchController.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHot.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileHomeImpl.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHandpick.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiNews.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiThemeList.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTheme.java" />
+        <option value="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileDiscoveryService.java" />
+        <option value="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileDiscoveryImpl.java" />
       </list>
     </option>
   </component>
@@ -255,6 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -370,36 +407,6 @@
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
               <item name="hdkvisit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="hdkvisit" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="hdkvisit" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
@@ -701,11 +708,15 @@
               <item name="tbk" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -715,7 +726,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552579087530" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552637344788" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -727,11 +738,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.orange.tbk.admin.util.hdkvisit.request" />
       <recent name="com.orange.tbk.admin.util.hdkvisit.exception" />
       <recent name="com.orange.tbk.adminweb.config" />
       <recent name="com.orange.tbk.adminweb.util" />
       <recent name="com.orange.tbk.api.utils.aliyunoss" />
-      <recent name="com.orange.tbk.adminweb.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\java\orange\tbkmobile\admin\src\main\java\com\orange\tbk\admin\util\hdkvisit" />
@@ -753,7 +764,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Generator">
+  <component name="RunManager" selected="Spring Boot.AdminWebApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -851,7 +862,8 @@
       <workItem from="1552285482102" duration="7771000" />
       <workItem from="1552361193094" duration="24543000" />
       <workItem from="1552445699637" duration="6818000" />
-      <workItem from="1552559213402" duration="13611000" />
+      <workItem from="1552559213402" duration="13829000" />
+      <workItem from="1552619626490" duration="12150000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -1056,18 +1068,24 @@
       <option name="project" value="LOCAL" />
       <updated>1552576027245</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="增加api接口..">
+      <created>1552579277928</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1552579277928</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71104000" />
+    <option name="totallyTimeSpent" value="83472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31256714" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.31740063" />
+      <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.31740063" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1077,7 +1095,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4032258" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4032258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1178,92 +1196,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="增加api接口.." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/src/main/resources/tbk-generator-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="45" column="58" lean-forward="true" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/model/Response.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroFilterConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/config/ValidatorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/annotation/ParameterError.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/bean/InterfaceManagement.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementIpHandle.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/sc/InterfaceManagementVisit.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/runner/InterfaceRunner.java" />
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/runner/InterfaceRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="40" column="76" lean-forward="true" selection-start-line="40" selection-start-column="76" selection-end-line="40" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyBatisPlusConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/MyMetaObjectHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/config/ZookeeperLockConfig.java" />
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/AdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/AdminWebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1589,31 +1521,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/Today.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/Today.java" />
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/exception/ApiKeyNotNull.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/GoodsDetails.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/GoodsDetails.java" />
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/exception/ApiVisitFail.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/HighCommission.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/HighCommission.java" />
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/type/HttpRequestMethod.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ArticleDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="51" lean-forward="true" selection-start-column="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ArticleDetails.java" />
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/base/BaseInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1680,13 +1600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/src/main/java/com/orange/tbk/build/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1698,13 +1611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -1726,13 +1632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
@@ -1764,24 +1663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileGoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileGoodsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="102" column="65" selection-start-line="102" selection-start-column="65" selection-end-line="102" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1792,10 +1677,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTalentArticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiKeyword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/admin.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/hutool/hutool-all/4.5.1/hutool-all-4.5.1.jar!/cn/hutool/core/text/UnicodeUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiSearchGoods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileSearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileSearchImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileGoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="47" column="5" lean-forward="true" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileSearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileHomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1113">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileHomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileHomeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+        <state relative-caret-position="119">
+          <caret line="185" column="37" lean-forward="true" selection-start-line="185" selection-start-column="37" selection-end-line="185" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/work/jdk/jdk1.8/jdk/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="891" column="15" selection-start-line="891" selection-start-column="15" selection-end-line="891" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/HdkApiVisit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileGoodsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="90" column="8" lean-forward="true" selection-start-line="90" selection-start-column="8" selection-end-line="114" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiThemeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiHandpick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/MobileDiscoveryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/util/hdkvisit/request/ApiNews.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/MobileDiscoveryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/MobileDiscoveryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="40" />
         </state>
       </provider>
     </entry>

@@ -3,9 +3,7 @@ package com.orange.tbk.admin.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.orange.tbk.admin.mapper.HdkConfigMapper;
 import com.orange.tbk.admin.util.hdkvisit.HdkApiVisit;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiBrand;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiColumn;
-import com.orange.tbk.admin.util.hdkvisit.request.ApiDeserver;
+import com.orange.tbk.admin.util.hdkvisit.request.*;
 import com.orange.tbk.api.bean.HdkConfig;
 import com.orange.tbk.api.redis.RedisKeyConstant;
 import com.orange.tbk.api.service.MobileHomeService;
@@ -102,6 +100,95 @@ public class MobileHomeImpl implements MobileHomeService {
 
             try {
                 String execute = HdkApiVisit.execute(apiColumn);
+
+                redisTemplate.opsForValue().set(redisKey,execute,1,
+                        TimeUnit.HOURS);
+
+                return execute;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+
+        return data;
+    }
+
+    @Override
+    public String talent() {
+
+        String redisKey = RedisKeyConstant.API_DATA + "talent";
+
+        String data = (String) redisTemplate.opsForValue().get(redisKey);
+        if (data == null || data.equals("")) {
+
+            HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
+
+            ApiTalent apiTalent = new ApiTalent();
+            apiTalent.setApikey(hdkConfig.getAppkey());
+
+            try {
+                String execute = HdkApiVisit.execute(apiTalent);
+
+                redisTemplate.opsForValue().set(redisKey,execute,1,
+                        TimeUnit.DAYS);
+
+                return execute;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+
+        return data;
+    }
+
+    @Override
+    public String talentArticle(String articleId) {
+
+        String redisKey = RedisKeyConstant.API_DATA + "talent-article:" + articleId;
+
+        String data = (String) redisTemplate.opsForValue().get(redisKey);
+        if (data == null || data.equals("")) {
+
+            HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
+
+            ApiTalentArticle apiTalentArticle = new ApiTalentArticle();
+            apiTalentArticle.setApikey(hdkConfig.getAppkey());
+            apiTalentArticle.setId(articleId);
+
+            try {
+                String execute = HdkApiVisit.execute(apiTalentArticle);
+
+                redisTemplate.opsForValue().set(redisKey,execute,1,
+                        TimeUnit.DAYS);
+
+                return execute;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            }
+        }
+
+        return data;
+    }
+
+    @Override
+    public String hot(Integer category) {
+
+        String redisKey = RedisKeyConstant.API_DATA + "hot:" + category;
+
+        String data = (String) redisTemplate.opsForValue().get(redisKey);
+        if (data == null || data.equals("")) {
+
+            HdkConfig hdkConfig = hdkConfigMapper.selectList(null).get(0);
+
+            ApiHot apiHot = new ApiHot();
+            apiHot.setApikey(hdkConfig.getAppkey());
+            apiHot.setCid(category);
+
+            try {
+                String execute = HdkApiVisit.execute(apiHot);
 
                 redisTemplate.opsForValue().set(redisKey,execute,1,
                         TimeUnit.HOURS);

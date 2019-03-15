@@ -118,6 +118,8 @@
                     }
                 }).then((rsp) => {
 
+                    console.log(rsp.data);
+                    console.log(rsp.data.code);
                     if (rsp.data.code == 1) {
                         if (page == 1) {
                             this.tab[index].data = [];

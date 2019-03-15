@@ -74,7 +74,7 @@
 	    name: "Card",
 		mounted() {
 
-            this.$axios.get('talent/getAll').then((rsp) => {
+            this.$axios.get('/home/talent').then((rsp) => {
                 if (rsp.data.code == 1) {
                     this.topdata = rsp.data.data.topdata;
                     this.newdata = rsp.data.data.newdata;

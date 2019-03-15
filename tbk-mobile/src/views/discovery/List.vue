@@ -140,11 +140,21 @@
 					}
 				}).then((rsp) => {
                     if (rsp.data.code == 1) {
+                        if (page == 1) {
+                            this.handpick = [];
+						}
                         for (let i = 0;i < rsp.data.data.length;i++) {
+                            rsp.data.data[i].show_content = rsp.data.data[i].show_content
+                                .replace(/&lt;/g, "<")
+                                .replace(/&gt;/g, ">")
+                                .replace(/&amp;/g, "&")
+                                .replace(/&quot;/g, '"')
+                                .replace(/&apos;/g, "'");
                             this.handpick.push(rsp.data.data[i]);
                         }
                         this.handpickLoad.loading = false;
                     } else {
+                        this.handpickLoad.loading = false;
                         this.handpickLoad.finished  = true;
                     }
                 }).catch((e) => {
@@ -161,6 +171,9 @@
 					}
 				}).then((rsp) => {
                     if (rsp.data.code == 1) {
+                        if (page == 1) {
+                            this.news = [];
+                        }
                         for (let i = 0;i < rsp.data.data.length;i++) {
 
                             rsp.data.data[i].goods = [];
@@ -173,10 +186,17 @@
                                 });
 							}
 
+                            rsp.data.data[i].show_text = rsp.data.data[i].show_text
+                                .replace(/&lt;/g, "<")
+                                .replace(/&gt;/g, ">")
+                                .replace(/&amp;/g, "&")
+                                .replace(/&quot;/g, '"')
+                                .replace(/&apos;/g, "'");
                             this.news.push(rsp.data.data[i]);
                         }
                         this.newsLoad.loading = false;
                     } else {
+                        this.newsLoad.loading = false;
                         this.newsLoad.finished  = true;
                     }
                 }).catch((e) => {
@@ -187,7 +207,7 @@
                 this.getTheme();
 			},
 			getTheme() { //获取精选主题数据
-                this.$axios.get('discovery/theme').then((rsp) => {
+                this.$axios.get('discovery/themeList').then((rsp) => {
                     if (rsp.data.code == 1) {
                         this.theme = rsp.data.data;
                     }
@@ -209,7 +229,7 @@
 
 	.theme-image {
 		height: 200px;
-		border-radius: 5%;
+		border-radius: 2%;
 	}
 
 	.theme-content {

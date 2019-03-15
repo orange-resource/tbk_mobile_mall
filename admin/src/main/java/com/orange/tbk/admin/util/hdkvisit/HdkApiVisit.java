@@ -60,15 +60,26 @@ public class HdkApiVisit {
 
         if (execute.getStatus() == HttpStatus.HTTP_OK) {
 
-            String body = UnicodeUtil.toString(execute.body());
+            String body = execute.body();
 
             JSONObject jsonObject = new JSONObject(body);
+            Object code = jsonObject.get("code");
             String msg = (String) jsonObject.get("msg");
-            if ("SUCCESS".equals(msg)) {
-                return body;
+
+            //这样处理是，有些部分api code返回是string的
+            if (code instanceof Integer) {
+                int codeInt = ((Integer) code).intValue();
+                if (codeInt != 1) {
+                    throw new ApiNoData(msg);
+                }
+            } else if (code instanceof String) {
+                String codeString = code.toString();
+                if (!"1".equals(codeString)) {
+                    throw new ApiNoData(msg);
+                }
             }
 
-            throw new ApiNoData((String) jsonObject.get("msg"));
+            return body;
         }
 
         throw new ApiVisitFail("API访问失败，状态码：" + execute.getStatus());

@@ -85,7 +85,7 @@
         },
         mounted() {
 
-            this.$axios.get('talent/getArticle',{
+            this.$axios.get('/home/talent/article',{
                 params: {
                     articleId: this.$route.query.id
                 }
@@ -106,6 +106,9 @@
                         .replace(/&apos;/g, "'");
                     setInterval(function () { //将文中出现的商品全部删除
                         $(".single-content").html('');
+                        $(".commodity-group").html('');
+                        $(".single-content-one").html('');
+                        $(".am-g").html('');
                     },1000);
                 } else {
                     this.$alert.notifyNoData(rsp.data.msg);

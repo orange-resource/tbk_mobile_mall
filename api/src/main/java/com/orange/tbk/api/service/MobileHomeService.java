@@ -8,4 +8,10 @@ public interface MobileHomeService {
 
     String district(Integer page,Integer tag,Integer type,Integer category);
 
+    String talent();
+
+    String talentArticle(String articleId);
+
+    String hot(Integer category);
+
 }

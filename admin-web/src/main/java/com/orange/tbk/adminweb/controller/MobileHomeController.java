@@ -48,4 +48,37 @@ public class MobileHomeController {
 
         return mobileHomeService.district(page,tag,type,category);
     }
+    
+    /**
+     * 获取达人说列表
+     */
+    @RspHandle(isReturnObject = true)
+    @RequestMapping(value = "talent",method = RequestMethod.GET)
+    @ResponseBody
+    public Object talent() {
+
+        return mobileHomeService.talent();
+    }
+
+    /**
+     * 获取达人说文章
+     */
+    @RspHandle(isReturnObject = true)
+    @RequestMapping(value = "talent/article",method = RequestMethod.GET)
+    @ResponseBody
+    public Object talentArticle(String articleId) {
+
+        return mobileHomeService.talentArticle(articleId);
+    }
+
+    /**
+     * 获取热销榜单
+     */
+    @RspHandle(isReturnObject = true)
+    @RequestMapping(value = "hot",method = RequestMethod.GET)
+    @ResponseBody
+    public Object hot(Integer category) {
+
+        return mobileHomeService.hot(category);
+    }
 }

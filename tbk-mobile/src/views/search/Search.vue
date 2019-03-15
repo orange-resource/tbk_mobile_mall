@@ -86,7 +86,7 @@
                 console.log(e);
             }
 
-            this.$axios.get('search/hotKeyword').then((rsp) => {
+            this.$axios.get('search/keyword').then((rsp) => {
 
                 if (rsp.data.code == 1) {
                     for (let i = 0;i < rsp.data.data.length;i++) {

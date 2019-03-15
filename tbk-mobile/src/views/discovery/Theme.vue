@@ -50,7 +50,7 @@
         name: "Theme",
         mounted() {
 
-            this.$axios.get('discovery/theme/single',{
+            this.$axios.get('discovery/theme',{
                 params: {
                     themeId: this.$route.query.id,
                 }

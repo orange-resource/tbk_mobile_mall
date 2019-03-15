@@ -67,15 +67,16 @@
         name: "SearchGoods",
         mounted() {
             this.keyword = this.$route.query.keyword;
+            this.getData(this.tagIndex,this.tab[this.tagIndex].total);
         },
         data() {
             return {
                 keyword: '',
                 tab: [
-                    {name: '综合',loading: false,finished: false,total: 0,data: []},
-                    {name: '最新',loading: false,finished: false,total: 0,data: []},
-                    {name: '销量',loading: false,finished: false,total: 0,data: []},
-                    {name: '价格',loading: false,finished: false,total: 0,data: []},
+                    {name: '综合',loading: true,finished: false,total: 0,data: []},
+                    {name: '最新',loading: true,finished: false,total: 0,data: []},
+                    {name: '销量',loading: true,finished: false,total: 0,data: []},
+                    {name: '价格',loading: true,finished: false,total: 0,data: []},
                 ],
                 tagIndex: 0,
                 localKeyword: 'orange-tyh-keyword',
@@ -102,6 +103,8 @@
             },
             tabSearch(index, title) { //点击标签，换标签触发
                 this.tagIndex = index;
+                this.tab[this.tagIndex].total = 1;
+                this.getData(this.tagIndex,1);
             },
             onLoad() { //继续加载数据事件
                 this.tab[this.tagIndex].total+=1;
@@ -126,6 +129,7 @@
                         }
                         this.tab[index].loading = false;
                     } else {
+                        this.tab[index].loading = false;
                         this.tab[index].finished = true;
                         this.$alert.notifyNoData(rsp.data.msg);
                     }
