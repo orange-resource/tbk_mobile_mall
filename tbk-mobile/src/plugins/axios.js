@@ -2,8 +2,6 @@
 
 import Vue from 'vue';
 import axios from "axios";
-import router from '../router'
-import store from '../store'
 
 import { Toast } from 'vant';
 
@@ -14,10 +12,17 @@ Vue.use(Toast);
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
+let baseUrl = '';
+if (process.env.NODE_ENV == "development") { //测试环境
+    baseUrl = "http://localhost/tbk";
+} else if (process.env.NODE_ENV == "production") { //发布环境
+    baseUrl = "http://tyh.wywxy.top/tbk";
+}
+
 let config = {
-  baseURL: "http://localhost/tbk",
+  baseURL: baseUrl,
   // baseURL: "",
-  timeout: 60 * 1000, // Timeout
+  timeout: 10000, // Timeout
   withCredentials: true, // Check cross-site Access-Control
 };
 
@@ -31,7 +36,7 @@ _axios.interceptors.request.use(
       toast = Toast.loading({
           duration: 0,
           mask: true,
-          message: '拼命加载数据中...'
+          message: '拼命加载中...'
       });
       return config;
   },
@@ -48,19 +53,7 @@ _axios.interceptors.response.use(
       // Do something with response data
 
       toast.clear();
-      // switch (response.status) {
-      //     case 200:
-      //       if (response.data.code == 12) {
-      //           store.commit("logout");
-      //           router.replace({
-      //               path: '/login'
-      //           })
-      //       }
-      //       break;
-      //     default:
-      //       alert("未知错误....");
-      //       break;
-      // }
+
       return response;
   },
   function(error) {
