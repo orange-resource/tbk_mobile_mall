@@ -10,12 +10,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/': {
-        target: 'http://localhost:8238',   // 需要请求的地址
+      '/tbk': {
+        target: 'http://localhost:8238/tbk',   // 需要请求的地址
         ws: false,
         changeOrigin: true,  // 是否跨域
         pathRewrite: {
-          '^/': '/'  // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
+          '^/tbk': '/'  // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
         }
       }
     },

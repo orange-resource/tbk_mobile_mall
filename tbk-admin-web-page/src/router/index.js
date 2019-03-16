@@ -127,6 +127,23 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/ossConfig',
+    component: Layout,
+    alwaysShow: true,
+    name: 'OssConfig',
+    redirect: 'noredirect',
+    meta: { title: 'OSS配置', icon: '配置' },
+    children: [
+      {
+        path: 'form',
+        name: 'HdkConfigForm',
+        component: () => import('@/views/aliyun-oss/Form'),
+        meta: { title: '配置操作', icon: '列表' }
+      },
+    ]
+  },
+
+  {
     path: '/hdkConfig',
     component: Layout,
     alwaysShow: true,

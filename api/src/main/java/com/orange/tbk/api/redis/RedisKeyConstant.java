@@ -23,6 +23,11 @@ public class RedisKeyConstant {
     public final static String API_DATA = "orange.tbk:api-data:";
 
     /**
+     * oss
+     */
+    public final static String ALIYUNOSS_IMPL = "orange.tbk:oss:";
+
+    /**
      * admin system config impl key
      */
     public final static String SYSTEMCONFIG_IMPL = "orange.tbk:data:SystemConfigImpl:";

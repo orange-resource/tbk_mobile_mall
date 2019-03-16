@@ -16,10 +16,10 @@
             <el-upload
               class="avatar-uploader"
               :drag="true"
-              action="..."
+              action="/tbk/aliyunOss/uploadImage"
+              name="image"
               :show-file-list="false"
               :on-success="handleAvatarSuccess"
-              :http-request="httpRequest"
               :before-upload="beforeAvatarUpload">
               <img v-if="form.image" :src="form.image" class="avatar">
               <i v-else class="el-icon-plus avatar-uploader-icon"></i>
@@ -97,7 +97,7 @@
     methods: {
       handleAvatarSuccess(res, file) {
         this.uploadImageLoading.close();
-        this.form.image = file.response.imagebase64;
+        this.form.image = file.response.data;
       },
       beforeAvatarUpload(file) {
         const isJPG = true;
@@ -115,15 +115,6 @@
         }
 
         return isJPG && isLt2M;
-      },
-      httpRequest(options) {
-
-        let file = options.file;
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (e) {
-          options.onSuccess({imagebase64: e.currentTarget.result}, options.file);
-        }
       },
       openExpress() { //上一页
         this.$router.push({

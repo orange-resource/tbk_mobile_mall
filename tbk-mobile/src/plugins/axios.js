@@ -21,8 +21,7 @@ if (process.env.NODE_ENV == "development") { //测试环境
 
 let config = {
   baseURL: baseUrl,
-  // baseURL: "",
-  timeout: 10000, // Timeout
+  timeout: 60000 * 5, // Timeout
   withCredentials: true, // Check cross-site Access-Control
 };
 

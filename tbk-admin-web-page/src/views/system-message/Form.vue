@@ -16,10 +16,10 @@
             <el-upload
               class="avatar-uploader"
               :drag="true"
-              action="..."
+              action="/tbk/aliyunOss/uploadImage"
+              name="image"
               :show-file-list="false"
               :on-success="handleAvatarSuccess"
-              :http-request="httpRequest"
               :before-upload="beforeAvatarUpload">
               <img v-if="form.image" :src="form.image" class="avatar">
               <i v-else class="el-icon-plus avatar-uploader-icon"></i>
@@ -40,6 +40,31 @@
               @blur="onEditorBlur($event)" @focus="onEditorFocus($event)"
               @change="onEditorChange($event)">
             </quill-editor>
+            <el-dialog
+              title="上传图片插入编辑器"
+              :visible.sync="dialogVisible"
+              width="30%">
+              <el-row type="flex" class="row-bg" justify="center">
+                <el-col :span="24" style="display: flex;justify-content: center;align-items: center">
+                  <el-upload
+                    class="avatar-uploader"
+                    :drag="true"
+                    action="/tbk/aliyunOss/uploadImage"
+                    name="image"
+                    :show-file-list="false"
+                    :on-success="editorImageUpload"
+                    :before-upload="beforeAvatarUpload">
+                    <img v-if="editorImage" :src="editorImage" class="avatar">
+                    <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                  </el-upload>
+                </el-col>
+              </el-row>
+              <span slot="footer" class="dialog-footer">
+                <el-button @click="dialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="editorImageInsert">确 定</el-button>
+              </span>
+            </el-dialog>
+
           </el-form-item>
 
           <el-form-item label="作者名称" prop="author" style="padding-top: 50px">
@@ -84,6 +109,8 @@
         this.formButtonName = '立即保存';
       }
 
+      this.$refs.myQuillEditor.quill.getModule('toolbar').addHandler('image', this.imgHandler);
+
     },
     data() {
       return {
@@ -113,6 +140,8 @@
             {required: true, message: '请输入作者名称', trigger: 'blur'},
           ],
         },
+        editorImage: '',
+        dialogVisible: false,
         uploadImageLoading: '',
         editorOption:{
           placeholder: "输入详情内容...",
@@ -146,9 +175,25 @@
       }
     },
     methods: {
+      imgHandler() {
+        this.dialogVisible = true;
+      },
+      editorImageInsert() {
+        let quill = this.$refs.myQuillEditor.quill
+        // 获取光标所在位置
+        let length = this.$refs.myQuillEditor.quill.selection.savedRange.index;
+        // 插入图片 res.info为服务器返回的图片地址
+        quill.insertEmbed(length, 'image', this.editorImage)
+        // 调整光标到最后
+        quill.setSelection(length + 1)
+      },
       handleAvatarSuccess(res, file) {
         this.uploadImageLoading.close();
-        this.form.image = file.response.imagebase64;
+        this.form.image = file.response.data;
+      },
+      editorImageUpload(res, file) {
+        this.uploadImageLoading.close();
+        this.editorImage = file.response.data;
       },
       beforeAvatarUpload(file) {
         const isJPG = true;
@@ -166,15 +211,6 @@
         }
 
         return isJPG && isLt2M;
-      },
-      httpRequest(options) {
-
-        let file = options.file;
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (e) {
-          options.onSuccess({imagebase64: e.currentTarget.result}, options.file);
-        }
       },
       openExpress() { //上一页
         this.$router.push({
