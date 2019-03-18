@@ -65,11 +65,9 @@ public class CarouselController {
     @ResponseBody
     public Response create(Carousel carousel) {
 
-        boolean save = carouselService.save(carousel);
-        if (save == true) {
-            return Response.build(ResponseCode.SUCCESS);
-        }
-        return Response.build(ResponseCode.ERROR);
+        carouselService.create(carousel);
+
+        return Response.build(ResponseCode.SUCCESS);
     }
 
     @RspHandle
@@ -78,11 +76,9 @@ public class CarouselController {
     @ResponseBody
     public Response alter(Carousel carousel) {
 
-        boolean update = carouselService.updateById(carousel);
-        if (update == true) {
-            return Response.build(ResponseCode.SUCCESS);
-        }
-        return Response.build(ResponseCode.ERROR);
+        carouselService.alter(carousel);
+
+        return Response.build(ResponseCode.SUCCESS);
     }
 
     @RspHandle
@@ -91,11 +87,9 @@ public class CarouselController {
     @ResponseBody
     public Response delete(String carouselId) {
 
-        boolean remove = carouselService.removeById(carouselId);
-        if (remove == true) {
-            return Response.build(ResponseCode.SUCCESS);
-        }
-        return Response.build(ResponseCode.ERROR);
+        carouselService.delete(carouselId);
+
+        return Response.build(ResponseCode.SUCCESS);
     }
 
 }

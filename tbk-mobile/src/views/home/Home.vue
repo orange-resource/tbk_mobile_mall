@@ -12,35 +12,61 @@
                 <!--头部 end-->
 
                 <!--分类区-->
-                <div v-for="(g,index) in grid"
-                     :key="'g' + index"
-                     style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
-                     @click="gridOpen(g.toUrl + '&title=' + g.name)">
-                    <img :src="g.imageUrl"
-                         style="height: 70px"/>
-                    <span style="font-size: 10px;text-align: center;color: #999999">{{g.name}}</span>
+                <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
+                     @click="gridOpen('/home/district?type=1&title=今日上新')">
+                    <img src='../../static/img/今日上新.jpg'
+                         style="height: 70px;border-radius: 35%;margin-left: 2px;margin-right: 2px"/>
+                    <span style="font-size: 10px;text-align: center;color: #999999">今日上新</span>
+                </div>
+                <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
+                     @click="gridOpen('/home/district?type=2&title=9.9包邮')">
+                    <img src='../../static/img/9.9包邮.jpg'
+                         style="height: 70px;border-radius: 35%;margin-left: 2px;margin-right: 2px"/>
+                    <span style="font-size: 10px;text-align: center;color: #999999">9.9包邮</span>
+                </div>
+                <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
+                     @click="gridOpen('/home/district?type=3&title=30元封顶')">
+                    <img src='../../static/img/30元封顶.jpg'
+                         style="height: 70px;border-radius: 35%;margin-left: 2px;margin-right: 2px"/>
+                    <span style="font-size: 10px;text-align: center;color: #999999">30元封顶</span>
+                </div>
+                <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
+                     @click="gridOpen('/home/district?type=9&title=天猫商品')">
+                    <img src='../../static/img/天猫商品.jpg'
+                         style="height: 70px;border-radius: 35%;margin-left: 2px;margin-right: 2px"/>
+                    <span style="font-size: 10px;text-align: center;color: #999999">天猫商品</span>
+                </div>
+                <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
+                     @click="gridOpen('/home/district?type=8&title=品牌爆款')">
+                    <img src='../../static/img/品牌爆款.jpg'
+                         style="height: 70px;border-radius: 35%;margin-left: 2px;margin-right: 2px"/>
+                    <span style="font-size: 10px;text-align: center;color: #999999">品牌爆款</span>
                 </div>
                 <!--分类区 end-->
 
+                <div style="clear: both"></div>
                 <!--聚划算，淘抢购-->
-                <div v-for="(i,index) in pretty" :key="'t' + index">
-                    <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen(i.toUrl + '&title=' + i.name)">
-                        <img :src="i.imageUrl" width="100%" height="100%"/>
+                <div>
+                    <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen('/home/district?type=4&title=聚划算')">
+                        <img src="../../static/img/聚划算.jpg" width="100%" height="100%"/>
+                    </div>
+                    <div style="float: left;width: 50%;display: flex;flex-direction: column;" @click="gridOpen('/home/district?type=5&title=淘抢购')">
+                        <img src="../../static/img/淘抢购.jpg" width="100%" height="100%"/>
                     </div>
                 </div>
 
                 <!--达人说-->
                 <van-row type="flex" justify="center" style="clear: both;">
                     <van-col span="24" style="display: flex;justify-content: center;align-items: center">
-                        <img src="https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536796690071.jpg"
+                        <img src="../../static/img/达人说.jpg"
                              width="100%" height="100%" @click="openTalent()">
                     </van-col>
                 </van-row>
 
                 <!--超值品牌-->
-                <van-row type="flex" justify="center" style="clear: both;">
+                <van-row type="flex" justify="center" style="clear: both;margin-top: 5px">
                     <van-col span="24" style="display: flex;justify-content: center;align-items: center">
-                        <img src="https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536803202470.jpg"
+                        <img src="../../static/img/超值大牌.jpg"
                              width="100%" height="100%" @click="openBrand()">
                     </van-col>
                 </van-row>
@@ -125,8 +151,8 @@
                 grid: [
                     {
                         name: '今日上新',
-                        imageUrl: 'https://x.dscmall.cn/storage/data/gallery_album/108/original_img/108_P_1536792341842.png',
-                        toUrl: '/home/district?type=1',
+                        imageUrl: '/static/img/3.jpg',
+                        toUrl: '',
                     },
                     {
                         name: '9.9包邮',

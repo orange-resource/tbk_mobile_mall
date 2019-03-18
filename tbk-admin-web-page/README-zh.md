@@ -1,6 +1,6 @@
 
-## verify 后台管理系统页面
-
+## 淘宝客后台管理系统页面
+基于Vue 2
 ```bash
 
 # Install dependencies

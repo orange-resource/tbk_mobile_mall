@@ -6,7 +6,7 @@
             <van-col span="22" style="display: flex;flex-direction: row">
                 <div style="width: 100px;position: relative">
                     <img :src="image"
-                         width="100px" height="100px" />
+                         width="100px" height="100px" @click="openImage(image)" />
                     <van-tag v-if="tag != null" type="danger" style="position: absolute;top:0;left:0;">{{ tag }}</van-tag>
                 </div>
                 <div style="flex: auto">
@@ -44,6 +44,9 @@
 </template>
 
 <script>
+
+    import { ImagePreview } from 'vant';
+
     export default {
         name: "orange-goods-sell",
         props:[
@@ -52,6 +55,11 @@
         methods: {
             open() {
                 this.$router.push({ path: this.to });
+            },
+            openImage(image) {
+                ImagePreview([
+                    image,
+                ]);
             },
         }
     }

@@ -32,4 +32,9 @@ public class RedisKeyConstant {
      */
     public final static String SYSTEMCONFIG_IMPL = "orange.tbk:data:SystemConfigImpl:";
 
+    /**
+     * admin carousel impl key
+     */
+    public final static String CAROUSEL_IMPL = "orange.tbk:data:CarouselImpl:";
+
 }

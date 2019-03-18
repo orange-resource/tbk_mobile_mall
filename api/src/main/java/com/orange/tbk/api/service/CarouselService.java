@@ -12,4 +12,10 @@ public interface CarouselService extends IService<Carousel> {
 
     List<CarouselVo> getListBySort();
 
+    void create(Carousel carousel);
+
+    void alter(Carousel carousel);
+
+    void delete(String carouselId);
+
 }

@@ -12,7 +12,7 @@
         <el-form :model="form" :rules="forms" :status-icon="true"
                  ref="form" label-width="100px" class="demo-ruleForm">
 
-          <el-form-item label="主图" prop="sort">
+          <el-form-item label="主图" prop="image">
             <el-upload
               class="avatar-uploader"
               :drag="true"
