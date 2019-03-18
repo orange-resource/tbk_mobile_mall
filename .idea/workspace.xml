@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e835c3-5892-4760-b7ee-25f4cf63fdd5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-web/log/adminweb.2019-03-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/log/admin.2019-03-16.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/InterfaceManagementImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/InterfaceManagementImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/redis/RedisKeyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/redis/RedisKeyConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/tbk.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/tbk.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/README-zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/README-zh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-admin-web-page/src/views/carousel/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-admin-web-page/src/views/carousel/Form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-sell.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/components/orange-goods-sell.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/views/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-web/log/adminweb.log" beforeDir="false" afterPath="$PROJECT_DIR$/admin-web/log/adminweb.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/log/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/admin/log/admin.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/static/img/聚划算.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/聚划算.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tbk-mobile/src/static/img/超值大牌.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/tbk-mobile/src/static/img/超值大牌.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -106,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/orange/tbk/admin/impl/CarouselImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -302,168 +295,6 @@
               <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
               <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="adminweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tbkmobile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tbkmobile" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="orange" type="462c0819:PsiDirectoryNode" />
-              <item name="tbk" type="462c0819:PsiDirectoryNode" />
-              <item name="adminweb" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -477,7 +308,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552908101935" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552908525583" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/node" />
@@ -658,7 +489,7 @@
       <workItem from="1552445699637" duration="6818000" />
       <workItem from="1552559213402" duration="13829000" />
       <workItem from="1552619626490" duration="35968000" />
-      <workItem from="1552787134223" duration="9267000" />
+      <workItem from="1552787134223" duration="10302000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1551585895473</created>
@@ -912,16 +743,23 @@
       <option name="project" value="LOCAL" />
       <updated>1552757426561</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="优化优化...">
+      <created>1552908183823</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1552908183823</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116557000" />
+    <option name="totallyTimeSpent" value="117592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.32223415" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4980695" visible="true" weight="0.32223415" />
       <window_info id="Structure" order="1" sideWeight="0.5019305" side_tool="true" weight="0.31740063" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -931,8 +769,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32949308" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4032258" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32949308" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4032258" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -952,7 +790,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.25832438" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.25832438" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1632,13 +1470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin-web/src/main/java/com/orange/tbk/adminweb/controller/CarouselController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1869">
@@ -1650,6 +1481,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/orange/tbk/api/service/CarouselService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
