@@ -2,36 +2,43 @@
 
 #### 介绍
 
+快速拥有自己的淘宝客商城，系统后台简单配置，立马可以当个甩手掌柜，你要做的就是推广这个商城！
+
+在线体验商城效果（请用手机移动端访问）：http://tyh.wywxy.top
+
+具体详情看手册，项目需要什么环境，需要注意的一些东西，都在手册上了
+
+使用手册：https://www.kancloud.cn/ongsoft/orange
 
 #### 软件架构
-软件架构说明
 
+Spring boot + Vue 前后端分离项目...
 
-#### 安装教程
+#### 项目使用到的技术
 
-1. xxxx
-2. xxxx
-3. xxxx
+后端java项目
+spring boot 2.0.6
+dubbo
+hutool (工具包)
+mybatis plus(mapper访问层)
+shiro(登陆验证)
+lombok(用于类自动生成get set方法)
+hikari(数据库连接池)
+移动端商城
+vue cli 3.0
+vant ui
+...等等
+系统后台
+vue 2.0
+element ui
+...等等
 
-#### 使用说明
+#### 商城部分图一览
 
-1. xxxx
-2. xxxx
-3. xxxx
+![描述](https://open-source-orange.oss-cn-hangzhou.aliyuncs.com/%E7%A0%81%E4%BA%91/%E6%B7%98%E5%AE%9D%E5%AE%A2/IMG_0687.PNG)
 
-#### 参与贡献
+![描述](https://open-source-orange.oss-cn-hangzhou.aliyuncs.com/%E7%A0%81%E4%BA%91/%E6%B7%98%E5%AE%9D%E5%AE%A2/IMG_0688.PNG)
 
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+![描述](https://open-source-orange.oss-cn-hangzhou.aliyuncs.com/%E7%A0%81%E4%BA%91/%E6%B7%98%E5%AE%9D%E5%AE%A2/IMG_0689.PNG)
 
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+![描述](https://open-source-orange.oss-cn-hangzhou.aliyuncs.com/%E7%A0%81%E4%BA%91/%E6%B7%98%E5%AE%9D%E5%AE%A2/IMG_0690.PNG)
