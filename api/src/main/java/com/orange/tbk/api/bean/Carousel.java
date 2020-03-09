@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 首页轮播模块
  * t_carousel
  * @author Orange
- * @date 2019/03/14
+ * @date 2020/03/09
  */
 @TableName("t_carousel")
 @KeySequence("SEQ_TEST")

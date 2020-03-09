@@ -7,7 +7,7 @@ import java.io.Serializable;
  * 系统各种信息模块
  * t_system_config
  * @author Orange
- * @date 2019/03/14
+ * @date 2020/03/09
  */
 @TableName("t_system_config")
 @KeySequence("SEQ_TEST")

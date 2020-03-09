@@ -4,10 +4,10 @@ import com.baomidou.mybatisplus.annotation.*;
 import java.io.Serializable;
 
 /**
- * 阿里云对象存储配置模块
+ * 阿里云oss存储对象配置
  * t_aliyun_oss
  * @author Orange
- * @date 2019/03/14
+ * @date 2020/03/09
  */
 @TableName("t_aliyun_oss")
 @KeySequence("SEQ_TEST")
@@ -55,7 +55,6 @@ public class AliyunOss implements Serializable {
     private String bucketName;
 
     /**
-     * 目录路径
      * catalogue
      */
     private String catalogue;
