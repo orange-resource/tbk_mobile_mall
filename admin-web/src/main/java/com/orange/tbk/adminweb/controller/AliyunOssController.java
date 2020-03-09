@@ -106,7 +106,7 @@ public class AliyunOssController {
         logger.info(">>>>>>>>文件路径：" + fineUrl);
         logger.info(">>>>>>>>上传文件结束");
 
-        return aliyunOss.getDomainName() + fineUrl + aliyunOss.getStyle();
+        return aliyunOss.getDomainName() + "/" + fineUrl + aliyunOss.getStyle();
     }
 
 }

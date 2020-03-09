@@ -14,7 +14,7 @@ Vue.use(Toast);
 
 let baseUrl = '';
 if (process.env.NODE_ENV == "development") { //测试环境
-    baseUrl = "http://localhost/tbk";
+    baseUrl = "http://localhost:8954/tbk";
 } else if (process.env.NODE_ENV == "production") { //发布环境
     baseUrl = "http://tyh.wywxy.top/tbk";
 }
