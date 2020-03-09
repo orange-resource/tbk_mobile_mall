@@ -2,7 +2,7 @@
 
     <div>
 
-        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff;margin-top: 5px">
+        <van-row type="flex" justify="center" style="padding: 10px 0 10px 0;background-color: #fff;margin-top: 5px;margin-bottom: 10px">
             <van-col span="22" style="display: flex;flex-direction: row">
                 <div style="width: 100px;position: relative">
                     <img :src="image"

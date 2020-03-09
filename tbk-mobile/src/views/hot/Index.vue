@@ -1,11 +1,9 @@
 <template>
 
-    <div class="bc" style="height: 100%">
+    <div class="bc">
 
         <div class="orange-home bc" style="height: 100%">
             <div class="orange-content" style="display: flex;flex-direction: column">
-
-                <orange-search to="/search/main"></orange-search>
 
                 <div style="flex: auto;display: flex;flex-direction: row">
 
@@ -21,7 +19,7 @@
                             <van-col span="22">
 
                                 <orange-horizontal-piece
-                                        style="font-size: 15px;"
+                                        style="font-size: 15px; padding-top: 15px; padding-bottom: 15px"
                                         title="今日热销">
                                 </orange-horizontal-piece>
                                 <orange-goods-sell
@@ -105,6 +103,7 @@
 
                     if (rsp.data.code == 1) {
                         this.goods = rsp.data.data;
+                        window.scrollTo(0, 0)
                     } else {
                         this.$alert.notifyNoData(rsp.data.msg);
                     }

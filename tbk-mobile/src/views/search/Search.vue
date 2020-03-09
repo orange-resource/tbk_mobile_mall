@@ -22,7 +22,7 @@
             <!--搜索 end-->
 
             <!--最近搜索-->
-            <van-row type="flex" justify="center" style="margin-top: 20px">
+            <van-row v-if="recentKeyword.length > 0" type="flex" justify="center" style="margin-top: 20px">
                 <van-col span="10" style="display: flex;align-items: center">
                     <span style="font-size: 15px;color: #232326">最近搜索</span>
                 </van-col>
