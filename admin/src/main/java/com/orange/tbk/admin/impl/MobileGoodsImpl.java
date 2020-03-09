@@ -1,6 +1,5 @@
 package com.orange.tbk.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.orange.tbk.admin.mapper.HdkConfigMapper;
 import com.orange.tbk.admin.util.hdkvisit.HdkApiVisit;
 import com.orange.tbk.admin.util.hdkvisit.request.ApiGoodsDetails;
@@ -9,12 +8,13 @@ import com.orange.tbk.admin.util.hdkvisit.request.ApiGoodsRates;
 import com.orange.tbk.api.bean.HdkConfig;
 import com.orange.tbk.api.redis.RedisKeyConstant;
 import com.orange.tbk.api.service.MobileGoodsService;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.concurrent.TimeUnit;
 
-@Service
+@Service(version = "${version}")
 public class MobileGoodsImpl implements MobileGoodsService {
 
     @Autowired

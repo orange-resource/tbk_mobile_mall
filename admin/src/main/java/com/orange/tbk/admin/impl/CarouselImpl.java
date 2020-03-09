@@ -1,19 +1,19 @@
 package com.orange.tbk.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.orange.tbk.admin.mapper.CarouselMapper;
 import com.orange.tbk.api.bean.Carousel;
 import com.orange.tbk.api.redis.RedisKeyConstant;
 import com.orange.tbk.api.service.CarouselService;
 import com.orange.tbk.api.vo.open.CarouselVo;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service(version = "${version}")
 public class CarouselImpl extends ServiceImpl<CarouselMapper, Carousel> implements CarouselService {
 
     @Autowired

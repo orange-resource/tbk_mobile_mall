@@ -1,12 +1,13 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.ApiAuth;
 import com.orange.tbk.adminweb.annotation.RspHandle;
+import com.orange.tbk.adminweb.model.ApiAuthConstant;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.InterfaceManagement;
 import com.orange.tbk.api.service.InterfaceManagementService;
-import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,11 +22,11 @@ import java.util.List;
 @RequestMapping(value = "interfaceManagement")
 public class InterfaceManagementController {
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private InterfaceManagementService interfaceManagementService;
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "list",method = RequestMethod.GET)
     @ResponseBody
     public Response list() {
@@ -39,7 +40,7 @@ public class InterfaceManagementController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "getSingle",method = RequestMethod.GET)
     @ResponseBody
     public Response getSingle(String key) {
@@ -53,7 +54,7 @@ public class InterfaceManagementController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "closeInterface",method = RequestMethod.POST)
     @ResponseBody
     public Response closeInterface(String key,Integer on) {
@@ -72,7 +73,7 @@ public class InterfaceManagementController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "ipHandle",method = RequestMethod.POST)
     @ResponseBody
     public Response ipHandle(String key,Integer on) {
@@ -91,7 +92,7 @@ public class InterfaceManagementController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "update",method = RequestMethod.POST)
     @ResponseBody
     public Response update(InterfaceManagement interfaceManagement) {

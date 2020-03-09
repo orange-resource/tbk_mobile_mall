@@ -1,12 +1,12 @@
 package com.orange.tbk.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.orange.tbk.admin.mapper.HdkConfigMapper;
 import com.orange.tbk.api.bean.HdkConfig;
 import com.orange.tbk.api.service.HdkConfigService;
+import org.apache.dubbo.config.annotation.Service;
 
-@Service
+@Service(version = "${version}")
 public class HdkConfigImpl extends ServiceImpl<HdkConfigMapper, HdkConfig> implements HdkConfigService {
 
     @Override

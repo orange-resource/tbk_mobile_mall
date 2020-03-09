@@ -40,7 +40,7 @@ service.interceptors.response.use(
     load.close();
 
     const res = response.data
-    if (res.code == 12) {
+    if (res.code == 926 || res.code == 940) {
 
       Message.error("登陆失效，请重新登陆")
       store.dispatch('FedLogOut').then(() => {

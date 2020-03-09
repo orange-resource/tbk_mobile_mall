@@ -33,8 +33,8 @@ const user = {
         login(username, userInfo.password).then(response => {
           if (response.code == 100) {
             Message.success("登陆成功");
-            setToken("1")
-            commit('SET_TOKEN', "1")
+            setToken(response.data)
+            commit('SET_TOKEN', response.data)
           } else {
             Message.error("登陆失败");
           }

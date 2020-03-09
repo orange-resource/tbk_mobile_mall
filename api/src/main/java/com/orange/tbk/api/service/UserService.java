@@ -5,6 +5,8 @@ import com.orange.tbk.api.bean.User;
 
 public interface UserService extends IService<User> {
 
-    int verifyUser(String username, String password);
+    String verifyUser(String username, String password);
+
+    void logout(String token);
 
 }

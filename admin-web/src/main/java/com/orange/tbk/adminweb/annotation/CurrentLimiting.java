@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Open {
+public @interface CurrentLimiting {
 
     /**
      * 接口说明

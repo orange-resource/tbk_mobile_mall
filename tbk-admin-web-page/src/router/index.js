@@ -43,7 +43,7 @@ export const constantRouterMap = [
     alwaysShow: true,
     name: 'Interface',
     redirect: 'noredirect',
-    meta: { title: '接口管理', icon: '接口变更动态' },
+    meta: { title: '接口限流', icon: '接口变更动态' },
     children: [
       {
         path: 'interface_list',

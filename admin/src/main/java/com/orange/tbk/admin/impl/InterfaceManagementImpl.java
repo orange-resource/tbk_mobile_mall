@@ -1,8 +1,8 @@
 package com.orange.tbk.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.orange.tbk.api.bean.InterfaceManagement;
 import com.orange.tbk.api.service.InterfaceManagementService;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-@Service
+@Service(version = "${version}")
 public class InterfaceManagementImpl implements InterfaceManagementService {
 
     @Autowired

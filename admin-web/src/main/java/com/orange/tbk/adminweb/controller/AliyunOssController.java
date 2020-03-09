@@ -1,13 +1,14 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.aliyun.oss.OSSClient;
+import com.orange.tbk.adminweb.annotation.ApiAuth;
 import com.orange.tbk.adminweb.annotation.RspHandle;
+import com.orange.tbk.adminweb.model.ApiAuthConstant;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.AliyunOss;
 import com.orange.tbk.api.service.AliyunOssService;
-import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.dubbo.config.annotation.Reference;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +26,11 @@ public class AliyunOssController {
 
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AliyunOssController.class);
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private AliyunOssService aliyunOssService;
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "single",method = RequestMethod.GET)
     @ResponseBody
     public Response single() {
@@ -43,7 +44,7 @@ public class AliyunOssController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "create",method = RequestMethod.POST)
     @ResponseBody
     public Response create(AliyunOss aliyunOss) {
@@ -57,7 +58,7 @@ public class AliyunOssController {
      * 上传图片
      */
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "uploadImage",method = RequestMethod.POST)
     @ResponseBody
     public Response uploadImage(MultipartFile image) {

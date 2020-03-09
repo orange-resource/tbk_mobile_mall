@@ -1,4 +1,4 @@
-package com.orange.tbk.adminweb.annotation;
+package com.orange.tbk.adminweb.model;
 
 public class ParameterError extends Exception {
 

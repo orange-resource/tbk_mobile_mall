@@ -1,7 +1,7 @@
 package com.orange.tbk.adminweb.runner;
 
 import cn.hutool.core.util.ClassUtil;
-import com.orange.tbk.adminweb.annotation.Open;
+import com.orange.tbk.adminweb.annotation.CurrentLimiting;
 import com.orange.tbk.api.bean.InterfaceManagement;
 import com.orange.tbk.api.redis.RedisKeyConstant;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 全部开放接口全部统一管理，提供参数配置，系统可以后台可配置
+ * 限流接口全部统一管理，提供参数配置，系统可以后台可配置
  * redis作为存储
  * 系统启动后第一时间执行
  * @author Orange软件
@@ -27,9 +27,9 @@ import java.util.Set;
  */
 @Component
 @Order(value = 1)
-public class InterfaceRunner implements CommandLineRunner {
+public class CurrentLimitingRunner implements CommandLineRunner {
     
-    private static final Logger log = LoggerFactory.getLogger(InterfaceRunner.class);
+    private static final Logger log = LoggerFactory.getLogger(CurrentLimitingRunner.class);
 
     @Value("${interface.scan.path}")
     private String interfaceScanPath;
@@ -104,7 +104,7 @@ public class InterfaceRunner implements CommandLineRunner {
 
             for (Method method : methods) {
 
-                Open annotation = method.getAnnotation(Open.class);
+                CurrentLimiting annotation = method.getAnnotation(CurrentLimiting.class);
                 if (annotation != null) {
                     map.put(RedisKeyConstant.OPEN_INTERFACE + c.getName() + "." + method.getName(),annotation.explain());
                 }

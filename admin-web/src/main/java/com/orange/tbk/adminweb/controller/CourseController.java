@@ -1,15 +1,16 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.orange.tbk.adminweb.annotation.Open;
+import com.orange.tbk.adminweb.annotation.ApiAuth;
+import com.orange.tbk.adminweb.annotation.CurrentLimiting;
 import com.orange.tbk.adminweb.annotation.RspHandle;
+import com.orange.tbk.adminweb.model.ApiAuthConstant;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.Course;
 import com.orange.tbk.api.service.CourseService;
 import com.orange.tbk.api.vo.open.CourseVo;
-import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,13 +25,13 @@ import java.util.List;
 @RequestMapping(value = "course")
 public class CourseController {
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private CourseService courseService;
 
     /**
      * 只会显示前30条
      */
-    @Open(explain = "获取新手教程列表 只会显示前30条")
+    @CurrentLimiting(explain = "获取新手教程列表 只会显示前30条")
     @RspHandle
     @RequestMapping(value = "list",method = RequestMethod.GET)
     @ResponseBody
@@ -41,7 +42,7 @@ public class CourseController {
         return Response.build(ResponseCode.QUERY_SUCCESS,list);
     }
 
-    @Open(explain = "获取新手教程文章")
+    @CurrentLimiting(explain = "获取新手教程文章")
     @RspHandle
     @RequestMapping(value = "article",method = RequestMethod.GET)
     @ResponseBody
@@ -53,7 +54,7 @@ public class CourseController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "page",method = RequestMethod.GET)
     @ResponseBody
     public Response page(Course course, Page page) {
@@ -74,7 +75,7 @@ public class CourseController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "single",method = RequestMethod.GET)
     @ResponseBody
     public Response single(String courseId) {
@@ -85,7 +86,7 @@ public class CourseController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "create",method = RequestMethod.POST)
     @ResponseBody
     public Response create(Course course) {
@@ -98,7 +99,7 @@ public class CourseController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "alter",method = RequestMethod.POST)
     @ResponseBody
     public Response alter(Course course) {
@@ -111,7 +112,7 @@ public class CourseController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     @ResponseBody
     public Response delete(String courseId) {

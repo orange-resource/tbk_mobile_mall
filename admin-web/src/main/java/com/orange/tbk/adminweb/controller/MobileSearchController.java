@@ -1,9 +1,9 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.orange.tbk.adminweb.annotation.Open;
+import com.orange.tbk.adminweb.annotation.CurrentLimiting;
 import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.api.service.MobileSearchService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "search")
 public class MobileSearchController {
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private MobileSearchService mobileSearchService;
 
-    @Open(explain = "获取热搜关键词")
+    @CurrentLimiting(explain = "获取热搜关键词")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "keyword",method = RequestMethod.GET)
     @ResponseBody
@@ -28,7 +28,7 @@ public class MobileSearchController {
         return mobileSearchService.keyword();
     }
 
-    @Open(explain = "搜索商品")
+    @CurrentLimiting(explain = "搜索商品")
     @RspHandle(isReturnObject = true)
     @RequestMapping(value = "goods",method = RequestMethod.GET)
     @ResponseBody

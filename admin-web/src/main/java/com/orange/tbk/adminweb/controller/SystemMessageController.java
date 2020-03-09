@@ -1,15 +1,16 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.orange.tbk.adminweb.annotation.Open;
+import com.orange.tbk.adminweb.annotation.ApiAuth;
+import com.orange.tbk.adminweb.annotation.CurrentLimiting;
 import com.orange.tbk.adminweb.annotation.RspHandle;
+import com.orange.tbk.adminweb.model.ApiAuthConstant;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.SystemMessage;
 import com.orange.tbk.api.service.SystemMessageService;
 import com.orange.tbk.api.vo.open.SystemMessageVo;
-import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,13 +25,13 @@ import java.util.List;
 @RequestMapping(value = "systemMessage")
 public class SystemMessageController {
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private SystemMessageService systemMessageService;
 
     /**
      * 只会显示前30条系统消息
      */
-    @Open(explain = "获取系统消息列表 只会显示前30条系统消息")
+    @CurrentLimiting(explain = "获取系统消息列表 只会显示前30条系统消息")
     @RspHandle
     @RequestMapping(value = "list",method = RequestMethod.GET)
     @ResponseBody
@@ -41,7 +42,7 @@ public class SystemMessageController {
         return Response.build(ResponseCode.QUERY_SUCCESS,list);
     }
 
-    @Open(explain = "获取系统消息文章详情...")
+    @CurrentLimiting(explain = "获取系统消息文章详情...")
     @RspHandle
     @RequestMapping(value = "article",method = RequestMethod.GET)
     @ResponseBody
@@ -53,7 +54,7 @@ public class SystemMessageController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "page",method = RequestMethod.GET)
     @ResponseBody
     public Response page(SystemMessage systemMessage, Page page) {
@@ -74,7 +75,7 @@ public class SystemMessageController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "single",method = RequestMethod.GET)
     @ResponseBody
     public Response single(String systemMessageId) {
@@ -85,7 +86,7 @@ public class SystemMessageController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "create",method = RequestMethod.POST)
     @ResponseBody
     public Response create(SystemMessage systemMessage) {
@@ -98,7 +99,7 @@ public class SystemMessageController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "alter",method = RequestMethod.POST)
     @ResponseBody
     public Response alter(SystemMessage systemMessage) {
@@ -111,7 +112,7 @@ public class SystemMessageController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     @ResponseBody
     public Response delete(String systemMessageId) {

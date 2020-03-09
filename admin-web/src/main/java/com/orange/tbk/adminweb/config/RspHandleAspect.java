@@ -1,5 +1,8 @@
-package com.orange.tbk.adminweb.annotation;
+package com.orange.tbk.adminweb.config;
 
+import cn.hutool.core.exceptions.ExceptionUtil;
+import com.orange.tbk.adminweb.model.ParameterError;
+import com.orange.tbk.adminweb.annotation.RspHandle;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.InterfaceManagement;
@@ -98,11 +101,12 @@ public class RspHandleAspect {
             }
 
         } catch (ParameterError e) {
-            return Response.build(ResponseCode.PARAMETER_ERROR,e.getMessage());
-        } catch (Exception e) {
-            log.error(e.getMessage());
+            return Response.build(ResponseCode.PARAMETER_ERROR, e.getMessage());
+        } catch (Throwable t) {
+            String name = t.getClass().getName();
+            log.error("\n项目异常：class: {} - {}", name, ExceptionUtil.stacktraceToString(t));
             if (setErrorInfo == true) {
-                return Response.build(ResponseCode.UNKNOWN_ERROR,e.getMessage());
+                return Response.build(ResponseCode.UNKNOWN_ERROR, t.getMessage());
             } else {
                 return Response.build(ResponseCode.UNKNOWN_ERROR);
             }

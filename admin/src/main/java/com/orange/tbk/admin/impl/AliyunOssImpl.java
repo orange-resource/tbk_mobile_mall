@@ -1,17 +1,17 @@
 package com.orange.tbk.admin.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.orange.tbk.admin.mapper.AliyunOssMapper;
 import com.orange.tbk.api.bean.AliyunOss;
 import com.orange.tbk.api.redis.RedisKeyConstant;
 import com.orange.tbk.api.service.AliyunOssService;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.List;
 
-@Service
+@Service(version = "${version}")
 public class AliyunOssImpl extends ServiceImpl<AliyunOssMapper, AliyunOss> implements AliyunOssService {
 
     @Autowired

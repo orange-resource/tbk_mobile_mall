@@ -1,12 +1,13 @@
 package com.orange.tbk.adminweb.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
+import com.orange.tbk.adminweb.annotation.ApiAuth;
 import com.orange.tbk.adminweb.annotation.RspHandle;
+import com.orange.tbk.adminweb.model.ApiAuthConstant;
 import com.orange.tbk.adminweb.model.Response;
 import com.orange.tbk.adminweb.model.ResponseCode;
 import com.orange.tbk.api.bean.HdkConfig;
 import com.orange.tbk.api.service.HdkConfigService;
-import org.apache.shiro.authz.annotation.RequiresUser;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,11 +22,11 @@ import java.util.List;
 @RequestMapping(value = "hdkConfig")
 public class HdkConfigController {
 
-    @Reference
+    @Reference(version = "${admin.version}", check = false)
     private HdkConfigService hdkConfigService;
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "single",method = RequestMethod.GET)
     @ResponseBody
     public Response single() {
@@ -39,7 +40,7 @@ public class HdkConfigController {
     }
 
     @RspHandle
-    @RequiresUser
+    @ApiAuth(type = ApiAuthConstant.ADMIN)
     @RequestMapping(value = "create",method = RequestMethod.POST)
     @ResponseBody
     public Response create(HdkConfig hdkConfig) {
