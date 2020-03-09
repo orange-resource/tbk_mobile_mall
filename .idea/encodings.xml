@@ -3,8 +3,13 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/admin-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
