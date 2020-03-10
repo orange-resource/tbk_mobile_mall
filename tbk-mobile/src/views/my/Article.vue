@@ -34,7 +34,7 @@
 
             <van-row type="flex" justify="center">
                 <van-col span="22" style="padding-top: 10px;margin-bottom: 20px">
-                    <div v-html="data.content" style="width: 100%">
+                    <div class="content" v-html="data.content" style="width: 100%">
 
                     </div>
                 </van-col>
@@ -103,6 +103,7 @@
 </script>
 
 <style scoped>
-
-
+    .content >>>img {
+        width: 100% !important;
+    }
 </style>
