@@ -32,16 +32,16 @@ const _axios = axios.create(config);
 _axios.interceptors.request.use(
   function(config) {
       // Do something before request is sent
-      toast = Toast.loading({
-          duration: 0,
-          mask: true,
-          message: '拼命加载中...'
-      });
+      // toast = Toast.loading({
+      //     duration: 0,
+      //     mask: true,
+      //     message: '拼命加载中...'
+      // });
       return config;
   },
   function(error) {
       // Do something with request error
-      toast.clear();
+      // toast.clear();
       return Promise.reject(error);
   }
 );
@@ -51,12 +51,12 @@ _axios.interceptors.response.use(
   function(response) {
       // Do something with response data
 
-      toast.clear();
+      // toast.clear();
 
       return response;
   },
   function(error) {
-      toast.clear();
+      // toast.clear();
       return Promise.reject(error);
   }
 );

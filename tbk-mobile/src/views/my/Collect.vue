@@ -66,7 +66,7 @@
         },
         methods: {
             onClickLeft() {
-                window.history.go(-1);
+                this.$router.back(-1);
             },
             onClickRight() {
                 this.$router.push({ path: "/my" });

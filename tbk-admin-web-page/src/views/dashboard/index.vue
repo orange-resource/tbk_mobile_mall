@@ -6,7 +6,6 @@
       <el-col :span="20">
         <el-card shadow="always" style="text-align: center">
           淘宝客移动商城后台系统 技术QQ1067357662
-          使用手册：https://www.kancloud.cn/ongsoft/orange
         </el-card>
       </el-col>
       <el-col :span="2"></el-col>

@@ -8,30 +8,36 @@
                 <div style="flex: auto;display: flex;flex-direction: row">
 
                     <div style="width: 70px;overflow:auto;flex-shrink: 0">
-                        <van-badge-group :active-key="activeKey" @change="onChange">
-                            <van-badge v-for="(i,index) in category" :key="index" :title="i.name" />
-                        </van-badge-group>
+                        <van-sidebar v-model="activeKey" @change="onChange">
+                            <van-sidebar-item v-for="(i,index) in category" :title="i.name" :key="'sidebar' + index" />
+                        </van-sidebar>
                     </div>
 
                     <div class="slide" style="flex: auto;overflow:auto;">
 
                         <van-row type="flex" justify="center" style="padding-top: 10px">
+
                             <van-col span="22">
 
                                 <orange-horizontal-piece
-                                        style="font-size: 15px; padding-top: 15px; padding-bottom: 15px"
-                                        title="今日热销">
+                                    style="font-size: 15px; padding-top: 15px; padding-bottom: 15px"
+                                    title="今日热销">
                                 </orange-horizontal-piece>
+                                <div v-if="loading" class="loading">
+                                    <van-loading color="#1989fa" />
+                                </div>
                                 <orange-goods-sell
-                                        v-for="(i,index) in goods"
-                                        :key="'q' + index"
-                                        :image="i.itempic"
-                                        :title="i.itemtitle"
-                                        :price="i.itemendprice"
-                                        :originalPrice="i.itemprice"
-                                        :payment="i.itemsale"
-                                        :to='"/goods?id=" + i.itemid'
+                                    v-else
+                                    v-for="(i,index) in goods"
+                                    :key="'q' + index"
+                                    :image="i.itempic"
+                                    :title="i.itemtitle"
+                                    :price="i.itemendprice"
+                                    :originalPrice="i.itemprice"
+                                    :payment="i.itemsale"
+                                    :to='"/goods?id=" + i.itemid'
                                 ></orange-goods-sell>
+
                             </van-col>
 
                         </van-row>
@@ -61,6 +67,7 @@
         },
         data() {
             return {
+                loading: true,
                 keyword: '',
                 // 左侧高亮元素的index
                 mainActiveIndex: 0,
@@ -104,6 +111,7 @@
                     if (rsp.data.code == 1) {
                         this.goods = rsp.data.data;
                         window.scrollTo(0, 0)
+                        this.loading = false
                     } else {
                         this.$alert.notifyNoData(rsp.data.msg);
                     }
@@ -125,5 +133,12 @@
 </script>
 
 <style scoped>
-
+    .loading {
+        height: 150px;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>

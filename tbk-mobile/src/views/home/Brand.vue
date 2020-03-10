@@ -97,7 +97,7 @@
         },
         methods:{
             onClickLeft() {
-                window.history.go(-1);
+                this.$router.back(-1);
             },
             onClickRight() {
                 this.$router.push({ path: "/" });
@@ -118,8 +118,6 @@
                     }
                 }).then((rsp) => {
 
-                    console.log(rsp.data);
-                    console.log(rsp.data.code);
                     if (rsp.data.code == 1) {
                         if (page == 1) {
                             this.tab[index].data = [];

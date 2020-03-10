@@ -114,6 +114,11 @@
         },
         methods: {
             onSearch() {
+                if (this.keyword === "") {
+                    this.$notify({ type: 'warning', message: '搜索关键词不能为空' })
+                    return;
+                }
+
                 try {
                     queue.insert({
                         key: this.localKeyword,

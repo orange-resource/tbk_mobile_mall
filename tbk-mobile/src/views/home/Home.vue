@@ -1,17 +1,18 @@
 <template>
 
-    <div class="bc" style="height: 100%">
+    <div class="" style="height: 100%;">
 
-        <div class="orange-home bc">
+        <div class="orange-home">
 
             <div class="orange-content">
 
                 <!--头部-->
-                <orange-search to="/search/main"></orange-search>
+                <!-- <orange-search to="/search/main"></orange-search> -->
                 <orange-swipe :images="swipe"></orange-swipe>
                 <!--头部 end-->
 
                 <!--分类区-->
+                <div style="margin-top:8px"></div>
                 <div style="float: left;width: 20%;display: flex;flex-direction: column;background-color: #fff;padding-bottom: 10px"
                      @click="gridOpen('/home/district?type=1&title=今日上新')">
                     <img src='../../static/img/今日上新.jpg'
@@ -64,7 +65,7 @@
                 </van-row>
 
                 <!--超值品牌-->
-                <van-row type="flex" justify="center" style="clear: both;margin-top: 5px">
+                <van-row type="flex" justify="center" style="clear: both;margin-top: 10px">
                     <van-col span="24" style="display: flex;justify-content: center;align-items: center">
                         <img src="../../static/img/超值大牌.jpg"
                              width="100%" height="100%" @click="openBrand()">
@@ -76,7 +77,7 @@
                     <van-row type="flex" justify="space-around">
                         <van-col span="24" style="text-align: center">
                             <img src="../../static/img/like.jpg"
-                                 width="100%" height="100%">
+                                 width="100%" height="45px">
                         </van-col>
                     </van-row>
                     <orange-goods-card

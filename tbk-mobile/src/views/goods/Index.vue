@@ -16,12 +16,10 @@
                 ></van-nav-bar>
 
                 <!--图片展示-->
-                <van-swipe style="background-color: #fff">
-                    <van-swipe-item>
-                        <img :src="details.itempic"
-                             width="100%" height="375px"/>
-                    </van-swipe-item>
-                </van-swipe>
+                <div style="height: 420px">
+                    <img class="main-img" :src="details.itempic"
+                             width="100%" height="420px"/>
+                </div>
 
                 <!--商品标题区-->
                 <div style="padding: .5em 1em 0 1em;background-color: #fff">
@@ -29,12 +27,12 @@
                         <span style="color: red;font-size: 20px;font-weight: 600">
                             ¥{{ details.itemendprice }}
                         </span>
-                        <span style="color: #999999">
+                        <span style="color: #999999;font-size: 10px;">
                             (卷后价格)
                         </span>
                     </div>
                 </div>
-                <div style="padding: 0 5em 0 1em;background-color: #fff;position: relative">
+                <div style="padding: 10px 5em 0 1em;background-color: #fff;position: relative">
                     <span style="font-weight: 600">
                         {{ details.itemtitle }}
                     </span>
@@ -81,7 +79,7 @@
                 <van-row type="flex" justify="space-around">
                     <van-col span="24" style="text-align: center">
                         <img src="../../static/img/like.jpg"
-                             width="100%" height="100%">
+                             width="100%" height="45px">
                     </van-col>
                 </van-row>
                 <orange-goods-card
@@ -97,7 +95,8 @@
                         style="margin-top: 10px"
                 ></orange-goods-card>
 
-                <van-actionsheet v-model="share" title="分享商品">
+                <van-action-sheet v-model="share" title="分享商品">
+                    <br>
                     <van-row type="flex" justify="center">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
                             <div id="qrcode" style="display: inline"></div>
@@ -108,7 +107,8 @@
                             <span style="font-size: 15px;color: #999999">长按图片，保存二维码</span>
                         </van-col>
                     </van-row>
-                </van-actionsheet>
+                    <br>
+                </van-action-sheet>
 
                 <orange-technology-footer style="clear: both"></orange-technology-footer>
 
@@ -117,17 +117,18 @@
             <!--底部-->
             <div class="orange-footer">
                 <van-goods-action>
-                    <van-goods-action-mini-btn
+                    <van-goods-action-icon
                             :icon="collect.icon"
                             :text="collect.name"
                             @click="clickCollect()"
                     />
-                    <van-goods-action-big-btn
+                    <van-goods-action-button
                             @click="openTb()"
+                            type="warning"
                             text="查看商品详情" />
-                    <van-goods-action-big-btn
+                    <van-goods-action-button
                             @click="btv()"
-                            primary
+                            type="danger"
                             text="立即领卷"
                     />
                 </van-goods-action>
@@ -244,7 +245,7 @@
                 }
             },
             onClickLeft() {
-                window.history.go(-1);
+                this.$router.back(-1);
             },
             onClickRight() {
                 this.$router.push({ path: "/" });
@@ -294,4 +295,7 @@
 </script>
 
 <style scoped>
+    .main-img {
+        border: none;
+    }
 </style>

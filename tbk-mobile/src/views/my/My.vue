@@ -50,7 +50,7 @@
 
                 <!--点击触发-->
                 <!--客服中心触发界面-->
-                <van-actionsheet v-model="cs" title="客服联系">
+                <van-action-sheet v-model="cs" title="客服联系">
                     <van-row type="flex" justify="center" style="margin: 20px 0 20px 0">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
                             <div v-html="systemConfig.contact" style="font-size: 15px;color: #999999">
@@ -58,10 +58,10 @@
                             </div>
                         </van-col>
                     </van-row>
-                </van-actionsheet>
+                </van-action-sheet>
 
                 <!--关于我们触发界面-->
-                <van-actionsheet v-model="gy" title="关于我们">
+                <van-action-sheet v-model="gy" title="关于我们">
                     <van-row type="flex" justify="center" style="margin: 20px 0 20px 0">
                         <van-col span="24" style="text-align: center;justify-content: center;align-items: center">
                             <div v-html="systemConfig.about" style="font-size: 15px;color: #999999">
@@ -69,7 +69,7 @@
                             </div>
                         </van-col>
                     </van-row>
-                </van-actionsheet>
+                </van-action-sheet>
 
             </div>
 
@@ -151,16 +151,32 @@
         },
         methods: {
             openCollect() {
-                this.$router.push({ path: "/my/collect" });
+                if (this.user.data.collectNumber === 0) {
+                    this.$notify({ type: 'warning', message: '先去收藏点宝贝吧' });
+                } else {
+                    this.$router.push({ path: "/my/collect" });
+                }
             },
             openFootprint() {
-                this.$router.push({ path: "/my/footprint" });
+                if (this.user.data.footprintNumber === 0) {
+                    this.$notify({ type: 'warning', message: '先去看一些宝贝吧' });
+                } else {
+                    this.$router.push({ path: "/my/footprint" });
+                }
             },
             openMsg() {
-                this.$router.push({ path: "/my/msg/msgList" });
+                if (this.user.data.msgNumber === 0) {
+                    this.$notify({ type: 'warning', message: '还没有系统消息哟' });
+                } else {
+                    this.$router.push({ path: "/my/msg/msgList" });
+                }
             },
             openTutorial() {
-                this.$router.push({ path: "/my/msg/courseList" });
+                if (this.user.data.tutorialNumber === 0) {
+                    this.$notify({ type: 'warning', message: '暂时没有新手教程' });
+                } else {
+                    this.$router.push({ path: "/my/msg/courseList" });
+                }
             },
         },
     }
