@@ -1,12 +1,13 @@
 <template>
 
-    <van-row type="flex" justify="space-around">
-        <van-col span="24" style="text-align: center;margin-top: 5px;padding: 10px 0 10px 0;background-color: deepskyblue">
-            <div v-html="content" style="padding-top: 5px;font-size: 15px;color: #fff">
-            </div>
-        </van-col>
-
-    </van-row>
+    <div class="footer">
+        <van-row type="flex" justify="space-around">
+            <van-col span="24" style="text-align: center;margin-top: 5px;padding: 10px 0 10px 0;background-color: deepskyblue">
+                <div v-html="content" style="padding-top: 5px;font-size: 15px;color: #fff">
+                </div>
+            </van-col>
+        </van-row>
+    </div>
 
 </template>
 
@@ -35,5 +36,7 @@
 </script>
 
 <style scoped>
-
+    .footer {
+        margin-top: 50px;
+    }
 </style>

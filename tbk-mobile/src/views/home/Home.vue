@@ -92,10 +92,11 @@
                             :to='"/goods?id=" + i.itemid'
                             style="margin-top: 10px"
                     ></orange-goods-card>
+                    <div style="clear: both;"></div>
                 </div>
                 <!--商品推荐 end-->
 
-                <orange-technology-footer style="clear: both"></orange-technology-footer>
+                <orange-technology-footer></orange-technology-footer>
 
             </div>
 
