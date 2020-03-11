@@ -16,7 +16,7 @@ let baseUrl = '';
 if (process.env.NODE_ENV == "development") { //测试环境
     baseUrl = "http://localhost:8954/tbk";
 } else if (process.env.NODE_ENV == "production") { //发布环境
-    baseUrl = "http://tyh.wywxy.top/tbk";
+    baseUrl = "http://tyh.ongsat.com/tbk";
 }
 
 let config = {
