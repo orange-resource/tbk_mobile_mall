@@ -17,7 +17,7 @@ public class RedisKeyConstant {
     /**
      * admin web 开放接口管理key
      */
-    public final static String OPEN_INTERFACE = APPLICATION_NAME + "open.interface:";
+    public final static String OPEN_INTERFACE = APPLICATION_NAME + "open-interface:";
 
     /**
      * admin web 访问人IP录入key

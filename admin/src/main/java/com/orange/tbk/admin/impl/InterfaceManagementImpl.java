@@ -1,6 +1,7 @@
 package com.orange.tbk.admin.impl;
 
 import com.orange.tbk.api.bean.InterfaceManagement;
+import com.orange.tbk.api.redis.RedisKeyConstant;
 import com.orange.tbk.api.service.InterfaceManagementService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +17,12 @@ public class InterfaceManagementImpl implements InterfaceManagementService {
     @Autowired
     private RedisTemplate<String,Object> template;
 
-    private static final String PREFIX = "orange.tbk:open.interface:";
-
     @Override
     public List<InterfaceManagement> getAll() throws Exception {
 
         List<InterfaceManagement> interfaceManagements = new ArrayList<>();
 
-        Set<String> keys = template.keys(PREFIX + "*");
+        Set<String> keys = template.keys(RedisKeyConstant.OPEN_INTERFACE + "*");
         for (String key : keys) {
 
             InterfaceManagement interfaceManagement = (InterfaceManagement) template.opsForValue().get(key);
