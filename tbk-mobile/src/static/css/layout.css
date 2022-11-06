@@ -1,0 +1,10 @@
+.orange-home{
+    display: flex;
+    flex-direction: column;
+}
+.orange-content{
+    flex: auto;
+}
+.orange-footer{
+    height: 50px;
+}

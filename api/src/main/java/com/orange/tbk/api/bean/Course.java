@@ -1,0 +1,126 @@
+package com.orange.tbk.api.bean;
+
+import com.baomidou.mybatisplus.annotation.*;
+import java.io.Serializable;
+
+/**
+ * 新手教程模块
+ * t_course
+ * @author Orange
+ * @date 2020/03/09
+ */
+@TableName("t_course")
+@KeySequence("SEQ_TEST")
+public class Course implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    private String id;
+
+    @TableField(value = "create_date",fill = FieldFill.INSERT)
+    private Long createDate;
+
+    @TableLogic
+    private Integer delFlag;
+
+    private String remarks;
+
+    @TableField(value = "update_date",fill = FieldFill.UPDATE)
+    private Long updateDate;
+
+    /**
+     * 新手教程标题
+     * title
+     */
+    private String title;
+
+    /**
+     * 作者
+     * author
+     */
+    private String author;
+
+    /**
+     * 教程内容
+     * content
+     */
+    private String content;
+
+    /**
+     * 主图地址
+     * image
+     */
+    private String image;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
+    }
+
+    public Long getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Long createDate) {
+        this.createDate = createDate;
+    }
+
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks == null ? null : remarks.trim();
+    }
+
+    public Long getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Long updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title == null ? null : title.trim();
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author == null ? null : author.trim();
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+}

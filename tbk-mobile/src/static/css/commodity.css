@@ -1,0 +1,372 @@
+/* 宝贝样式 */
+
+/* 双排样式 */
+.even-commodity {
+    position: relative;
+    width: calc(50% - 10px);
+    display: inline-block;
+    background: #f7f7f7;
+    padding: 0;
+    margin: 16px 0 0 0;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.commodity-group .even-commodity:nth-child(1), .commodity-group .even-commodity:nth-child(2) {
+    margin-top: 0;
+}
+
+.commodity-group .even-commodity:nth-child(odd) {
+    margin-right: 10px;
+}
+
+.commodity-group .even-commodity:nth-child(even) {
+    margin-left: 10px;
+}
+
+.even-commodity img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+}
+
+.commodity-details {
+    padding: 1rem;
+}
+
+.details-title {
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    margin-bottom: 1rem;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.commodity-message {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-left {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.message-left > span > span:first-child {
+    font-size: 14px;
+    color: #999999;
+    padding-right: .5rem;
+}
+
+.message-left > span > span:last-child {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #EF6262;
+}
+
+.message-right {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.message-right > span:first-child {
+    font-size: 14px;
+    color: #999999;
+}
+
+
+/* 单排样式一 */
+.single-content-one {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.single-info-one {
+    position: relative;
+    background: #F7F7F7;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.single-info-one:last-child {
+    margin-bottom: 0;
+}
+
+.single-info-one > img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    display: block;
+}
+
+.single-details-one {
+    padding: 1rem;
+}
+
+.single-title-one {
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    padding-bottom: 1rem;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.single-coupon-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.single-coupon-one > span:last-child {
+    font-size: 14px;
+    color: #999999;
+}
+
+.single-message-one {
+    display: flex;
+    justify-content: space-between;
+}
+
+.single-message-one > span > span:last-child {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #EF6262;
+}
+
+
+/* 单排样式二 */
+.single-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.single-info {
+    position: relative;
+    display: flex;
+    background: #F7F7F7;
+    margin-bottom: 16px;
+    border-radius: 6px;
+}
+
+.single-info:last-child {
+    margin-bottom: 0;
+}
+
+.single-info > img {
+    width: 140px;
+    height: 140px;
+    border-radius: 6px 0 0 6px;
+}
+
+.single-details-two {
+    width: calc(100% - 140px);
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.single-title-two {
+    width: 100%;
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.single-coupon-two {
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.single-coupon-two > span:last-child {
+    color: #999999;
+}
+
+.single-couponmoney-two {
+    position: relative;
+    color: #ffffff;
+    background: linear-gradient(85deg, #f75f2e 0%, #ef6262 100%);
+    padding: .2rem 1rem;
+    border-radius: 4px;
+}
+
+.single-message-two {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.single-message-two > span > span:first-child {
+    font-size: 14px;
+    color: #999999;
+}
+
+.single-message-two > span > span:last-child {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ef6262;
+}
+
+.single-container .single-info:hover .commodity-remove {
+    display: flex;
+}
+
+.adaptive-picture {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.adaptive-picture > img {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.coupon-style {
+    position: relative;
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #ffffff;
+    background: linear-gradient(85deg, #f75f2e 0%, #ef6262 100%);
+    padding: 0 .5rem;
+    display: inline-flex;
+    border-radius: 4px;
+}
+
+.coupon-style::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
+    background: #f7f7f7;
+    border-radius: 50%;
+}
+
+.coupon-style::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: calc(50% - 6px);
+    width: 12px;
+    height: 12px;
+    background: #f7f7f7;
+    border-radius: 50%;
+}
+
+.coupon-style > span:first-child {
+    width: 26px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.coupon-style > span:first-child::after {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: calc(50% - 7px);
+    width: 1px;
+    height: 14px;
+    background: #ffffff;
+}
+
+.coupon-style > span:last-child {
+    width: calc(100% - 26px);
+    display: inline-flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 760px) {
+    .even-commodity {
+        width: calc(50% - 5px);
+    }
+
+    .commodity-group .even-commodity:nth-child(odd) {
+        margin-right: 5px;
+    }
+
+    .commodity-group .even-commodity:nth-child(even) {
+        margin-left: 5px;
+    }
+
+    .commodity-message {
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .single-content {
+        width: 100%;
+    }
+}
+
+
+/* 移动端 */
+.coupon-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.coupon-box .coupon-style {
+    width: 64px;
+}
+
+.commodity-view {
+    font-size: 12px;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #f75f2e 0%, #ef6262 100%);
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mobile-coupon {
+    font-size: 12px;
+    color: #999999;
+}
+
+.mobile-price {
+    font-size: 14px;
+    color: #FF3C00;
+}
+
+.mobile-sold {
+    font-size: 12px;
+    color: #999999;
+}
